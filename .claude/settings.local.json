@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open:*)",
+      "WebFetch(domain:munstergutters.ie)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(npx netlify:*)",
+      "Bash(node:*)",
+      "Bash(npm --version:*)",
+      "WebFetch(domain:recommendedroofing.ie)",
+      "Bash(xargs:*)",
+      "Bash(ls:*)",
+      "Bash(sips:*)",
+      "Bash(convert:*)",
+      "WebFetch(domain:www.wikidata.org)"
+    ]
+  }
+}
