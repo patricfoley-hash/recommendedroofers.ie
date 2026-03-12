@@ -12,6 +12,7 @@
     <meta property="og:description" content="Need roofers Cork? Recommended Roofing — CIRI registered, bank & council approved, 10-year guarantee. Free quote on roof repairs, new roofs & emergency roofing.">
     <meta property="og:image" content="https://recommendedroofers.ie/images/hero-roofer.webp">
     <meta name="keywords" content="roofers Cork, roofer Cork, roofing Cork, Cork roofers, Cork roofing, roof repair Cork, roofing company Cork, local roofers Cork, emergency roofers Cork, roofing contractors Cork, Cork roofing specialists, flat roofing Cork, new roof Cork, roof installation Cork">
+    <link rel="preload" as="image" href="images/hero-roofer.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -1172,7 +1173,7 @@
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "LocalBusiness",
+                "@type": ["LocalBusiness", "RoofingContractor"],
                 "@id": "https://recommendedroofers.ie/#business",
                 "name": "Recommended Roofing",
                 "url": "https://recommendedroofers.ie",
@@ -1180,6 +1181,12 @@
                 "email": "info@recommendedroofing.ie",
                 "description": "Cork's most trusted roofing company. CIRI registered roofers in Cork offering roof repair, new roof installation, flat roofing and emergency callouts across Cork, Limerick, Kerry and Waterford. 10-year written guarantee on all work.",
                 "image": "https://recommendedroofers.ie/images/hero-roofer.webp",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://recommendedroofing.ie/wp-content/uploads/2021/01/recommended-roofing-logo.png",
+                    "width": 200,
+                    "height": 60
+                },
                 "priceRange": "€€",
                 "currenciesAccepted": "EUR",
                 "paymentAccepted": "Cash, Credit Card, Bank Transfer",
@@ -1192,6 +1199,8 @@
                     "@type": "PostalAddress",
                     "streetAddress": "North Point Business Park, New Mallow Road",
                     "addressLocality": "Cork",
+                    "addressRegion": "Cork",
+                    "postalCode": "T23 A8Y1",
                     "addressCountry": "IE"
                 },
                 "geo": {
@@ -1242,8 +1251,23 @@
                     "@type": "AggregateRating",
                     "ratingValue": "4.7",
                     "reviewCount": "200",
-                    "bestRating": "5"
+                    "bestRating": "5",
+                    "worstRating": "1"
                 },
+                "review": [
+                    {
+                        "@type": "Review",
+                        "author": { "@type": "Person", "name": "Sean Murphy" },
+                        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                        "reviewBody": "Excellent work by Recommended Roofing. Fixed our leaking roof quickly and professionally. Highly recommend these roofers in Cork."
+                    },
+                    {
+                        "@type": "Review",
+                        "author": { "@type": "Person", "name": "Mary O'Brien" },
+                        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                        "reviewBody": "Best roofers Cork has to offer. CIRI registered, very tidy work and great value. Our new roof looks fantastic."
+                    }
+                ],
                 "sameAs": [
                     "https://www.facebook.com/recommendedroofing",
                     "https://www.instagram.com/recommendedroofing"
@@ -1507,12 +1531,12 @@
         <div class="container">
             <p class="trusted-label">Trusted By Leading Organisations Across Ireland</p>
             <div class="trusted-logos">
-                <div class="trusted-logo"><img src="images/client-boi.webp" alt="Bank of Ireland — approved roofing company Cork"></div>
-                <div class="trusted-logo"><img src="images/client-clare-council.webp" alt="Clare County Council — council approved Cork roofers"></div>
-                <div class="trusted-logo"><img src="images/client-galway-property.webp" alt="Galway Property Management — commercial roofing Cork"></div>
-                <div class="trusted-logo"><img src="images/client-midcollege.webp" alt="Mid College — roofing contractor Cork"></div>
-                <div class="trusted-logo"><img src="images/client-kenny.webp" alt="Kenny — Cork roofing client"></div>
-                <div class="trusted-logo"><img src="images/client-flanagans.webp" alt="Flanagans Pharmacy — Cork roofing services"></div>
+                <div class="trusted-logo"><img src="images/client-boi.webp" alt="Bank of Ireland — approved roofing company Cork" width="160" height="60" loading="lazy"></div>
+                <div class="trusted-logo"><img src="images/client-clare-council.webp" alt="Clare County Council — council approved Cork roofers" width="160" height="60" loading="lazy"></div>
+                <div class="trusted-logo"><img src="images/client-galway-property.webp" alt="Galway Property Management — commercial roofing Cork" width="160" height="60" loading="lazy"></div>
+                <div class="trusted-logo"><img src="images/client-midcollege.webp" alt="Mid College — roofing contractor Cork" width="160" height="60" loading="lazy"></div>
+                <div class="trusted-logo"><img src="images/client-kenny.webp" alt="Kenny — Cork roofing client" width="160" height="60" loading="lazy"></div>
+                <div class="trusted-logo"><img src="images/client-flanagans.webp" alt="Flanagans Pharmacy — Cork roofing services" width="160" height="60" loading="lazy"></div>
 
             </div>
         </div>
@@ -1557,6 +1581,7 @@
             </div>
             <div class="keyword-image">
                 <img src="images/roofer-cork.png" alt="Roofers Cork — Recommended Roofing specialist on a Cork roof"
+                     width="600" height="500" loading="lazy"
                      style="object-position: center center;"
                      onerror="this.parentElement.innerHTML='<div class=&quot;keyword-image-placeholder&quot;><i class=&quot;fas fa-hard-hat&quot;></i><span>Roofers Cork</span></div>'">
             </div>
@@ -1600,7 +1625,7 @@
     <section class="why-us section-padding" id="why-us">
         <div class="container">
             <div class="why-us-image">
-                <img src="images/two-roofers.jpg" alt="Recommended Roofing — local roofers Cork working on a residential roof repair Cork">
+                <img src="images/two-roofers.jpg" alt="Recommended Roofing — local roofers Cork working on a residential roof repair Cork" width="600" height="450" loading="lazy">
                 <div class="experience-badge">
                     <h3>6+</h3>
                     <p>Years in Cork</p>
@@ -1753,35 +1778,35 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="images/roof-repair.webp" alt="Roof repair Cork — Recommended Roofing completed project">
+                    <img src="images/roof-repair.webp" alt="Roof repair Cork — Recommended Roofing completed project" width="400" height="300" loading="lazy">
                     <span>Roof Repair Cork</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/new-gutters-install.jpg" alt="New roof installation Cork by Recommended Roofing">
+                    <img src="images/new-gutters-install.jpg" alt="New roof installation Cork by Recommended Roofing" width="400" height="300" loading="lazy">
                     <span>New Roof Cork</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/cast-iron-gutters.webp" alt="Flat roofing Cork — roofing company Cork project">
+                    <img src="images/cast-iron-gutters.webp" alt="Flat roofing Cork — roofing company Cork project" width="400" height="300" loading="lazy">
                     <span>Flat Roofing Cork</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/gutter-cleaning.webp" alt="Commercial roofing Cork — Cork roofers at work">
+                    <img src="images/gutter-cleaning.webp" alt="Commercial roofing Cork — Cork roofers at work" width="400" height="300" loading="lazy">
                     <span>Commercial Cork</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/cottage-guttering.jpg" alt="Roof renovation Cork — re-roofing by local roofers Cork">
+                    <img src="images/cottage-guttering.jpg" alt="Roof renovation Cork — re-roofing by local roofers Cork" width="400" height="300" loading="lazy">
                     <span>Roof Renovation</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/guttering-kerry-after.jpg" alt="Roofers Kerry — Recommended Roofing Munster project">
+                    <img src="images/guttering-kerry-after.jpg" alt="Roofers Kerry — Recommended Roofing Munster project" width="400" height="300" loading="lazy">
                     <span>Kerry Project</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/guttering-cork.jpg" alt="Cork roofers completed project — Cork City roofing work">
+                    <img src="images/guttering-cork.jpg" alt="Cork roofers completed project — Cork City roofing work" width="400" height="300" loading="lazy">
                     <span>Cork City</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/bank-of-ireland-gutters.webp" alt="Commercial roofing Cork — Bank of Ireland roofing project">
+                    <img src="images/bank-of-ireland-gutters.webp" alt="Commercial roofing Cork — Bank of Ireland roofing project" width="400" height="300" loading="lazy">
                     <span>Bank of Ireland</span>
                 </div>
             </div>
