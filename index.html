@@ -271,7 +271,7 @@
 
         .hero .container {
             display: grid;
-            grid-template-columns: 1fr 0.85fr;
+            grid-template-columns: 1fr 1fr;
             gap: 50px;
             align-items: center;
             padding-top: 40px;
@@ -346,20 +346,16 @@
 
         /* Hero form card */
         .hero-form-card {
-            background: var(--white);
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: var(--shadow-lg);
+            background: transparent !important;
+            border-radius: 0 !important;
+            padding: 0 !important;
+            box-shadow: none !important;
             color: var(--dark);
+            overflow: hidden;
         }
 
-        .hero-form-card h3 { font-size: 1.4rem; margin-bottom: 5px; color: var(--dark); }
-
-        .hero-form-card > p {
-            font-size: 0.88rem;
-            color: var(--medium-gray);
-            margin-bottom: 6px;
-        }
+        .hero-form-card h3 { display: none !important; }
+        .hero-form-card > p { display: none !important; }
 
         .form-group { margin-bottom: 14px; }
 
@@ -404,6 +400,48 @@
 
         .form-trust i { color: var(--red); }
 
+        /* ===== HERO EYEBROW ===== */
+        .hero-eyebrow {
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #FBBC04;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        /* ===== HERO OUTCOMES ===== */
+        .hero-outcomes {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .hero-outcomes li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            color: var(--white);
+            font-family: 'Roboto', sans-serif;
+        }
+        .hero-outcomes li i {
+            color: #FBBC04;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        /* ===== HERO FRICTION ===== */
+        .hero-friction {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
         /* ===== TRUST BAR ===== */
         .trust-bar {
             background: var(--white);
@@ -413,24 +451,26 @@
 
         .trust-bar .container {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
+            gap: 8px;
+            flex-wrap: nowrap;
+            overflow: hidden;
         }
 
-        .trust-item { display: flex; align-items: center; gap: 12px; }
-        .trust-item i { font-size: 1.7rem; color: var(--red); }
+        .trust-item { display: flex; align-items: center; gap: 8px; flex-shrink: 1; min-width: 0; }
+        .trust-item i { font-size: 2.2rem; color: var(--red); flex-shrink: 0; }
 
         .trust-item strong {
             display: block;
             font-family: 'Oswald', sans-serif;
-            font-size: 0.95rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.2px;
+            white-space: nowrap;
         }
 
-        .trust-item span { font-size: 0.8rem; color: var(--medium-gray); }
+        .trust-item span { font-size: 0.72rem; color: var(--medium-gray); white-space: nowrap; }
 
         /* ===== TRUSTED BY ===== */
         .trusted-by {
@@ -468,13 +508,14 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 56px;
-            align-items: center;
+            align-items: stretch;
         }
 
         .keyword-image {
             position: relative;
             border-radius: 8px;
-            height: 400px;
+            min-height: 400px;
+            height: 100%;
             overflow: hidden;
             box-shadow: var(--shadow-lg);
         }
@@ -504,6 +545,47 @@
         }
 
         .keyword-content .btn-primary { margin-top: 6px; }
+
+        .keyword-text {
+            font-size: 0.95rem;
+            color: var(--medium-gray);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        /* ===== OUTCOME BLOCKS ===== */
+        .outcome-blocks {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+        .outcome-block {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .outcome-block i {
+            font-size: 1.6rem;
+            color: var(--red);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        .outcome-block h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .outcome-block p {
+            font-size: 0.92rem;
+            color: var(--medium-gray);
+            line-height: 1.6;
+            margin: 0;
+        }
 
         /* ===== SERVICES ===== */
         .services { background: var(--light-gray); }
@@ -1077,6 +1159,196 @@
             .footer-socials { flex-wrap: wrap; }
         }
     </style>
+
+    <!-- ===== SCHEMA MARKUP ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://recommendedroofers.ie/#business",
+                "name": "Recommended Roofing",
+                "url": "https://recommendedroofers.ie",
+                "telephone": "+35321 2040925",
+                "email": "info@recommendedroofing.ie",
+                "description": "Cork's most trusted roofing company. CIRI registered roofers in Cork offering roof repair, new roof installation, flat roofing and emergency callouts across Cork, Limerick, Kerry and Waterford. 10-year written guarantee on all work.",
+                "image": "https://recommendedroofers.ie/images/hero-roofer.webp",
+                "priceRange": "€€",
+                "currenciesAccepted": "EUR",
+                "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+                "areaServed": [
+                    "Cork City", "Cork County", "Ballincollig", "Carrigaline", "Midleton",
+                    "Cobh", "Mallow", "Bandon", "Kinsale", "Fermoy", "Macroom",
+                    "Youghal", "Clonakilty", "Limerick", "Kerry", "Waterford"
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "North Point Business Park, New Mallow Road",
+                    "addressLocality": "Cork",
+                    "addressCountry": "IE"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "51.9022",
+                    "longitude": "-8.4658"
+                },
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+                        "opens": "08:00",
+                        "closes": "18:00"
+                    }
+                ],
+                "hasCredential": [
+                    "CIRI Registered",
+                    "Bank of Ireland Heritage Contractor",
+                    "Approved Clare County Council Provider"
+                ],
+                "knowsAbout": [
+                    "Roofing Service", "Roofer", "Commercial Roofing", "Domestic Roof Construction",
+                    "Residential Roofing", "Flat Roof", "Roof", "Fascia", "Soffit", "Skylight",
+                    "Rain Gutter", "Downspout", "Flashing", "Chimney", "Asphalt Shingle",
+                    "Asphalt Roll Roofing", "Roof Cleaning", "Green Roof", "Membrane Roofing",
+                    "Leak", "Gutter Services", "Gutter Guard Installation", "Roof Repair",
+                    "Roof Installation", "Roof Inspection", "Flat Roof Waterproofing",
+                    "Chimney Repair", "Skylight Repair", "Skylight Installation",
+                    "Attic Venting Installation", "Loft Ventilation"
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Roofing Services Cork",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof Repair Cork" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "New Roof Installation Cork" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flat Roofing Cork" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof Renovation Cork" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Roof Repair Cork" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chimney Repair Cork" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Skylight Installation Cork" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof Cleaning Cork" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fascia & Soffit Cork" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gutter Services Cork" } }
+                    ]
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.7",
+                    "reviewCount": "200",
+                    "bestRating": "5"
+                },
+                "sameAs": [
+                    "https://www.facebook.com/recommendedroofing",
+                    "https://www.instagram.com/recommendedroofing"
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://recommendedroofers.ie/#webpage",
+                "url": "https://recommendedroofers.ie",
+                "name": "Roofers Cork | Recommended Roofing | Cork's Most Trusted Roofing Company",
+                "description": "Need roofers in Cork? Recommended Roofing are Cork's most trusted roofing company. CIRI registered, bank & council approved. Free quotes for roof repair, replacement, flat roofing & more.",
+                "isPartOf": { "@id": "https://recommendedroofers.ie/#business" },
+                "about": { "@id": "https://recommendedroofers.ie/#business" },
+                "inLanguage": "en-IE"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How much does roof repair cost in Cork?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Roof repair costs in Cork depend on the extent of damage, roof type, and access requirements. Minor repairs such as replacing a few slates typically start from a few hundred euro, while a full re-roof for a Cork semi-detached home generally ranges from €6,000–€12,000. We always provide a free, detailed written quote before any work begins — so you know the exact cost upfront."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do you offer free roof inspections in Cork?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes — every inspection and quote across Cork is completely free with no obligation. One of our Cork roofers will visit your property, thoroughly inspect the roof, and provide a clear written quote. There's never any pressure to proceed, and we'll explain exactly what we found and what we recommend."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Are you a CIRI registered roofing company based in Cork?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Recommended Roofing is a CIRI-registered roofing company based at North Point Business Park, New Mallow Road, Cork. We carry €6.5 million public liability insurance and €13 million employer liability insurance. Proof of registration and insurance is available on request."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do Cork roofers need to be bank approved?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "When selling a Cork property, mortgage lenders require a satisfactory roof survey as part of approval. Our work meets the standards required by all major Irish banks, meaning your property will pass the survey. If you're selling or need roofing work to satisfy a Cork bank surveyor, we can help."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What guarantee do you offer on Cork roofing work?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Every roofing project we complete in Cork comes with a 10-year written workmanship guarantee — whether it's a roof repair, a full re-roof, or a flat roofing installation. We also use premium materials carrying their own manufacturer warranties — typically 25–60 years depending on the product."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do you offer emergency roof repairs in Cork?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. If you have storm damage or a sudden leak in Cork, call us immediately on 021 2040925. We offer rapid emergency callouts across Cork city and county and will do our best to reach you the same day or first thing the following morning."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How long does a full re-roof take in Cork?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A standard Cork residential re-roof typically takes 3–5 days depending on the size and complexity of the property. Larger homes or those with dormers or skylights may require more time. We'll confirm the exact timeline in your written quote."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What areas of Cork do you cover?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We cover all of Cork city and county including Douglas, Ballincollig, Bishopstown, Blackrock, Midleton, Mallow, Bandon, Fermoy and surrounding areas. We also serve Limerick, Kerry, and Waterford. Our Cork office is at North Point Business Park, New Mallow Road, Cork."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much does it cost to hire roofers in Cork?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The cost of hiring roofers in Cork depends on the type and scale of work. A minor roof repair in Cork typically starts from €150-€300, while a full re-roof on an average Cork home can range from €8,000 to €20,000+ depending on materials and roof size. We provide free, no-obligation quotes for all Cork roofing work."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do Cork roofers work in all weather conditions?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Experienced Cork roofers like Recommended Roofing are well used to working in Irish weather conditions. We monitor forecasts closely and plan work accordingly. For emergency roof repairs in Cork — such as storm damage or active leaks — our team responds quickly regardless of conditions to make your roof safe and weathertight."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What areas of Cork do your roofers cover?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Our Cork roofers cover the entire Cork city and county area including Cork City, Ballincollig, Carrigaline, Midleton, Cobh, Mallow, Bandon, Kinsale, Fermoy, Macroom, Youghal, Clonakilty and all surrounding areas. We also cover Limerick, Kerry and Waterford."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
 
@@ -1131,11 +1403,18 @@
                     <i class="fas fa-shield-alt"></i>
                     CIRI Registered &bull; Bank &amp; Council Approved &bull; Fully Insured
                 </div>
+                <p class="hero-eyebrow">Cork Homeowners &amp; Businesses — Same-Day Response Available</p>
                 <!-- H1: SEO keyword — paragraph-sized, sits above visual headline -->
                 <h1 class="hero-seo-keyword">Roofers Cork</h1>
                 <!-- Visual headline — large, bold, styled as paragraph NOT h1 -->
-                <p class="hero-headline">Cork's Most Trusted<br><span>Roofing</span> Specialists</p>
-                <p class="hero-desc">Recommended Roofing are Cork's most trusted local roofers — delivering expert roof repair, new roof installation, flat roofing, and emergency callouts across Cork city and county since 2019. Every job comes with a 10-year written guarantee from a roofing company Cork homeowners and businesses rely on.</p>
+                <p class="hero-headline">Stop Your Roof Leaking —<br><span>Fixed Right, First Time</span></p>
+                <ul class="hero-outcomes">
+                    <li><i class="fas fa-check-circle"></i> Roof repaired and leak-free within 48 hours</li>
+                    <li><i class="fas fa-check-circle"></i> Fixed price — no hidden costs, ever</li>
+                    <li><i class="fas fa-check-circle"></i> 10-year written guarantee on all work</li>
+                    <li><i class="fas fa-check-circle"></i> Bank of Ireland Heritage Contractor</li>
+                    <li><i class="fas fa-check-circle"></i> Approved Clare County Council Provider</li>
+                </ul>
                 <div class="hero-buttons">
                     <a href="tel:0212040925" class="btn btn-primary">
                         <i class="fas fa-phone-alt"></i> Call Us Now
@@ -1144,6 +1423,7 @@
                         <i class="fas fa-arrow-down"></i> Our Services
                     </a>
                 </div>
+                <p class="hero-friction">No obligation &nbsp;&middot;&nbsp; Responds within 2 hours &nbsp;&middot;&nbsp; Free survey included</p>
                 <div class="hero-stats">
                     <div class="hero-stat">
                         <h3>6+</h3>
@@ -1160,11 +1440,9 @@
                 </div>
             </div>
             <div class="hero-form-card" id="contact">
-                <h3>Get Your Free Roofing Quote</h3>
-                <p>No obligation &mdash; Cork roofers ready to respond within 2 hours</p>
                 <iframe
                     src="https://api.twolabsleadgen.com/widget/form/b3qFYv3eyajJCp7nJblw"
-                    style="width:100%;height:200px;border:none;border-radius:3px;"
+                    style="width:100%;height:480px;border:none;"
                     id="inline-b3qFYv3eyajJCp7nJblw"
                     data-layout="{'id':'INLINE'}"
                     data-trigger-type="alwaysShow"
@@ -1215,13 +1493,6 @@
                     <span>Written workmanship warranty</span>
                 </div>
             </div>
-            <div class="trust-item">
-                <i class="fas fa-star"></i>
-                <div>
-                    <strong>Top-Rated Cork Roofing</strong>
-                    <span>4.7 stars — 200+ Google Reviews</span>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1246,10 +1517,34 @@
         <div class="container">
             <div class="keyword-content">
                 <!-- *** UPDATE H2 AND PARAGRAPHS FOR EACH KEYWORD PAGE *** -->
-                <h2>Trusted <span>Roofers in Cork</span> — Quality You Can Count On</h2>
+                <h2>3 Reasons Cork Homeowners <span>Choose Recommended Roofing</span></h2>
                 <div class="red-line"></div>
-                <p>When you search for roofers in Cork, you need a contractor who shows up on time, prices honestly, and delivers work built to last. That's exactly what Recommended Roofing has done for Cork homeowners and businesses since 2019. As a CIRI-registered roofing company Cork property owners trust, with offices in Cork and Limerick, we've completed over 2,000 residential and commercial roofing projects across Munster — from minor slate repairs to complete re-roofs and specialist flat roofing systems.</p>
-                <p>Whether you have a leaking roof after a storm, missing or cracked slates, failing flashing, or need an entirely new roof, our experienced local roofers Cork-wide have the skills, materials, and written guarantee to get it right first time. From roof repair Cork residents call us for daily to full new roof installations — every project includes a 10-year workmanship guarantee, so you're protected long after we've left the site.</p>
+                <div class="outcome-blocks">
+                    <div class="outcome-block">
+                        <i class="fas fa-home"></i>
+                        <div>
+                            <h4>Your Roof Will Never Leak Again</h4>
+                            <p>We don't patch problems — we fix them permanently. Every repair comes with a full inspection so you're not back to square one next winter.</p>
+                        </div>
+                    </div>
+                    <div class="outcome-block">
+                        <i class="fas fa-file-invoice"></i>
+                        <div>
+                            <h4>You'll Know the Exact Price Before We Start</h4>
+                            <p>No surprise bills. No hidden extras. You get a fixed written quote upfront — and that's the price you pay. Simple.</p>
+                        </div>
+                    </div>
+                    <div class="outcome-block">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h4>You're Covered for 10 Years in Writing</h4>
+                            <p>Every job — repair, new roof or renovation — comes with a 10-year written workmanship guarantee. Total peace of mind long after we've left.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="keyword-text">Finding reliable roofers in Cork shouldn't be stressful. Whether you need an emergency roof repair after a storm, a full re-roof on an older Cork home, or specialist flat roofing for a commercial property, Recommended Roofing has the experience, equipment, and local knowledge to get it done right. As one of Cork's most established roofing companies, we've worked on everything from terraced houses in Cork City to large commercial buildings across Cork county.</p>
+
+                <p class="keyword-text">Our Cork roofers are fully trained, CIRI registered, and carry €6.5M public liability insurance on every job. We cover all areas across Cork including Cork City, Ballincollig, Carrigaline, Midleton, Cobh, Mallow, Bandon, Kinsale, and surrounding areas. When you need a roofing company in Cork you can trust, Recommended Roofing delivers — on time, on budget, and backed by a 10-year written guarantee.</p>
                 <a href="tel:0212040925" class="btn btn-primary">
                     <i class="fas fa-phone-alt"></i> Call Cork: 021 2040925
                 </a>
@@ -1609,6 +1904,35 @@
                         </div>
                     </div>
                 </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How much does it cost to hire roofers in Cork?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The cost of hiring roofers in Cork depends on the type and scale of work. A minor roof repair in Cork typically starts from €150-€300, while a full re-roof on an average Cork home can range from €8,000 to €20,000+ depending on materials and roof size. At Recommended Roofing, we provide free, no-obligation quotes for all Cork roofing work — so you know exactly what you're paying before we start. No hidden costs, no surprises.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do Cork roofers work in all weather conditions?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Experienced Cork roofers like Recommended Roofing are well used to working in Irish weather conditions. We monitor forecasts closely and plan work accordingly. For emergency roof repairs in Cork — such as storm damage or active leaks — our team responds quickly regardless of conditions to make your roof safe and weathertight. For larger planned roofing projects in Cork, we'll schedule work during suitable weather windows to ensure the best quality finish.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What areas of Cork do your roofers cover?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our Cork roofers cover the entire Cork city and county area including Cork City, Ballincollig, Carrigaline, Midleton, Cobh, Mallow, Bandon, Kinsale, Fermoy, Macroom, Youghal, Clonakilty and all surrounding areas. We also cover Limerick, Kerry and Waterford. No matter where you are in Cork, Recommended Roofing can provide a fast response, free quote, and professional roofing service backed by our 10-year written guarantee.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1643,7 +1967,7 @@
             <div class="map-grid">
                 <div class="map-embed">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.123456789!2d-8.4744!3d51.9099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x484479c2d2fc1b4d%3A0x0!2sNorth+Point+Business+Park%2C+New+Mallow+Rd%2C+Cork!5e0!3m2!1sen!2sie!4v1700000000000!5m2!1sen!2sie"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.123456789!2d-8.4870294!3d51.9231592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x484491ec9fd09047%3A0x669cf386e3e340b3!2sRecommended+Roofing!5e0!3m2!1sen!2sie!4v1700000000000!5m2!1sen!2sie"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
@@ -1691,7 +2015,7 @@
                 <div class="footer-about">
                     <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
                         <div style="width:34px;height:34px;background:var(--red);border-radius:5px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;flex-shrink:0;"><i class="fas fa-home"></i></div>
-                        <span style="font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#fff;">Recommended Roofing</span>
+                        <a href="https://recommendedroofing.ie" target="_blank" rel="noopener" style="font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#fff;">Recommended Roofing</a>
                     </div>
                     <p>Cork's most trusted local roofers since 2019. Recommended Roofing is a CIRI registered roofing company Cork homeowners and businesses rely on — bank &amp; council approved, with a 10-year written guarantee on all Cork roofing work.</p>
                     <div class="footer-socials">
@@ -1741,6 +2065,49 @@
             </div>
         </div>
     </footer>
+
+    <!-- ===== SEO ENTITIES (hidden) ===== -->
+    <div style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">
+        <h3>Roofing Service Cork</h3>
+        <h3>Roofer Cork</h3>
+        <h3>Roofing Cork</h3>
+        <h3>Roof Damage Repair Cork</h3>
+        <h3>Roof Installation Cork</h3>
+        <h3>Roof Repair Cork</h3>
+        <h4>Roof Repair for Storm &amp; Wind Damage Cork</h4>
+        <h4>Roof Inspection Cork</h4>
+        <h4>Commercial Roofing Cork</h4>
+        <h4>Domestic Roof Construction Cork</h4>
+        <h4>Skylight Repair Cork</h4>
+        <h4>Skylight Installation Cork</h4>
+        <h4>Chimney Repair &amp; Restoration Cork</h4>
+        <h4>Flat Roofing Systems Cork</h4>
+        <h4>Flat Roof Waterproofing Cork</h4>
+        <h4>Chimney Inspections Cork</h4>
+        <h4>Attic Venting Installation Cork</h4>
+        <h4>Attic Venting Repairs Cork</h4>
+        <h4>Loft Ventilation Cork</h4>
+        <h4>Residential Roofing Cork</h4>
+        <h4>Flat Roof Cork</h4>
+        <h4>Roof Cork</h4>
+        <h4>Fascia Cork</h4>
+        <h4>Soffit Cork</h4>
+        <h4>Skylight Cork</h4>
+        <h4>Rain Gutter Cork</h4>
+        <h4>Downspout Cork</h4>
+        <h4>Flashing Cork</h4>
+        <h4>Chimney Cork</h4>
+        <h4>Asphalt Shingle Cork</h4>
+        <h4>Asphalt Roll Roofing Cork</h4>
+        <h4>Roof Cleaning Cork</h4>
+        <h4>Green Roof Cork</h4>
+        <h4>Membrane Roofing Cork</h4>
+        <h4>Leak Cork</h4>
+        <h4>Gutter Services Cork</h4>
+        <h4>Gutter Guard Installation Cork</h4>
+        <h4>Hammer Tacker Cork</h4>
+        <h4>Ladder Cork</h4>
+    </div>
 
     <!-- ===== FLOATING CTA ===== -->
     <div class="floating-cta">
