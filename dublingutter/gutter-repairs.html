@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gutter Repairs Dublin | Fast, Affordable Repair Service | DublinGutter.ie</title>
+  <meta name="description" content="Expert gutter repairs across Dublin. We fix cracked joints, sagging gutters, leaking seals and all common gutter problems. Upfront pricing, same-day available." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .service-nav { background: var(--white); border-bottom: 2px solid var(--border); position: sticky; top: 72px; z-index: 900; }
+    .service-nav-inner { display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+    .service-nav-inner::-webkit-scrollbar { display: none; }
+    .service-nav-link { display: flex; align-items: center; gap: 8px; padding: 14px 20px; font-family: 'Poppins', sans-serif; font-size: 0.82rem; font-weight: 600; color: var(--grey); white-space: nowrap; border-bottom: 3px solid transparent; margin-bottom: -2px; text-decoration: none; transition: all var(--transition); }
+    .service-nav-link:hover { color: var(--blue); }
+    .service-nav-link.active { color: var(--yellow-dark); border-bottom-color: var(--yellow); }
+    .service-nav-link i { font-size: 0.85rem; }
+    .service-hero { background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%); padding: 60px 0; }
+    .service-hero-inner { display: grid; grid-template-columns: 1fr 380px; gap: 50px; align-items: center; }
+    .service-hero-content .breadcrumb { justify-content: flex-start; margin-bottom: 16px; }
+    .service-hero-content h1 { color: var(--white); font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom: 14px; }
+    .service-hero-content p { color: rgba(255,255,255,0.85); font-size: 1.05rem; margin-bottom: 24px; line-height: 1.7; }
+    .service-hero-bullets { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .service-hero-bullets li { display: flex; align-items: center; gap: 10px; color: var(--white); font-size: 0.95rem; }
+    .service-hero-bullets i { color: var(--yellow); }
+    .service-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .service-hero-form { background: var(--white); border-radius: var(--radius-lg); padding: 28px; }
+    .service-hero-form h3 { font-size: 1.15rem; color: var(--blue-dark); margin-bottom: 4px; }
+    .service-hero-form > p { font-size: 0.82rem; color: var(--grey); margin-bottom: 18px; }
+    .problems-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .problem-card { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 22px; display: flex; gap: 14px; align-items: flex-start; }
+    .problem-icon { width: 40px; height: 40px; background: var(--yellow-light); border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .problem-icon i { color: var(--yellow-dark); font-size: 1rem; }
+    .problem-card h4 { font-size: 0.9rem; color: var(--grey-dark); margin-bottom: 4px; }
+    .problem-card p { font-size: 0.82rem; color: var(--grey); line-height: 1.6; }
+    .content-split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; }
+    .content-split-img i { font-size: 6rem; color: var(--blue-light); }
+    .content-split-text h2 { font-size: 1.7rem; margin-bottom: 14px; }
+    .content-split-text p { color: var(--grey); margin-bottom: 14px; line-height: 1.75; }
+    .content-split-text ul { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
+    .content-split-text li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.92rem; color: var(--text); }
+    .content-split-text li i { color: var(--yellow-dark); margin-top: 3px; flex-shrink: 0; }
+    .pricing-box { background: var(--blue-dark); border-radius: var(--radius-lg); padding: 36px; color: var(--white); text-align: center; }
+    .pricing-box h3 { color: var(--white); font-size: 1.3rem; margin-bottom: 8px; }
+    .pricing-box p { color: rgba(255,255,255,0.75); margin-bottom: 24px; }
+    .pricing-features { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; text-align: left; }
+    .pricing-feature { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.9); font-size: 0.9rem; }
+    .pricing-feature i { color: var(--yellow); }
+    @media (max-width: 1024px) {
+      .service-hero-inner { grid-template-columns: 1fr; }
+      .service-hero-form { display: none; }
+      .problems-grid { grid-template-columns: 1fr 1fr; }
+      .content-split { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .problems-grid { grid-template-columns: 1fr; }
+      .service-nav-link span { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span><i class="fas fa-phone"></i> (01) 485 1932</span>
+        <span><i class="fas fa-envelope"></i> info@dublingutter.ie</span>
+      </div>
+      <div class="topbar-right">
+        <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.9 Google Reviews</span>
+        <span><i class="fas fa-shield-halved"></i> Fully Insured</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fas fa-water"></i></span>
+        <div class="logo-text">
+          <span class="logo-main">DublinGutter<span class="logo-dot">.ie</span></span>
+          <span class="logo-sub">Gutter Experts Dublin</span>
+        </div>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="near-me.html" class="nav-link">Near Me</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <a href="quote.html" class="btn btn-primary header-cta">Get Free Quote</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- SERVICE NAV TABS -->
+  <nav class="service-nav">
+    <div class="container service-nav-inner">
+      <a href="gutter-repairs.html" class="service-nav-link active"><i class="fas fa-wrench"></i> <span>Gutter Repairs</span></a>
+      <a href="gutter-cleaning.html" class="service-nav-link"><i class="fas fa-broom"></i> <span>Gutter Cleaning</span></a>
+      <a href="new-gutters.html" class="service-nav-link"><i class="fas fa-plus"></i> <span>New Gutters</span></a>
+      <a href="fascia-soffit.html" class="service-nav-link"><i class="fas fa-house-chimney"></i> <span>Fascia &amp; Soffit</span></a>
+      <a href="downpipes.html" class="service-nav-link"><i class="fas fa-arrows-down-to-line"></i> <span>Downpipes</span></a>
+      <a href="commercial-guttering.html" class="service-nav-link"><i class="fas fa-building"></i> <span>Commercial</span></a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="service-hero">
+    <div class="container service-hero-inner">
+      <div class="service-hero-content">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span><span>Gutter Repairs</span></div>
+        <h1>Gutter Repairs Dublin</h1>
+        <p>Leaking, sagging or damaged gutters? We repair all types of gutter problems across Dublin quickly and affordably — always trying to repair before replacing to save you money.</p>
+        <ul class="service-hero-bullets">
+          <li><i class="fas fa-check-circle"></i> Same-day repair available across Dublin</li>
+          <li><i class="fas fa-check-circle"></i> Upfront price agreed before work starts</li>
+          <li><i class="fas fa-check-circle"></i> 30 years of gutter repair experience</li>
+          <li><i class="fas fa-check-circle"></i> Fully insured & guaranteed work</li>
+        </ul>
+        <div class="service-hero-ctas">
+          <a href="quote.html" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get Free Repair Quote</a>
+          <a href="tel:014851932" class="btn btn-outline-white"><i class="fas fa-phone"></i> (01) 485 1932</a>
+        </div>
+      </div>
+      <div class="service-hero-form">
+        <h3>Book a Gutter Repair</h3>
+        <p>We'll get back to you within 1 hour</p>
+        <form>
+          <div class="form-group"><label>Your Name</label><input type="text" placeholder="Full name" /></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="Your phone" /></div>
+          <div class="form-group"><label>Your Area / Eircode</label><input type="text" placeholder="e.g. D15, Swords..." /></div>
+          <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-wrench"></i> Book Repair</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container trust-bar-inner">
+      <div class="trust-item"><i class="fas fa-bolt"></i><div><strong>Same-Day Available</strong><span>7 days a week</span></div></div>
+      <div class="trust-item"><i class="fas fa-hard-hat"></i><div><strong>30 Years Experience</strong><span>Trusted since 1994</span></div></div>
+      <div class="trust-item"><i class="fas fa-tag"></i><div><strong>Upfront Pricing</strong><span>No hidden charges</span></div></div>
+      <div class="trust-item"><i class="fab fa-google"></i><div><strong>188 Google Reviews</strong><span>Rated 4.9 / 5 stars</span></div></div>
+    </div>
+  </section>
+
+  <!-- PROBLEMS WE FIX -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Gutter Problems</span>
+        <h2>Common Gutter Problems We Fix</h2>
+        <p>Whatever the issue, our experienced team can diagnose and repair it quickly</p>
+      </div>
+      <div class="problems-grid">
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-link-slash"></i></div><div><h4>Damaged Brackets & Joints</h4><p>Broken brackets cause gutters to sag and pull away from the fascia. We replace and reset them properly.</p></div></div>
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-arrow-down"></i></div><div><h4>Sagging Gutters</h4><p>Gutters that sag don't drain properly and can cause overflow. We realign and support your gutters.</p></div></div>
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-droplet"></i></div><div><h4>Leaking Joints & Seals</h4><p>Deteriorated seals cause drips at joints. We reseal or replace joints to stop leaks at the source.</p></div></div>
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-water"></i></div><div><h4>Water Running Behind Gutters</h4><p>A sign of misalignment or a failed drip edge. Needs urgent attention to prevent damp and wall damage.</p></div></div>
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-circle-exclamation"></i></div><div><h4>Gutter Detaching from Wall</h4><p>Gutters pulling away from the fascia need immediate repair before they fall and cause injury or damage.</p></div></div>
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-ruler"></i></div><div><h4>Poor Alignment & Fall</h4><p>Incorrectly aligned gutters pool water and cause overflow. We reset the correct fall angle throughout.</p></div></div>
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-circle-dot"></i></div><div><h4>Holes in Cast Iron Gutters</h4><p>Older cast iron gutters develop holes over time. We repair or replace sections to keep them watertight.</p></div></div>
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-plug-circle-xmark"></i></div><div><h4>Blocked Downpipe Outlet</h4><p>Fall pipe detached or blocked at the gutter outlet. We clear and resecure for proper water flow.</p></div></div>
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-bolt"></i></div><div><h4>Storm Damage</h4><p>Gutters damaged by high winds or heavy rain. We offer same-day emergency repairs across all of Dublin.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPAIR VS REPLACE -->
+  <section class="section section-light">
+    <div class="container content-split">
+      <div class="content-split-img"><i class="fas fa-wrench"></i></div>
+      <div class="content-split-text">
+        <span class="section-tag">Our Approach</span>
+        <h2>We Always Repair Before Replacing</h2>
+        <p>Unlike some companies, we don't push for a full replacement if a repair will do the job. A simple repair can save you hundreds or even thousands of euro compared to a full gutter replacement.</p>
+        <p>When we arrive, we inspect the full gutter system and give you an honest assessment of what's needed. We'll quote for repair and replacement where relevant so you can make an informed decision — with no pressure.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Full gutter system inspection on every visit</li>
+          <li><i class="fas fa-check"></i> Honest advice — repair if possible, replace if necessary</li>
+          <li><i class="fas fa-check"></i> Quote agreed before any work begins</li>
+          <li><i class="fas fa-check"></i> All repairs guaranteed</li>
+          <li><i class="fas fa-check"></i> PVC and aluminium gutters repaired</li>
+          <li><i class="fas fa-check"></i> Cast iron and older gutters also catered for</li>
+        </ul>
+        <a href="quote.html" class="btn btn-primary">Get a Free Repair Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Pricing</span>
+        <h2>Honest, Upfront Gutter Repair Pricing</h2>
+        <p>We agree the price before any work starts — no surprises on your bill</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;">
+        <div class="pricing-box">
+          <h3>Minor Repair</h3>
+          <p>Single joint, bracket or seal repair</p>
+          <div class="pricing-features">
+            <div class="pricing-feature"><i class="fas fa-check"></i> Joint reseal or replacement</div>
+            <div class="pricing-feature"><i class="fas fa-check"></i> Bracket replacement</div>
+            <div class="pricing-feature"><i class="fas fa-check"></i> Small section repair</div>
+            <div class="pricing-feature"><i class="fas fa-check"></i> Same-day available</div>
+          </div>
+          <a href="quote.html" class="btn btn-primary btn-full">Get Quote</a>
+        </div>
+        <div class="pricing-box" style="background: var(--yellow); ">
+          <h3 style="color: var(--grey-dark);">Section Repair</h3>
+          <p style="color: var(--grey-dark); opacity: 0.8;">One or more sections of gutter</p>
+          <div class="pricing-features">
+            <div class="pricing-feature" style="color: var(--grey-dark);"><i class="fas fa-check" style="color: var(--blue);"></i> Multiple joint repairs</div>
+            <div class="pricing-feature" style="color: var(--grey-dark);"><i class="fas fa-check" style="color: var(--blue);"></i> Section replacement</div>
+            <div class="pricing-feature" style="color: var(--grey-dark);"><i class="fas fa-check" style="color: var(--blue);"></i> Full realignment</div>
+            <div class="pricing-feature" style="color: var(--grey-dark);"><i class="fas fa-check" style="color: var(--blue);"></i> Flow test included</div>
+          </div>
+          <a href="quote.html" class="btn" style="background: var(--blue); color: white; width:100%; justify-content:center;">Get Quote</a>
+        </div>
+        <div class="pricing-box">
+          <h3>Full Repair</h3>
+          <p>Complete gutter system repair</p>
+          <div class="pricing-features">
+            <div class="pricing-feature"><i class="fas fa-check"></i> Full system inspection</div>
+            <div class="pricing-feature"><i class="fas fa-check"></i> All repairs completed</div>
+            <div class="pricing-feature"><i class="fas fa-check"></i> Alignment reset</div>
+            <div class="pricing-feature"><i class="fas fa-check"></i> Flow test & report</div>
+          </div>
+          <a href="quote.html" class="btn btn-primary btn-full">Get Quote</a>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top: 20px; color: var(--grey); font-size: 0.88rem;"><i class="fas fa-info-circle"></i> All prices quoted on-site after inspection. Every job is different — get a free quote for an accurate price.</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Reviews</span><h2>What Our Customers Say</h2></div>
+      <div class="reviews-grid">
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Had a leaking gutter corner causing damp in my hall. Called DublinGutter and they were out the same day. Fixed it in under an hour, clean job, fair price. Highly recommend."</p><div class="review-author"><div class="review-avatar">C</div><div><strong>Ciara T.</strong><span>Finglas</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Gutters were pulling away from the wall after the storms. They came out, replaced the brackets, realigned the whole run and sealed everything. Excellent work and very reasonable."</p><div class="review-author"><div class="review-avatar">B</div><div><strong>Brian K.</strong><span>Lucan</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Water was running down the side of my house. Turned out to be a cracked joint. DublinGutter repaired it quickly and cheaply. Would have cost a fortune if left any longer."</p><div class="review-author"><div class="review-avatar">N</div><div><strong>Niamh R.</strong><span>Swords</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">FAQ</span><h2>Gutter Repair Questions</h2></div>
+      <div class="faq-grid">
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How long does a gutter repair take? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Most minor repairs take 1–2 hours. More extensive repairs involving multiple sections may take a half day. We'll give you an accurate time estimate when we quote.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you repair all types of gutters? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we repair PVC, aluminium and cast iron gutters of all sizes and profiles. We carry a wide range of parts and fittings on our vans.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Will you try to sell me new gutters I don't need? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Never. We always repair where possible and only recommend replacement when it's genuinely the better option. We'll always give you both options and explain the pros and cons honestly.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is there a call-out fee? <i class="fas fa-plus"></i></button><div class="faq-a"><p>No call-out fee. We come out, inspect the gutters and give you a quote. You only pay if you proceed with the work.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you offer emergency same-day repairs? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we offer same-day emergency call-outs across all of Dublin at no extra charge. Call us and we'll do our best to get to you the same day.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are your repairs guaranteed? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes, all our repairs are fully guaranteed. If a repaired section fails, we'll come back and fix it at no charge.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div class="cta-text"><h2>Got a Gutter Problem?</h2><p>Get a free, no-obligation repair quote today. Same-day service available across Dublin.</p></div>
+      <div class="cta-actions">
+        <a href="tel:014851932" class="btn btn-white"><i class="fas fa-phone"></i> (01) 485 1932</a>
+        <a href="quote.html" class="btn btn-outline-white">Get Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER SERVICES -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Also Available</span><h2>Other Gutter Services</h2></div>
+      <div class="services-grid">
+        <a href="gutter-cleaning.html" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>Regular cleaning prevents blockages and damage. We clear all debris and check your full system.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="new-gutters.html" class="service-card"><div class="service-icon"><i class="fas fa-plus"></i></div><h3>New Gutters</h3><p>Full gutter replacement in PVC or aluminium. Multiple colours to suit your home.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="fascia-soffit.html" class="service-card"><div class="service-icon"><i class="fas fa-house-chimney"></i></div><h3>Fascia &amp; Soffit</h3><p>New uPVC fascia and soffit to transform your roofline and protect against water damage.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-light"><span class="logo-icon"><i class="fas fa-water"></i></span><div class="logo-text"><span class="logo-main">DublinGutter<span class="logo-dot">.ie</span></span><span class="logo-sub">Gutter Experts Dublin</span></div></a>
+        <p>Dublin's trusted gutter repair and replacement experts. Serving homeowners and businesses across Dublin for over 30 years.</p>
+        <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="gutter-repairs.html">Gutter Repairs</a></li><li><a href="gutter-cleaning.html">Gutter Cleaning</a></li><li><a href="new-gutters.html">New Gutters</a></li><li><a href="fascia-soffit.html">Fascia &amp; Soffit</a></li><li><a href="downpipes.html">Downpipes Repair</a></li><li><a href="commercial-guttering.html">Commercial Guttering</a></li></ul></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="near-me.html">Areas We Cover</a></li><li><a href="quote.html">Get a Free Quote</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i><a href="tel:014851932">(01) 485 1932</a></li><li><i class="fas fa-envelope"></i><a href="mailto:info@dublingutter.ie">info@dublingutter.ie</a></li><li><i class="fas fa-map-marker-alt"></i> Dublin &amp; Leinster</li><li><i class="fas fa-clock"></i> Mon–Sun: 7am–9pm</li></ul></div>
+    </div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2026 DublinGutter.ie — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
+  </footer>
+
+  <div class="float-ctas">
+    <a href="tel:014851932" class="float-btn float-phone"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/353014851932" class="float-btn float-whatsapp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', () => { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50); });
+    document.getElementById('hamburger').addEventListener('click', () => { document.getElementById('nav').classList.toggle('open'); document.getElementById('hamburger').classList.toggle('active'); });
+    function toggleFaq(btn) { const item = btn.parentElement; const isOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open')); if (!isOpen) item.classList.add('open'); }
+  </script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commercial Guttering Dublin | Business &amp; Industrial Gutter Services | DublinGutter.ie</title>
+  <meta name="description" content="Commercial guttering services across Dublin. Gutter repair, cleaning and replacement for offices, warehouses, schools and large buildings. Free quotes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .service-nav { background: var(--white); border-bottom: 2px solid var(--border); position: sticky; top: 72px; z-index: 900; }
+    .service-nav-inner { display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+    .service-nav-inner::-webkit-scrollbar { display: none; }
+    .service-nav-link { display: flex; align-items: center; gap: 8px; padding: 14px 20px; font-family: 'Poppins', sans-serif; font-size: 0.82rem; font-weight: 600; color: var(--grey); white-space: nowrap; border-bottom: 3px solid transparent; margin-bottom: -2px; text-decoration: none; transition: all var(--transition); }
+    .service-nav-link:hover { color: var(--blue); }
+    .service-nav-link.active { color: var(--yellow-dark); border-bottom-color: var(--yellow); }
+    .service-nav-link i { font-size: 0.85rem; }
+    .service-hero { background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%); padding: 60px 0; }
+    .service-hero-inner { display: grid; grid-template-columns: 1fr 380px; gap: 50px; align-items: center; }
+    .service-hero-content .breadcrumb { justify-content: flex-start; margin-bottom: 16px; }
+    .service-hero-content h1 { color: var(--white); font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom: 14px; }
+    .service-hero-content p { color: rgba(255,255,255,0.85); font-size: 1.05rem; margin-bottom: 24px; line-height: 1.7; }
+    .service-hero-bullets { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .service-hero-bullets li { display: flex; align-items: center; gap: 10px; color: var(--white); font-size: 0.95rem; }
+    .service-hero-bullets i { color: var(--yellow); }
+    .service-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .service-hero-form { background: var(--white); border-radius: var(--radius-lg); padding: 28px; }
+    .service-hero-form h3 { font-size: 1.15rem; color: var(--blue-dark); margin-bottom: 4px; }
+    .service-hero-form > p { font-size: 0.82rem; color: var(--grey); margin-bottom: 18px; }
+    .problems-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .problem-card { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 22px; display: flex; gap: 14px; align-items: flex-start; }
+    .problem-icon { width: 40px; height: 40px; background: var(--yellow-light); border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .problem-icon i { color: var(--yellow-dark); font-size: 1rem; }
+    .problem-card h4 { font-size: 0.9rem; color: var(--grey-dark); margin-bottom: 4px; }
+    .problem-card p { font-size: 0.82rem; color: var(--grey); line-height: 1.6; }
+    .content-split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; }
+    .content-split-img i { font-size: 6rem; color: var(--blue-light); }
+    .content-split-text h2 { font-size: 1.7rem; margin-bottom: 14px; }
+    .content-split-text p { color: var(--grey); margin-bottom: 14px; line-height: 1.75; }
+    .content-split-text ul { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
+    .content-split-text li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.92rem; color: var(--text); }
+    .content-split-text li i { color: var(--yellow-dark); margin-top: 3px; flex-shrink: 0; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-bottom: 16px; }
+    .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    @media (max-width: 1024px) {
+      .service-hero-inner { grid-template-columns: 1fr; }
+      .service-hero-form { display: none; }
+      .problems-grid { grid-template-columns: 1fr 1fr; }
+      .content-split { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .problems-grid { grid-template-columns: 1fr; }
+      .service-nav-link span { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span><i class="fas fa-phone"></i> (01) 485 1932</span>
+        <span><i class="fas fa-envelope"></i> info@dublingutter.ie</span>
+      </div>
+      <div class="topbar-right">
+        <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.9 Google Reviews</span>
+        <span><i class="fas fa-shield-halved"></i> Fully Insured</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fas fa-water"></i></span>
+        <div class="logo-text">
+          <span class="logo-main">DublinGutter<span class="logo-dot">.ie</span></span>
+          <span class="logo-sub">Gutter Experts Dublin</span>
+        </div>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="near-me.html" class="nav-link">Near Me</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <a href="quote.html" class="btn btn-primary header-cta">Get Free Quote</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- SERVICE NAV TABS -->
+  <nav class="service-nav">
+    <div class="container service-nav-inner">
+      <a href="gutter-repairs.html" class="service-nav-link"><i class="fas fa-wrench"></i> <span>Gutter Repairs</span></a>
+      <a href="gutter-cleaning.html" class="service-nav-link"><i class="fas fa-broom"></i> <span>Gutter Cleaning</span></a>
+      <a href="new-gutters.html" class="service-nav-link"><i class="fas fa-plus"></i> <span>New Gutters</span></a>
+      <a href="fascia-soffit.html" class="service-nav-link"><i class="fas fa-house-chimney"></i> <span>Fascia &amp; Soffit</span></a>
+      <a href="downpipes.html" class="service-nav-link"><i class="fas fa-arrows-down-to-line"></i> <span>Downpipes</span></a>
+      <a href="commercial-guttering.html" class="service-nav-link active"><i class="fas fa-building"></i> <span>Commercial</span></a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="service-hero">
+    <div class="container service-hero-inner">
+      <div class="service-hero-content">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="services.html">Services</a><span>/</span><span>Commercial Guttering</span></div>
+        <h1>Commercial Guttering Dublin</h1>
+        <p>We provide a full commercial guttering service for businesses, property managers and large-scale buildings across Dublin. From routine gutter maintenance to full system replacement, our experienced team handles jobs of all sizes.</p>
+        <ul class="service-hero-bullets">
+          <li><i class="fas fa-check-circle"></i> All commercial building types catered for</li>
+          <li><i class="fas fa-check-circle"></i> Planned maintenance contracts available</li>
+          <li><i class="fas fa-check-circle"></i> Fully insured for commercial work</li>
+          <li><i class="fas fa-check-circle"></i> Free site survey and quote</li>
+        </ul>
+        <div class="service-hero-ctas">
+          <a href="quote.html" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request Commercial Quote</a>
+          <a href="tel:014851932" class="btn btn-outline-white"><i class="fas fa-phone"></i> (01) 485 1932</a>
+        </div>
+      </div>
+      <div class="service-hero-form">
+        <h3>Commercial Enquiry</h3>
+        <p>We'll get back to you within 1 hour</p>
+        <form>
+          <div class="form-group"><label>Your Name</label><input type="text" placeholder="Full name" /></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="Your phone" /></div>
+          <div class="form-group"><label>Building / Site Address</label><input type="text" placeholder="Address or Eircode" /></div>
+          <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-building"></i> Send Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container trust-bar-inner">
+      <div class="trust-item"><i class="fas fa-bolt"></i><div><strong>Same-Day Available</strong><span>7 days a week</span></div></div>
+      <div class="trust-item"><i class="fas fa-hard-hat"></i><div><strong>30 Years Experience</strong><span>Trusted since 1994</span></div></div>
+      <div class="trust-item"><i class="fas fa-tag"></i><div><strong>Upfront Pricing</strong><span>No hidden charges</span></div></div>
+      <div class="trust-item"><i class="fab fa-google"></i><div><strong>188 Google Reviews</strong><span>Rated 4.9 / 5 stars</span></div></div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION (using problems-grid layout) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Commercial Guttering</span>
+        <h2>Commercial Guttering Services</h2>
+        <p>We work with all types of commercial and public buildings across Dublin and Leinster</p>
+      </div>
+      <div class="problems-grid">
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-building"></i></div><div><h4>Office Buildings</h4><p>Regular gutter maintenance for office blocks and commercial premises. We work around your business hours.</p></div></div>
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-warehouse"></i></div><div><h4>Warehouses &amp; Industrial</h4><p>Large-scale guttering for warehouses and industrial units. We handle all profiles including box gutters and parapet gutters.</p></div></div>
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-school"></i></div><div><h4>Schools &amp; Public Buildings</h4><p>Scheduled maintenance and repair for schools, community centres and public buildings across Dublin.</p></div></div>
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-church"></i></div><div><h4>Heritage &amp; Period Buildings</h4><p>Specialist repair and replacement for older buildings including cast iron gutter restoration and traditional profiles.</p></div></div>
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-city"></i></div><div><h4>Apartment Complexes</h4><p>Full guttering services for apartment blocks and residential developments. Service contracts available for property managers.</p></div></div>
+        <div class="problem-card"><div class="problem-icon"><i class="fas fa-store"></i></div><div><h4>Retail &amp; Hospitality</h4><p>Gutter cleaning, repair and replacement for shops, restaurants and hotels. Minimal disruption to your business.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT SPLIT -->
+  <section class="section section-light">
+    <div class="container content-split">
+      <div class="content-split-img"><i class="fas fa-city"></i></div>
+      <div class="content-split-text">
+        <span class="section-tag">Why Choose Us</span>
+        <h2>Why Choose DublinGutter for Commercial Work?</h2>
+        <p>Commercial guttering requires a different level of planning and expertise to residential work. We have 30 years of experience dealing with large-scale buildings and understand the requirements around access, timing and minimal disruption to business operations.</p>
+        <p>We're fully insured for commercial work and can provide all relevant documentation. Planned maintenance contracts are available for property managers and facilities teams who need regular, scheduled gutter maintenance.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Fully insured for commercial guttering</li>
+          <li><i class="fas fa-check"></i> Work planned around your business hours</li>
+          <li><i class="fas fa-check"></i> All access equipment provided</li>
+          <li><i class="fas fa-check"></i> Full written reports after each visit</li>
+          <li><i class="fas fa-check"></i> Planned maintenance contracts available</li>
+          <li><i class="fas fa-check"></i> Experience with all building types and sizes</li>
+          <li><i class="fas fa-check"></i> Competitive rates for ongoing contracts</li>
+        </ul>
+        <a href="quote.html" class="btn btn-primary">Request a Commercial Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Reviews</span><h2>What Our Customers Say</h2></div>
+      <div class="reviews-grid">
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"We use DublinGutter for all our commercial properties in Dublin. They're reliable, professional and always provide a detailed report after every visit. Exactly what you want from a maintenance contractor."</p><div class="review-author"><div class="review-avatar">J</div><div><strong>James T.</strong><span>Property Manager, Dublin 2</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Had gutters replaced on a large warehouse in west Dublin. The team were very organised, had all the equipment needed and completed the job with no disruption to our operations. Would use again without hesitation."</p><div class="review-author"><div class="review-avatar">C</div><div><strong>Colm F.</strong><span>Facilities Manager, Clondalkin</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"DublinGutter have been maintaining the gutters on our school for the past three years. Always on time, always thorough and the price is always fair. Highly recommended for any school or public building."</p><div class="review-author"><div class="review-avatar">B</div><div><strong>Brian M.</strong><span>School Principal, North Dublin</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">FAQ</span><h2>Commercial Guttering Questions</h2></div>
+      <div class="faq-grid">
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you offer maintenance contracts for commercial properties? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we offer planned maintenance contracts for property managers, facilities managers and commercial landlords. We schedule regular cleaning and inspections and provide written reports after every visit.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you insured for commercial work? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes, we carry full public liability insurance for commercial guttering work and can provide all relevant documentation on request.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you work outside business hours? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we can schedule commercial work early mornings, evenings or weekends to minimise disruption to your business.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you handle large-scale rooflines? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes, we have experience with large-scale buildings including churches, warehouses and multi-storey commercial properties. We bring all necessary access equipment.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you provide a written quote and report? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — all commercial quotes are provided in writing, and we issue a full written report after every maintenance visit.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What areas do you cover for commercial work? <i class="fas fa-plus"></i></button><div class="faq-a"><p>We cover all of Dublin and surrounding Leinster counties for commercial guttering work.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div class="cta-text"><h2>Looking for a Commercial Guttering Partner?</h2><p>Get in touch for a free site survey and quote. Maintenance contracts available for ongoing work.</p></div>
+      <div class="cta-actions">
+        <a href="tel:014851932" class="btn btn-white"><i class="fas fa-phone"></i> (01) 485 1932</a>
+        <a href="quote.html" class="btn btn-outline-white">Request Commercial Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER SERVICES -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Also Available</span><h2>Other Gutter Services</h2></div>
+      <div class="services-grid">
+        <a href="gutter-repairs.html" class="service-card"><div class="service-icon"><i class="fas fa-wrench"></i></div><h3>Gutter Repairs</h3><p>Fast, affordable gutter repairs for commercial and residential properties across Dublin.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="gutter-cleaning.html" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>Scheduled gutter cleaning for commercial properties — full system clean and written inspection report.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="new-gutters.html" class="service-card"><div class="service-icon"><i class="fas fa-plus"></i></div><h3>New Gutters</h3><p>New gutter systems for commercial buildings. All profiles and sizes, supply and fit included.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-light"><span class="logo-icon"><i class="fas fa-water"></i></span><div class="logo-text"><span class="logo-main">DublinGutter<span class="logo-dot">.ie</span></span><span class="logo-sub">Gutter Experts Dublin</span></div></a>
+        <p>Dublin's trusted gutter repair and replacement experts. Serving homeowners and businesses across Dublin for over 30 years.</p>
+        <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="gutter-repairs.html">Gutter Repairs</a></li><li><a href="gutter-cleaning.html">Gutter Cleaning</a></li><li><a href="new-gutters.html">New Gutters</a></li><li><a href="fascia-soffit.html">Fascia &amp; Soffit</a></li><li><a href="downpipes.html">Downpipes Repair</a></li><li><a href="commercial-guttering.html">Commercial Guttering</a></li></ul></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="near-me.html">Areas We Cover</a></li><li><a href="quote.html">Get a Free Quote</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i><a href="tel:014851932">(01) 485 1932</a></li><li><i class="fas fa-envelope"></i><a href="mailto:info@dublingutter.ie">info@dublingutter.ie</a></li><li><i class="fas fa-map-marker-alt"></i> Dublin &amp; Leinster</li><li><i class="fas fa-clock"></i> Mon–Sun: 7am–9pm</li></ul></div>
+    </div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2026 DublinGutter.ie — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
+  </footer>
+
+  <div class="float-ctas">
+    <a href="tel:014851932" class="float-btn float-phone"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/353014851932" class="float-btn float-whatsapp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', () => { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50); });
+    document.getElementById('hamburger').addEventListener('click', () => { document.getElementById('nav').classList.toggle('open'); document.getElementById('hamburger').classList.toggle('active'); });
+    function toggleFaq(btn) { const item = btn.parentElement; const isOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open')); if (!isOpen) item.classList.add('open'); }
+  </script>
+</body>
+</html>
