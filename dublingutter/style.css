@@ -100,7 +100,7 @@ ul { list-style: none; }
 .hero {
   position: relative;
   background-color: var(--blue-dark);
-  background-image: url('images/gutter repairs near me Dublin - hero-bg.png');
+  background-image: url('images/hero-bg.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
