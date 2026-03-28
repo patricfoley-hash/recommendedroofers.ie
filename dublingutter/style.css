@@ -267,7 +267,8 @@ ul { list-style: none; }
 .float-ctas { position: fixed; bottom: 28px; right: 24px; z-index: 999; display: flex; flex-direction: column; gap: 12px; }
 .float-btn { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; box-shadow: 0 4px 16px rgba(0,0,0,0.25); transition: transform var(--transition); color: var(--white); }
 .float-btn:hover { transform: scale(1.1); color: var(--white); }
-.float-phone { background: var(--blue); }
+.float-phone { background: var(--yellow); color: var(--grey-dark); }
+.float-phone:hover { color: var(--grey-dark); }
 .float-whatsapp { background: #25D366; }
 
 /* ---- PAGE HERO (inner pages) ---- */
