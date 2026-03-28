@@ -16,18 +16,19 @@
     fill="#1E40AF"
     letter-spacing="-0.3">Recommended</text>
 
-  <!-- "ROOFING & GUTTERING" — centred under "Recommended" -->
+  <!-- "ROOFING & GUTTERING" — stretched to match "Recommended" width -->
   <text
-    x="115" y="62"
-    text-anchor="middle"
+    x="4" y="62"
+    text-anchor="start"
     font-family="'Poppins', 'Segoe UI', Arial, sans-serif"
     font-weight="600"
     font-size="13.5"
-    fill="#475569"
-    letter-spacing="2.6">ROOFING &amp; GUTTERING</text>
+    fill="#F59E0B"
+    textLength="222"
+    lengthAdjust="spacing">ROOFING &amp; GUTTERING</text>
 
-  <!-- Yellow accent underline — matches width of "Recommended" -->
+  <!-- Black accent underline — matches width of "Recommended" -->
   <rect x="4" y="69" width="222" height="3" rx="1.5"
-    fill="#F59E0B"/>
+    fill="#000000"/>
 
 </svg>
