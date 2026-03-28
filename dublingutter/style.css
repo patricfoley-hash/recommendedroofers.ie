@@ -185,7 +185,7 @@ ul { list-style: none; }
 .why-point h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 3px; }
 .why-point p { color: rgba(255,255,255,0.75); font-size: 0.88rem; }
 .why-img-wrap { background: rgba(255,255,255,0.08); border-radius: var(--radius-lg); aspect-ratio: 4/3; position: relative; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.15); overflow: hidden; }
-.why-img-wrap::before { content: '\f015'; font-family: 'Font Awesome 6 Free'; font-weight: 900; font-size: 5rem; color: rgba(255,255,255,0.1); }
+.why-img-wrap::before { content: ''; }
 .why-badge { position: absolute; bottom: 20px; right: 20px; background: var(--white); border-radius: 12px; padding: 14px 18px; text-align: center; box-shadow: var(--shadow); }
 .badge-num { display: block; font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 800; color: var(--yellow-dark); line-height: 1; }
 .badge-text { display: block; font-size: 0.75rem; color: var(--grey); font-weight: 600; margin-top: 2px; }
