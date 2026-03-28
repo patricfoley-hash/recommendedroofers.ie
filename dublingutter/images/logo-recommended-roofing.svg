@@ -27,8 +27,5 @@
     textLength="222"
     lengthAdjust="spacing">ROOFING &amp; GUTTERING</text>
 
-  <!-- Black accent underline — matches width of "Recommended" -->
-  <rect x="4" y="69" width="222" height="3" rx="1.5"
-    fill="#000000"/>
 
 </svg>
