@@ -129,6 +129,7 @@ ul { list-style: none; }
 /* Hero Form */
 .hero-form-wrap { display: flex; justify-content: center; }
 .hero-form-card { background: var(--white); border-radius: var(--radius-lg); padding: 0; box-shadow: var(--shadow-lg); width: 100%; max-width: 420px; overflow: hidden; }
+.hero-form-card .form-header { padding: 24px 24px 18px; border-bottom: 1px solid var(--border); }
 .form-header { text-align: center; margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 18px; }
 .form-header h3 { font-size: 1.3rem; color: var(--blue-dark); margin-bottom: 4px; }
 .form-header p { font-size: 0.85rem; color: var(--grey); }
