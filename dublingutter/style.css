@@ -102,7 +102,7 @@ ul { list-style: none; }
   background-color: var(--blue-dark);
   background-image: url('images/hero-bg.png');
   background-size: cover;
-  background-position: 72% center;
+  background-position: 65% center;
   background-repeat: no-repeat;
   min-height: 680px; display: flex; align-items: center; overflow: hidden;
 }
@@ -376,6 +376,8 @@ ul { list-style: none; }
   .team-grid { grid-template-columns: 1fr; }
   /* Badge spacing from header */
   .hero-inner { padding-top: 48px; }
+  /* Shift hero image right on mobile to show face */
+  .hero { background-position: 40% center; }
   /* Phone CTA button yellow on mobile */
   .hero-ctas .btn-white { background: var(--yellow); color: var(--grey-dark); border-color: var(--yellow-dark); }
   .hero-ctas .btn-white:hover { background: var(--yellow-dark); border-color: var(--yellow-dark); }
