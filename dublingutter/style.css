@@ -176,6 +176,15 @@ ul { list-style: none; }
 .service-card p { font-size: 0.88rem; color: var(--grey); line-height: 1.6; flex: 1; }
 .service-link { margin-top: 14px; font-size: 0.85rem; font-weight: 600; color: var(--yellow-dark); font-family: 'Poppins', sans-serif; display: flex; align-items: center; gap: 6px; }
 
+/* Photo variant — opt-in, so plain .service-card elsewhere is untouched */
+.service-card.has-photo { padding: 0; overflow: hidden; }
+.service-photo { position: relative; aspect-ratio: 16 / 10; background: var(--blue-xlight); overflow: hidden; }
+.service-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--transition); }
+.service-card.has-photo:hover .service-photo img { transform: scale(1.05); }
+.service-card.has-photo .service-icon { position: absolute; top: -26px; left: 24px; margin-bottom: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.18); }
+.service-card.has-photo .service-body { position: relative; padding: 38px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+.service-card.has-photo .service-body p { flex: 1; }
+
 /* ---- WHY US ---- */
 .why-inner { display: grid; grid-template-columns: 1fr 0.8fr; gap: 60px; align-items: center; }
 .why-points { display: flex; flex-direction: column; gap: 24px; margin: 28px 0 36px; }
@@ -286,8 +295,9 @@ ul { list-style: none; }
 .service-detail:last-child { border-bottom: none; }
 .service-detail.reverse { direction: rtl; }
 .service-detail.reverse > * { direction: ltr; }
-.service-detail-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; }
+.service-detail-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .service-detail-img i { font-size: 5rem; color: var(--blue-light); }
+.service-detail-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .service-detail-content h2 { font-size: 1.7rem; margin-bottom: 14px; }
 .service-detail-content p { color: var(--grey); margin-bottom: 14px; line-height: 1.75; }
 .service-detail-content ul { margin: 14px 0 24px; display: flex; flex-direction: column; gap: 8px; }
