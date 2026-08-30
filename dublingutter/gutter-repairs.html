@@ -38,8 +38,9 @@
     .problem-card h4 { font-size: 0.9rem; color: var(--grey-dark); margin-bottom: 4px; }
     .problem-card p { font-size: 0.82rem; color: var(--grey); line-height: 1.6; }
     .content-split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; }
+    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 16/9; overflow: hidden; display: flex; align-items: center; justify-content: center; }
     .content-split-img i { font-size: 6rem; color: var(--blue-light); }
+    .content-split-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .content-split-text h2 { font-size: 1.7rem; margin-bottom: 14px; }
     .content-split-text p { color: var(--grey); margin-bottom: 14px; line-height: 1.75; }
     .content-split-text ul { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
@@ -172,7 +173,7 @@
   <!-- REPAIR VS REPLACE -->
   <section class="section section-light">
     <div class="container content-split">
-      <div class="content-split-img"><i class="fas fa-wrench"></i></div>
+      <div class="content-split-img"><img src="/images/services/gutter-repairs-dublin.webp" alt="Gutters and roofline on a modern Dublin home after repair" width="1200" height="675" loading="lazy" decoding="async" /></div>
       <div class="content-split-text">
         <span class="section-tag">Our Approach</span>
         <h2>We Always Repair Before Replacing</h2>
