@@ -72,7 +72,7 @@ SERVICES = [
 ]
 
 HEAD_CSS = """  <style>
-    .service-hero { background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%); padding: 60px 0; }
+    .service-hero { padding: 60px 0; }   /* background lives in style.css */
     .service-hero-inner { display: grid; grid-template-columns: 1fr 380px; gap: 50px; align-items: center; }
     .service-hero-content .breadcrumb { justify-content: flex-start; margin-bottom: 16px; }
     .service-hero-content h1 { color: var(--white); font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom: 14px; }
