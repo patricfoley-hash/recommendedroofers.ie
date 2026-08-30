@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://dublingutter.ie/gutter-services-city-centre" />
-  <title>Gutter Services City Centre | Repairs, Cleaning &amp; New Gutters | Recommended Roofing &amp; Guttering</title>
-  <meta name="description" content="Gutter and cast iron repairs, cleaning and replacement in Dublin city centre. Period and commercial buildings across D1, D2, the Docklands &amp; Stoneybatter. Free quotes, upfront pricing." />
+  <title>Gutter Services Dublin City Centre (Dublin 1 & 2) | Repairs, Cleaning &amp; New Gutters | Recommended Roofing &amp; Guttering</title>
+  <meta name="description" content="Gutter repairs, cleaning and replacement in Dublin City Centre, Dublin 1 &amp; 2. Same-day call-outs across Phibsborough, Fairview, Ballsbridge, Ringsend. Free quotes, upfront pricing." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -23,15 +23,21 @@
     .service-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
     .service-hero-form { background: var(--white); border-radius: var(--radius-lg); padding: 14px; }
     .content-split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .content-split-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .content-split-text h2 { font-size: 1.7rem; margin-bottom: 14px; }
     .content-split-text p { color: var(--grey); margin-bottom: 14px; line-height: 1.75; }
     .content-split-text ul { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
     .content-split-text li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.92rem; color: var(--text); }
     .content-split-text li i { color: var(--yellow-dark); margin-top: 3px; flex-shrink: 0; }
     .local-areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
-    .local-area { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; font-weight: 600; color: var(--grey-dark); }
+    .local-area { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
+    a.local-area:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); box-shadow: var(--shadow); }
     .local-area i { color: var(--blue); }
+    .nearby-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .nearby-link { display: inline-flex; align-items: center; gap: 7px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; padding: 9px 16px; font-size: 0.88rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
+    .nearby-link:hover { border-color: var(--blue); color: var(--blue); }
+    .nearby-link i { color: var(--yellow-dark); font-size: 0.8rem; }
     @media (max-width: 1024px) {
       .service-hero-inner { grid-template-columns: 1fr; }
       .content-split { grid-template-columns: 1fr; }
@@ -40,23 +46,47 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Recommended Roofing & Guttering — City Centre",
-    "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
-    "url": "https://dublingutter.ie/gutter-services-city-centre",
-    "telephone": "+35312339526",
-    "email": "info@recommendedroofing.ie",
-    "priceRange": "€€",
-    "address": { "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" },
-    "areaServed": [
-      { "@type": "Place", "name": "City Centre, Dublin 1 & 2" },
-      { "@type": "Place", "name": "Docklands" },
+    "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Recommended Roofing & Guttering — Dublin City Centre",
+      "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
+      "url": "https://dublingutter.ie/gutter-services-city-centre",
+      "telephone": "+35312339526",
+      "email": "info@recommendedroofing.ie",
+      "priceRange": "€€",
+      "address": { "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" },
+      "areaServed": [
+      { "@type": "Place", "name": "Dublin City Centre (Dublin 1 &amp; 2)" },
+      { "@type": "Place", "name": "Phibsborough" },
+      { "@type": "Place", "name": "Fairview" },
+      { "@type": "Place", "name": "Ballsbridge" },
+      { "@type": "Place", "name": "Ringsend" },
       { "@type": "Place", "name": "Smithfield" },
-      { "@type": "Place", "name": "Stoneybatter" },
-      { "@type": "Place", "name": "North Wall" },
-      { "@type": "Place", "name": "IFSC" }
-    ],
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }
+      { "@type": "Place", "name": "Stoneybatter" }
+      ],
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dublingutter.ie/" },
+        { "@type": "ListItem", "position": 2, "name": "Areas We Cover", "item": "https://dublingutter.ie/near-me" },
+        { "@type": "ListItem", "position": 3, "name": "North Dublin", "item": "https://dublingutter.ie/gutter-services-north-dublin" },
+        { "@type": "ListItem", "position": 4, "name": "Dublin City Centre", "item": "https://dublingutter.ie/gutter-services-city-centre" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+      { "@type": "Question", "name": "Do you cover all of Dublin City Centre?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we cover Dublin City Centre and the surrounding areas including Phibsborough, Fairview, Ballsbridge, Ringsend. If you're nearby and unsure, just give us a call." } },
+      { "@type": "Question", "name": "Can you come out same-day in Dublin City Centre?", "acceptedAnswer": { "@type": "Answer", "text": "For anything urgent we'll do our best to get there the same day. There's no premium for an emergency call-out in Dublin City Centre." } },
+      { "@type": "Question", "name": "How much does a gutter repair cost?", "acceptedAnswer": { "@type": "Answer", "text": "Every job is different, so we quote on-site after a quick inspection. There's no call-out fee and the price is agreed upfront before any work begins — no surprises on the bill." } },
+      { "@type": "Question", "name": "What causes most gutter problems in Dublin City Centre?", "acceptedAnswer": { "@type": "Answer", "text": "Almost nothing here is a simple pitched roof with a gutter on the front. It's parapet gutters, valley gutters, hoppers and cast iron downpipes running down shared party walls — work that needs proper access equipment and someone who has done it before." } },
+      { "@type": "Question", "name": "Are you insured and is the work guaranteed?", "acceptedAnswer": { "@type": "Answer", "text": "We carry full public liability insurance and guarantee our work. Paperwork is available on request before we start." } }
+      ]
+    }
+    ]
   }
   </script>
 </head>
@@ -82,6 +112,7 @@
         <a href="/" class="nav-link">Home</a>
         <a href="/services" class="nav-link">Services</a>
         <a href="/near-me" class="nav-link active">Near Me</a>
+        <a href="/blog" class="nav-link">Blog</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/contact" class="nav-link">Contact</a>
       </nav>
@@ -93,14 +124,14 @@
   <section class="service-hero">
     <div class="container service-hero-inner">
       <div class="service-hero-content">
-        <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/near-me">Near Me</a><span>/</span><span>City Centre</span></div>
-        <h1>Gutter Services in City Centre, Dublin 1 &amp; 2</h1>
-        <p>Local gutter repair, cleaning and replacement for homes and businesses across City Centre and the wider Dublin city centre area. Our mobile teams know the local roads well and can often be with you the same day — with an upfront price agreed before any work starts.</p>
+        <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/near-me">Areas</a><span>/</span><a href="/gutter-services-north-dublin">North Dublin</a><span>/</span><span>Dublin City Centre</span></div>
+        <h1>Gutter Services in Dublin City Centre, Dublin 1 &amp; 2</h1>
+        <p>Straightforward gutter work in Dublin City Centre — repairs, cleaning, downpipes, fascia and soffit, and full replacements. Free quotes, a price agreed up front, and a guarantee on everything we do.</p>
         <ul class="service-hero-bullets">
-          <li><i class="fas fa-check-circle"></i> Same-day call-outs across City Centre &amp; Dublin city centre</li>
-          <li><i class="fas fa-check-circle"></i> Upfront price agreed before work starts</li>
-          <li><i class="fas fa-check-circle"></i> 30 years of gutter experience in Dublin city centre</li>
-          <li><i class="fas fa-check-circle"></i> Fully insured &amp; guaranteed work</li>
+          <li><i class="fas fa-check-circle"></i> Fast response throughout Dublin City Centre</li>
+          <li><i class="fas fa-check-circle"></i> You'll know the price before we begin</li>
+          <li><i class="fas fa-check-circle"></i> We fix the cause, not just the symptom</li>
+          <li><i class="fas fa-check-circle"></i> Guaranteed work — if it fails, we come back</li>
         </ul>
         <div class="service-hero-ctas">
           <a href="/quote" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get Free Quote</a>
@@ -113,17 +144,12 @@
             style="width:100%;height:493px;border:none;border-radius:var(--radius-lg)"
             id="inline-b3qFYv3eyajJCp7nJblw"
             data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Quotation Form"
-            data-height="493"
+            data-trigger-type="alwaysShow" data-trigger-value=""
+            data-activation-type="alwaysActivated" data-activation-value=""
+            data-deactivation-type="neverDeactivate" data-deactivation-value=""
+            data-form-name="Quotation Form" data-height="493"
             data-layout-iframe-id="inline-b3qFYv3eyajJCp7nJblw"
-            data-form-id="b3qFYv3eyajJCp7nJblw"
-            title="Quotation Form">
+            data-form-id="b3qFYv3eyajJCp7nJblw" title="Quotation Form">
           </iframe>
           <script src="https://api.twolabsleadgen.com/js/form_embed.js"></script>
       </div>
@@ -143,18 +169,18 @@
     <div class="container content-split">
       <div class="content-split-text">
         <span class="section-tag">Your Local Gutter Team</span>
-        <h2>Trusted Gutter Specialists in City Centre</h2>
-        <p>Dublin's city centre is full of period and Georgian buildings, from the red-brick terraces of Stoneybatter and the north inner city to the offices and apartments around the Docklands. Many still run original cast iron gutters that need specialist care.</p>
-        <p>Older city-centre buildings and tight terraces bring their own challenges — cast iron repairs, awkward access and shared rooflines. We've decades of experience working on exactly these properties, residential and commercial alike.</p>
+        <h2>Trusted Gutter Specialists in Dublin City Centre</h2>
+        <p>The city centre is Georgian terraces, Victorian commercial buildings and modern apartment blocks, much of it protected structures and almost all of it terraced or shared.</p>
+        <p>Almost nothing here is a simple pitched roof with a gutter on the front. It's parapet gutters, valley gutters, hoppers and cast iron downpipes running down shared party walls — work that needs proper access equipment and someone who has done it before.</p>
         <ul>
-          <li><i class="fas fa-check"></i> We cover City Centre and all the surrounding areas</li>
-          <li><i class="fas fa-check"></i> Honest advice — we repair before we replace</li>
-          <li><i class="fas fa-check"></i> No call-out fee and no obligation to proceed</li>
-          <li><i class="fas fa-check"></i> Tidy work and full clean-up when we're done</li>
+          <li><i class="fas fa-check"></i> Familiar with the housing stock right across Dublin City Centre</li>
+          <li><i class="fas fa-check"></i> Straight answers about what needs doing and what doesn't</li>
+          <li><i class="fas fa-check"></i> Fixed pricing agreed in advance</li>
+          <li><i class="fas fa-check"></i> Fully insured for your peace of mind</li>
         </ul>
         <a href="/quote" class="btn btn-primary">Get a Free Quote</a>
       </div>
-      <div class="content-split-img"><img src="images/gutter-cleaning.webp" alt="Gutter repair and installation in City Centre, Dublin 1 &amp; 2" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div class="content-split-img"><img src="/images/services/gutter-cleaning-dublin.webp" alt="Gutter cleaning and clearing on a Dublin house in Dublin City Centre" width="1200" height="675" loading="lazy" decoding="async" /></div>
     </div>
   </section>
 
@@ -162,16 +188,16 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Our Services</span>
-        <h2>Gutter Services We Offer in City Centre</h2>
-        <p>Our full range of gutter services is available right across City Centre and nearby</p>
+        <h2>Gutter Services We Offer in Dublin City Centre</h2>
+        <p>Our full range of gutter services is available right across Dublin City Centre and nearby</p>
       </div>
       <div class="services-grid">
-        <a href="/gutter-repairs" class="service-card"><div class="service-icon"><i class="fas fa-wrench"></i></div><h3>Gutter Repairs</h3><p>Leaking joints, sagging runs and loose brackets repaired fast across City Centre. Same-day available.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/gutter-cleaning" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>Leaves and moss block gutters fast around City Centre. We clear and flush the full system.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/new-gutters" class="service-card"><div class="service-icon"><i class="fas fa-plus"></i></div><h3>New Gutters</h3><p>Full PVC or aluminium gutter replacement in a range of colours to match your City Centre home.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/gutter-repairs" class="service-card"><div class="service-icon"><i class="fas fa-wrench"></i></div><h3>Gutter Repairs</h3><p>Most gutter faults in Dublin City Centre are a repair, not a replacement. We'll tell you honestly which yours is.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/gutter-cleaning" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>A blocked gutter is how water gets behind a fascia. We clear Dublin City Centre gutters before that happens.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/new-gutters" class="service-card"><div class="service-icon"><i class="fas fa-plus"></i></div><h3>New Gutters</h3><p>Full PVC or aluminium gutter replacement in a range of colours to match your Dublin City Centre home.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
         <a href="/fascia-soffit" class="service-card"><div class="service-icon"><i class="fas fa-house-chimney"></i></div><h3>Fascia &amp; Soffit</h3><p>New uPVC fascia and soffit to smarten your roofline and stop water getting behind the gutter.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/downpipes" class="service-card"><div class="service-icon"><i class="fas fa-arrows-down-to-line"></i></div><h3>Downpipes</h3><p>Blocked, detached or damaged downpipes cleared, resecured or replaced anywhere in City Centre.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/commercial-guttering" class="service-card"><div class="service-icon"><i class="fas fa-building"></i></div><h3>Commercial Guttering</h3><p>Gutter services for shops, schools, offices and apartment blocks across City Centre.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/downpipes" class="service-card"><div class="service-icon"><i class="fas fa-arrows-down-to-line"></i></div><h3>Downpipes</h3><p>Undersized downpipes are behind a lot of Dublin City Centre overflow problems. We size and fit them properly.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/commercial-guttering" class="service-card"><div class="service-icon"><i class="fas fa-building"></i></div><h3>Commercial Guttering</h3><p>Industrial and commercial roofs need a different approach to a house. We do both across Dublin City Centre.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
       </div>
     </div>
   </section>
@@ -180,50 +206,72 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Local Coverage</span>
-        <h2>Areas We Cover Around City Centre</h2>
+        <h2>Areas We Cover Around Dublin City Centre</h2>
         <p>If you're in or near any of these areas, we can help</p>
       </div>
       <div class="local-areas">
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Docklands</div>
+        <a href="/gutter-services-phibsborough" class="local-area"><i class="fas fa-map-marker-alt"></i> Phibsborough</a>
+        <a href="/gutter-services-fairview" class="local-area"><i class="fas fa-map-marker-alt"></i> Fairview</a>
+        <a href="/gutter-services-ballsbridge" class="local-area"><i class="fas fa-map-marker-alt"></i> Ballsbridge</a>
+        <a href="/gutter-services-ringsend" class="local-area"><i class="fas fa-map-marker-alt"></i> Ringsend</a>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Smithfield</div>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Stoneybatter</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> North Wall</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> IFSC</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Christchurch</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Portobello</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Grand Canal Dock</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> The Liberties</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Docklands</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Grand Canal</div>
       </div>
-      <p class="areas-note" style="margin-top: 28px;">Not sure if we reach you? <a href="/contact">Contact us</a> — we cover all of Dublin 1 &amp; 2 and the surrounding area.</p>
+      <p class="areas-note" style="margin-top: 28px;">Not sure if we reach you? <a href="/contact">Contact us</a> — we cover Dublin City Centre and all of North Dublin.</p>
     </div>
   </section>
 
   <section class="section section-light">
     <div class="container">
-      <div class="section-header"><span class="section-tag">Reviews</span><h2>What City Centre Customers Say</h2></div>
+      <div class="section-header"><span class="section-tag">Reviews</span><h2>What Dublin City Centre Customers Say</h2></div>
       <div class="reviews-grid">
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Repaired original cast iron gutters on a period terrace. Sympathetic, skilled work."</p><div class="review-author"><div class="review-avatar">C</div><div><strong>Conor M.</strong><span>Stoneybatter</span></div></div></div>
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Sorted guttering on an apartment block quickly and professionally. Good communication throughout."</p><div class="review-author"><div class="review-avatar">D</div><div><strong>David P.</strong><span>Docklands</span></div></div></div>
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Reliable commercial gutter maintenance for our office. Always tidy and on time."</p><div class="review-author"><div class="review-avatar">R</div><div><strong>Rónán K.</strong><span>Dublin 2</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Georgian building, parapet gutter, protected structure. They knew what they were dealing with.&rdquo;</p><div class="review-author"><div class="review-avatar">B</div><div><strong>Building Manager</strong><span>Dublin 2</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Cast iron downpipe on a shared wall. Coordinated with the neighbouring owner and got it done.&rdquo;</p><div class="review-author"><div class="review-avatar">O</div><div><strong>Owner</strong><span>Dublin 1</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Proper access equipment and full insurance paperwork without me having to ask.&rdquo;</p><div class="review-author"><div class="review-avatar">F</div><div><strong>Facilities Mgr</strong><span>Docklands</span></div></div></div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="section-header"><span class="section-tag">FAQ</span><h2>City Centre Gutter Questions</h2></div>
+      <div class="section-header"><span class="section-tag">FAQ</span><h2>Dublin City Centre Gutter Questions</h2></div>
       <div class="faq-grid">
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you cover all of City Centre? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we cover City Centre and the surrounding areas including Docklands, Smithfield, Stoneybatter, North Wall, IFSC. If you're nearby and unsure, just give us a call.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you come out same-day in City Centre? <i class="fas fa-plus"></i></button><div class="faq-a"><p>In most cases, yes. We run mobile teams across Dublin city centre, so for urgent leaks or storm damage we can usually get to you the same day at no extra charge.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you cover all of Dublin City Centre? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we cover Dublin City Centre and the surrounding areas including Phibsborough, Fairview, Ballsbridge, Ringsend. If you're nearby and unsure, just give us a call.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you come out same-day in Dublin City Centre? <i class="fas fa-plus"></i></button><div class="faq-a"><p>For anything urgent we'll do our best to get there the same day. There's no premium for an emergency call-out in Dublin City Centre.</p></div></div>
         <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does a gutter repair cost? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Every job is different, so we quote on-site after a quick inspection. There's no call-out fee and the price is agreed upfront before any work begins — no surprises on the bill.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Will you try to sell me new gutters I don't need? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Never. We always repair where possible and only recommend replacement when it's genuinely the better option. You'll get both options explained honestly.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you insured and is the work guaranteed? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we're fully insured and all our work is guaranteed. If a repaired section fails, we'll come back and put it right at no charge.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What causes most gutter problems in Dublin City Centre? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Almost nothing here is a simple pitched roof with a gutter on the front. It's parapet gutters, valley gutters, hoppers and cast iron downpipes running down shared party walls — work that needs proper access equipment and someone who has done it before.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you insured and is the work guaranteed? <i class="fas fa-plus"></i></button><div class="faq-a"><p>We carry full public liability insurance and guarantee our work. Paperwork is available on request before we start.</p></div></div>
       </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nearby</span>
+        <h2>Gutter Services Near Dublin City Centre</h2>
+        <p>We work right across North Dublin — here are the areas closest to Dublin City Centre</p>
+      </div>
+      <div class="nearby-links">
+        <a href="/gutter-services-phibsborough" class="nearby-link"><i class="fas fa-location-dot"></i> Phibsborough</a>
+        <a href="/gutter-services-fairview" class="nearby-link"><i class="fas fa-location-dot"></i> Fairview</a>
+        <a href="/gutter-services-ballsbridge" class="nearby-link"><i class="fas fa-location-dot"></i> Ballsbridge</a>
+        <a href="/gutter-services-ringsend" class="nearby-link"><i class="fas fa-location-dot"></i> Ringsend</a>
+        <a href="/gutter-services-swords" class="nearby-link"><i class="fas fa-location-dot"></i> Swords</a>
+        <a href="/gutter-services-malahide" class="nearby-link"><i class="fas fa-location-dot"></i> Malahide</a>
+        <a href="/gutter-services-portmarnock" class="nearby-link"><i class="fas fa-location-dot"></i> Portmarnock</a>
+        <a href="/gutter-services-howth" class="nearby-link"><i class="fas fa-location-dot"></i> Howth</a>
+      </div>
+      <p class="areas-note" style="margin-top: 28px;">See every area we cover in <a href="/gutter-services-north-dublin">North Dublin</a>, or browse <a href="/near-me">all Dublin areas</a>.</p>
     </div>
   </section>
 
   <section class="cta-banner">
     <div class="container cta-inner">
-      <div class="cta-text"><h2>Need a Gutter Expert in City Centre?</h2><p>Get a free, no-obligation quote today. Same-day service available across Dublin 1 &amp; 2.</p></div>
+      <div class="cta-text"><h2>Need a Gutter Expert in Dublin City Centre?</h2><p>Free quote, fixed price, no call-out fee. We're working across Dublin City Centre every day of the week.</p></div>
       <div class="cta-actions">
         <a href="tel:012339526" class="btn btn-white"><i class="fas fa-phone"></i> (01) 233 9526</a>
         <a href="/quote" class="btn btn-outline-white">Get Free Quote</a>
@@ -232,7 +280,7 @@
   </section>
 
   <section class="map-section">
-    <iframe src="https://www.google.com/maps?q=Dublin%20City%20Centre%2C%20Ireland&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="City Centre, Dublin 1 &amp; 2"></iframe>
+    <iframe src="https://www.google.com/maps?q=Dublin+City+Centre%2C+Dublin%2C+Ireland&amp;output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dublin City Centre"></iframe>
   </section>
 
   <footer class="footer">
@@ -243,10 +291,10 @@
         <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
       </div>
       <div class="footer-col"><h4>Services</h4><ul><li><a href="/gutter-repairs">Gutter Repairs</a></li><li><a href="/gutter-cleaning">Gutter Cleaning</a></li><li><a href="/new-gutters">New Gutters</a></li><li><a href="/fascia-soffit">Fascia &amp; Soffit</a></li><li><a href="/downpipes">Downpipes Repair</a></li><li><a href="/commercial-guttering">Commercial Guttering</a></li></ul></div>
-      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about">About Us</a></li><li><a href="/near-me">Areas We Cover</a></li><li><a href="/quote">Get a Free Quote</a></li><li><a href="/contact">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012339526">(01) 233 9526</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon–Sun: 7am–9pm</li></ul></div>
+      <div class="footer-col"><h4>Areas We Cover</h4><ul><li><a href="/gutter-services-north-dublin">North Dublin</a></li><li><a href="/gutter-services-south-dublin">South Dublin</a></li><li><a href="/near-me">All Areas</a></li><li><a href="/blog">Gutter Advice</a></li><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012339526">(01) 233 9526</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon&ndash;Sun: 7am&ndash;9pm</li></ul></div>
     </div>
-    <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing & Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing &amp; Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
   </footer>
 
   <div class="float-ctas">

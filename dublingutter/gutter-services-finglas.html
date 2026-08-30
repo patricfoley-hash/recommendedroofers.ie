@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://dublingutter.ie/gutter-services-finglas" />
-  <title>Gutter Services Finglas (D11) | Repairs, Cleaning &amp; New Gutters | Recommended Roofing &amp; Guttering</title>
-  <meta name="description" content="Gutter repairs, cleaning and replacement in Finglas, Dublin 11. Same-day call-outs across Glasnevin, Santry, Cabra &amp; Ballymun. Free quotes, upfront pricing." />
+  <title>Gutter Services Finglas (Dublin 11) | Repairs, Cleaning &amp; New Gutters | Recommended Roofing &amp; Guttering</title>
+  <meta name="description" content="Gutter repairs, cleaning and replacement in Finglas, Dublin 11. Same-day call-outs across Glasnevin, Ballymun, Cabra, Blanchardstown. Free quotes, upfront pricing." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -23,15 +23,21 @@
     .service-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
     .service-hero-form { background: var(--white); border-radius: var(--radius-lg); padding: 14px; }
     .content-split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .content-split-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .content-split-text h2 { font-size: 1.7rem; margin-bottom: 14px; }
     .content-split-text p { color: var(--grey); margin-bottom: 14px; line-height: 1.75; }
     .content-split-text ul { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
     .content-split-text li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.92rem; color: var(--text); }
     .content-split-text li i { color: var(--yellow-dark); margin-top: 3px; flex-shrink: 0; }
     .local-areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
-    .local-area { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; font-weight: 600; color: var(--grey-dark); }
+    .local-area { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
+    a.local-area:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); box-shadow: var(--shadow); }
     .local-area i { color: var(--blue); }
+    .nearby-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .nearby-link { display: inline-flex; align-items: center; gap: 7px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; padding: 9px 16px; font-size: 0.88rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
+    .nearby-link:hover { border-color: var(--blue); color: var(--blue); }
+    .nearby-link i { color: var(--yellow-dark); font-size: 0.8rem; }
     @media (max-width: 1024px) {
       .service-hero-inner { grid-template-columns: 1fr; }
       .content-split { grid-template-columns: 1fr; }
@@ -40,23 +46,47 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Recommended Roofing & Guttering — Finglas",
-    "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
-    "url": "https://dublingutter.ie/gutter-services-finglas",
-    "telephone": "+35312339526",
-    "email": "info@recommendedroofing.ie",
-    "priceRange": "€€",
-    "address": { "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" },
-    "areaServed": [
-      { "@type": "Place", "name": "Finglas, Dublin 11" },
+    "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Recommended Roofing & Guttering — Finglas",
+      "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
+      "url": "https://dublingutter.ie/gutter-services-finglas",
+      "telephone": "+35312339526",
+      "email": "info@recommendedroofing.ie",
+      "priceRange": "€€",
+      "address": { "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" },
+      "areaServed": [
+      { "@type": "Place", "name": "Finglas (Dublin 11)" },
       { "@type": "Place", "name": "Glasnevin" },
-      { "@type": "Place", "name": "Santry" },
       { "@type": "Place", "name": "Ballymun" },
       { "@type": "Place", "name": "Cabra" },
-      { "@type": "Place", "name": "Wellmount" }
-    ],
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }
+      { "@type": "Place", "name": "Blanchardstown" },
+      { "@type": "Place", "name": "Charlestown" },
+      { "@type": "Place", "name": "Ballygall" }
+      ],
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dublingutter.ie/" },
+        { "@type": "ListItem", "position": 2, "name": "Areas We Cover", "item": "https://dublingutter.ie/near-me" },
+        { "@type": "ListItem", "position": 3, "name": "North Dublin", "item": "https://dublingutter.ie/gutter-services-north-dublin" },
+        { "@type": "ListItem", "position": 4, "name": "Finglas", "item": "https://dublingutter.ie/gutter-services-finglas" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+      { "@type": "Question", "name": "Do you cover all of Finglas?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we cover Finglas and the surrounding areas including Glasnevin, Ballymun, Cabra, Blanchardstown. If you're nearby and unsure, just give us a call." } },
+      { "@type": "Question", "name": "Can you come out same-day in Finglas?", "acceptedAnswer": { "@type": "Answer", "text": "Usually. We keep teams working across North Dublin every day, so an emergency in Finglas can normally be seen the same day." } },
+      { "@type": "Question", "name": "How much does a gutter repair cost?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the height, the length of the run and what's wrong. We'll look at it for free, give you a fixed price, and you decide from there." } },
+      { "@type": "Question", "name": "What causes most gutter problems in Finglas?", "acceptedAnswer": { "@type": "Answer", "text": "Estate housing of this age is at the point where the original gutters have simply worn out. Sun-brittled PVC and rusted brackets are the norm, and we do more full replacements here than repairs." } },
+      { "@type": "Question", "name": "Are you insured and is the work guaranteed?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we're fully insured and all our work is guaranteed. If a repaired section fails, we'll come back and put it right at no charge." } }
+      ]
+    }
+    ]
   }
   </script>
 </head>
@@ -82,6 +112,7 @@
         <a href="/" class="nav-link">Home</a>
         <a href="/services" class="nav-link">Services</a>
         <a href="/near-me" class="nav-link active">Near Me</a>
+        <a href="/blog" class="nav-link">Blog</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/contact" class="nav-link">Contact</a>
       </nav>
@@ -93,9 +124,9 @@
   <section class="service-hero">
     <div class="container service-hero-inner">
       <div class="service-hero-content">
-        <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/near-me">Near Me</a><span>/</span><span>Finglas</span></div>
+        <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/near-me">Areas</a><span>/</span><a href="/gutter-services-north-dublin">North Dublin</a><span>/</span><span>Finglas</span></div>
         <h1>Gutter Services in Finglas, Dublin 11</h1>
-        <p>Local gutter repair, cleaning and replacement for homes and businesses across Finglas and the wider North Dublin area. Our mobile teams know the local roads well and can often be with you the same day — with an upfront price agreed before any work starts.</p>
+        <p>Straightforward gutter work in Finglas — repairs, cleaning, downpipes, fascia and soffit, and full replacements. Free quotes, a price agreed up front, and a guarantee on everything we do.</p>
         <ul class="service-hero-bullets">
           <li><i class="fas fa-check-circle"></i> Same-day call-outs across Finglas &amp; North Dublin</li>
           <li><i class="fas fa-check-circle"></i> Upfront price agreed before work starts</li>
@@ -113,17 +144,12 @@
             style="width:100%;height:493px;border:none;border-radius:var(--radius-lg)"
             id="inline-b3qFYv3eyajJCp7nJblw"
             data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Quotation Form"
-            data-height="493"
+            data-trigger-type="alwaysShow" data-trigger-value=""
+            data-activation-type="alwaysActivated" data-activation-value=""
+            data-deactivation-type="neverDeactivate" data-deactivation-value=""
+            data-form-name="Quotation Form" data-height="493"
             data-layout-iframe-id="inline-b3qFYv3eyajJCp7nJblw"
-            data-form-id="b3qFYv3eyajJCp7nJblw"
-            title="Quotation Form">
+            data-form-id="b3qFYv3eyajJCp7nJblw" title="Quotation Form">
           </iframe>
           <script src="https://api.twolabsleadgen.com/js/form_embed.js"></script>
       </div>
@@ -144,17 +170,17 @@
       <div class="content-split-text">
         <span class="section-tag">Your Local Gutter Team</span>
         <h2>Trusted Gutter Specialists in Finglas</h2>
-        <p>From the established homes around Finglas East and West to Glasnevin and Santry on the edges, this part of North Dublin has a lot of mature housing — and mature gutters that need looking after. We've been repairing and replacing them across D11 for three decades.</p>
-        <p>The big old trees around Finglas and the Tolka Valley look great until autumn fills your gutters with leaves and they start to overflow. We clear, repair and realign so the water runs off cleanly instead of down your brickwork.</p>
+        <p>Finglas is mostly large 1950s and 60s estates — Finglas East, West and South — with the older village core and newer developments out towards Charlestown.</p>
+        <p>Estate housing of this age is at the point where the original gutters have simply worn out. Sun-brittled PVC and rusted brackets are the norm, and we do more full replacements here than repairs.</p>
         <ul>
-          <li><i class="fas fa-check"></i> We cover Finglas and all the surrounding areas</li>
-          <li><i class="fas fa-check"></i> Honest advice — we repair before we replace</li>
-          <li><i class="fas fa-check"></i> No call-out fee and no obligation to proceed</li>
-          <li><i class="fas fa-check"></i> Tidy work and full clean-up when we're done</li>
+          <li><i class="fas fa-check"></i> Local to Finglas, so we're not charging you travel</li>
+          <li><i class="fas fa-check"></i> You get told what's actually wrong, not what sells</li>
+          <li><i class="fas fa-check"></i> A written price before anything starts</li>
+          <li><i class="fas fa-check"></i> Everything cleared away before we leave</li>
         </ul>
         <a href="/quote" class="btn btn-primary">Get a Free Quote</a>
       </div>
-      <div class="content-split-img"><img src="images/gutter-repairs-dublin.webp" alt="Gutter repair and installation in Finglas, Dublin 11" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div class="content-split-img"><img src="/images/services/fascia-soffit-repair-dublin.webp" alt="Replacement fascia and soffit on a Dublin house in Finglas" width="1200" height="675" loading="lazy" decoding="async" /></div>
     </div>
   </section>
 
@@ -166,12 +192,12 @@
         <p>Our full range of gutter services is available right across Finglas and nearby</p>
       </div>
       <div class="services-grid">
-        <a href="/gutter-repairs" class="service-card"><div class="service-icon"><i class="fas fa-wrench"></i></div><h3>Gutter Repairs</h3><p>Leaking joints, sagging runs and loose brackets repaired fast across Finglas. Same-day available.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/gutter-cleaning" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>Leaves and moss block gutters fast around Finglas. We clear and flush the full system.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/new-gutters" class="service-card"><div class="service-icon"><i class="fas fa-plus"></i></div><h3>New Gutters</h3><p>Full PVC or aluminium gutter replacement in a range of colours to match your Finglas home.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/fascia-soffit" class="service-card"><div class="service-icon"><i class="fas fa-house-chimney"></i></div><h3>Fascia &amp; Soffit</h3><p>New uPVC fascia and soffit to smarten your roofline and stop water getting behind the gutter.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/downpipes" class="service-card"><div class="service-icon"><i class="fas fa-arrows-down-to-line"></i></div><h3>Downpipes</h3><p>Blocked, detached or damaged downpipes cleared, resecured or replaced anywhere in Finglas.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/commercial-guttering" class="service-card"><div class="service-icon"><i class="fas fa-building"></i></div><h3>Commercial Guttering</h3><p>Gutter services for shops, schools, offices and apartment blocks across Finglas.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/gutter-repairs" class="service-card"><div class="service-icon"><i class="fas fa-wrench"></i></div><h3>Gutter Repairs</h3><p>We fix the cause rather than patching the symptom, so Finglas gutters keep working through the next storm.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/gutter-cleaning" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>Full clear-out and flush of gutters, hoppers and downpipes anywhere in Finglas.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/new-gutters" class="service-card"><div class="service-icon"><i class="fas fa-plus"></i></div><h3>New Gutters</h3><p>New gutters fitted to the right fall with enough downpipes to actually cope. Common sense, done right in Finglas.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/fascia-soffit" class="service-card"><div class="service-icon"><i class="fas fa-house-chimney"></i></div><h3>Fascia &amp; Soffit</h3><p>Rotten boards replaced and the whole roofline made weatherproof again — a common job in Finglas.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/downpipes" class="service-card"><div class="service-icon"><i class="fas fa-arrows-down-to-line"></i></div><h3>Downpipes</h3><p>Cracked, loose or blocked downpipes sorted — including rerouting discharge away from walls and drives.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/commercial-guttering" class="service-card"><div class="service-icon"><i class="fas fa-building"></i></div><h3>Commercial Guttering</h3><p>Box gutters, valley gutters and internal outlets on commercial buildings in and around Finglas.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
       </div>
     </div>
   </section>
@@ -184,17 +210,17 @@
         <p>If you're in or near any of these areas, we can help</p>
       </div>
       <div class="local-areas">
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Glasnevin</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Santry</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Ballymun</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Cabra</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Wellmount</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Dunsink</div>
+        <a href="/gutter-services-glasnevin" class="local-area"><i class="fas fa-map-marker-alt"></i> Glasnevin</a>
+        <a href="/gutter-services-ballymun" class="local-area"><i class="fas fa-map-marker-alt"></i> Ballymun</a>
+        <a href="/gutter-services-cabra" class="local-area"><i class="fas fa-map-marker-alt"></i> Cabra</a>
+        <a href="/gutter-services-blanchardstown" class="local-area"><i class="fas fa-map-marker-alt"></i> Blanchardstown</a>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Charlestown</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Jamestown</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Kilshane</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Ballygall</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Cappagh</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Dunsink</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Finglas Village</div>
       </div>
-      <p class="areas-note" style="margin-top: 28px;">Not sure if we reach you? <a href="/contact">Contact us</a> — we cover all of Dublin 11 and the surrounding area.</p>
+      <p class="areas-note" style="margin-top: 28px;">Not sure if we reach you? <a href="/contact">Contact us</a> — we cover Finglas and all of North Dublin.</p>
     </div>
   </section>
 
@@ -202,9 +228,9 @@
     <div class="container">
       <div class="section-header"><span class="section-tag">Reviews</span><h2>What Finglas Customers Say</h2></div>
       <div class="reviews-grid">
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Quick response and a clean, professional job on a leaking joint. Couldn't ask for more."</p><div class="review-author"><div class="review-avatar">D</div><div><strong>Derek M.</strong><span>Glasnevin</span></div></div></div>
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Full gutter replacement on a 3-bed semi. Great value and the finish is spotless."</p><div class="review-author"><div class="review-avatar">A</div><div><strong>Ann F.</strong><span>Santry</span></div></div></div>
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Came out on a Sunday for an emergency leak. Same price, no surcharge. Sound lads."</p><div class="review-author"><div class="review-avatar">J</div><div><strong>Joe B.</strong><span>Finglas</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Original gutters were beyond repair. Honest about that, and the replacement price was fair.&rdquo;</p><div class="review-author"><div class="review-avatar">C</div><div><strong>Christy B.</strong><span>Finglas East</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Rain was coming in over the front door for months. Fixed properly in one visit.&rdquo;</p><div class="review-author"><div class="review-avatar">L</div><div><strong>Lorraine K.</strong><span>Cappagh</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Would recommend. Straight talking and good work.&rdquo;</p><div class="review-author"><div class="review-avatar">N</div><div><strong>Noel R.</strong><span>Finglas West</span></div></div></div>
       </div>
     </div>
   </section>
@@ -213,18 +239,39 @@
     <div class="container">
       <div class="section-header"><span class="section-tag">FAQ</span><h2>Finglas Gutter Questions</h2></div>
       <div class="faq-grid">
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you cover all of Finglas? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we cover Finglas and the surrounding areas including Glasnevin, Santry, Ballymun, Cabra, Wellmount. If you're nearby and unsure, just give us a call.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you come out same-day in Finglas? <i class="fas fa-plus"></i></button><div class="faq-a"><p>In most cases, yes. We run mobile teams across North Dublin, so for urgent leaks or storm damage we can usually get to you the same day at no extra charge.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does a gutter repair cost? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Every job is different, so we quote on-site after a quick inspection. There's no call-out fee and the price is agreed upfront before any work begins — no surprises on the bill.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Will you try to sell me new gutters I don't need? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Never. We always repair where possible and only recommend replacement when it's genuinely the better option. You'll get both options explained honestly.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you cover all of Finglas? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we cover Finglas and the surrounding areas including Glasnevin, Ballymun, Cabra, Blanchardstown. If you're nearby and unsure, just give us a call.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you come out same-day in Finglas? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Usually. We keep teams working across North Dublin every day, so an emergency in Finglas can normally be seen the same day.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does a gutter repair cost? <i class="fas fa-plus"></i></button><div class="faq-a"><p>It depends on the height, the length of the run and what's wrong. We'll look at it for free, give you a fixed price, and you decide from there.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What causes most gutter problems in Finglas? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Estate housing of this age is at the point where the original gutters have simply worn out. Sun-brittled PVC and rusted brackets are the norm, and we do more full replacements here than repairs.</p></div></div>
         <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you insured and is the work guaranteed? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we're fully insured and all our work is guaranteed. If a repaired section fails, we'll come back and put it right at no charge.</p></div></div>
       </div>
     </div>
   </section>
 
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nearby</span>
+        <h2>Gutter Services Near Finglas</h2>
+        <p>We work right across North Dublin — here are the areas closest to Finglas</p>
+      </div>
+      <div class="nearby-links">
+        <a href="/gutter-services-glasnevin" class="nearby-link"><i class="fas fa-location-dot"></i> Glasnevin</a>
+        <a href="/gutter-services-ballymun" class="nearby-link"><i class="fas fa-location-dot"></i> Ballymun</a>
+        <a href="/gutter-services-cabra" class="nearby-link"><i class="fas fa-location-dot"></i> Cabra</a>
+        <a href="/gutter-services-blanchardstown" class="nearby-link"><i class="fas fa-location-dot"></i> Blanchardstown</a>
+        <a href="/gutter-services-howth" class="nearby-link"><i class="fas fa-location-dot"></i> Howth</a>
+        <a href="/gutter-services-sutton" class="nearby-link"><i class="fas fa-location-dot"></i> Sutton</a>
+        <a href="/gutter-services-baldoyle" class="nearby-link"><i class="fas fa-location-dot"></i> Baldoyle</a>
+        <a href="/gutter-services-donaghmede" class="nearby-link"><i class="fas fa-location-dot"></i> Donaghmede</a>
+      </div>
+      <p class="areas-note" style="margin-top: 28px;">See every area we cover in <a href="/gutter-services-north-dublin">North Dublin</a>, or browse <a href="/near-me">all Dublin areas</a>.</p>
+    </div>
+  </section>
+
   <section class="cta-banner">
     <div class="container cta-inner">
-      <div class="cta-text"><h2>Need a Gutter Expert in Finglas?</h2><p>Get a free, no-obligation quote today. Same-day service available across Dublin 11.</p></div>
+      <div class="cta-text"><h2>Need a Gutter Expert in Finglas?</h2><p>No obligation, no pressure, no call-out charge. Just a straight price for the work in Finglas.</p></div>
       <div class="cta-actions">
         <a href="tel:012339526" class="btn btn-white"><i class="fas fa-phone"></i> (01) 233 9526</a>
         <a href="/quote" class="btn btn-outline-white">Get Free Quote</a>
@@ -233,7 +280,7 @@
   </section>
 
   <section class="map-section">
-    <iframe src="https://www.google.com/maps?q=Finglas%2C%20Dublin%2011%2C%20Ireland&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Finglas, Dublin 11"></iframe>
+    <iframe src="https://www.google.com/maps?q=Finglas%2C+Dublin%2C+Ireland&amp;output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Finglas"></iframe>
   </section>
 
   <footer class="footer">
@@ -244,10 +291,10 @@
         <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
       </div>
       <div class="footer-col"><h4>Services</h4><ul><li><a href="/gutter-repairs">Gutter Repairs</a></li><li><a href="/gutter-cleaning">Gutter Cleaning</a></li><li><a href="/new-gutters">New Gutters</a></li><li><a href="/fascia-soffit">Fascia &amp; Soffit</a></li><li><a href="/downpipes">Downpipes Repair</a></li><li><a href="/commercial-guttering">Commercial Guttering</a></li></ul></div>
-      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about">About Us</a></li><li><a href="/near-me">Areas We Cover</a></li><li><a href="/quote">Get a Free Quote</a></li><li><a href="/contact">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012339526">(01) 233 9526</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon–Sun: 7am–9pm</li></ul></div>
+      <div class="footer-col"><h4>Areas We Cover</h4><ul><li><a href="/gutter-services-north-dublin">North Dublin</a></li><li><a href="/gutter-services-south-dublin">South Dublin</a></li><li><a href="/near-me">All Areas</a></li><li><a href="/blog">Gutter Advice</a></li><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012339526">(01) 233 9526</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon&ndash;Sun: 7am&ndash;9pm</li></ul></div>
     </div>
-    <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing & Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing &amp; Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
   </footer>
 
   <div class="float-ctas">

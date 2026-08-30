@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://dublingutter.ie/gutter-services-stillorgan" />
   <title>Gutter Services Stillorgan | Repairs, Cleaning &amp; New Gutters | Recommended Roofing &amp; Guttering</title>
-  <meta name="description" content="Gutter repairs, cleaning and replacement in Stillorgan, South Dublin. Same-day call-outs across Foxrock, Mount Merrion, Kilmacud &amp; Goatstown. Free quotes, upfront pricing." />
+  <meta name="description" content="Gutter repairs, cleaning and replacement in Stillorgan, Co. Dublin. Same-day call-outs across Mount Merrion, Blackrock, Sandyford, Dundrum. Free quotes, upfront pricing." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -23,15 +23,21 @@
     .service-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
     .service-hero-form { background: var(--white); border-radius: var(--radius-lg); padding: 14px; }
     .content-split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .content-split-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .content-split-text h2 { font-size: 1.7rem; margin-bottom: 14px; }
     .content-split-text p { color: var(--grey); margin-bottom: 14px; line-height: 1.75; }
     .content-split-text ul { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
     .content-split-text li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.92rem; color: var(--text); }
     .content-split-text li i { color: var(--yellow-dark); margin-top: 3px; flex-shrink: 0; }
     .local-areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
-    .local-area { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; font-weight: 600; color: var(--grey-dark); }
+    .local-area { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
+    a.local-area:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); box-shadow: var(--shadow); }
     .local-area i { color: var(--blue); }
+    .nearby-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .nearby-link { display: inline-flex; align-items: center; gap: 7px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; padding: 9px 16px; font-size: 0.88rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
+    .nearby-link:hover { border-color: var(--blue); color: var(--blue); }
+    .nearby-link i { color: var(--yellow-dark); font-size: 0.8rem; }
     @media (max-width: 1024px) {
       .service-hero-inner { grid-template-columns: 1fr; }
       .content-split { grid-template-columns: 1fr; }
@@ -40,23 +46,47 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Recommended Roofing & Guttering — Stillorgan",
-    "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
-    "url": "https://dublingutter.ie/gutter-services-stillorgan",
-    "telephone": "+35312339526",
-    "email": "info@recommendedroofing.ie",
-    "priceRange": "€€",
-    "address": { "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" },
-    "areaServed": [
-      { "@type": "Place", "name": "Stillorgan, South Dublin" },
-      { "@type": "Place", "name": "Foxrock" },
-      { "@type": "Place", "name": "Leopardstown" },
-      { "@type": "Place", "name": "Sandyford" },
+    "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Recommended Roofing & Guttering — Stillorgan",
+      "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
+      "url": "https://dublingutter.ie/gutter-services-stillorgan",
+      "telephone": "+35312339526",
+      "email": "info@recommendedroofing.ie",
+      "priceRange": "€€",
+      "address": { "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" },
+      "areaServed": [
+      { "@type": "Place", "name": "Stillorgan" },
       { "@type": "Place", "name": "Mount Merrion" },
+      { "@type": "Place", "name": "Blackrock" },
+      { "@type": "Place", "name": "Sandyford" },
+      { "@type": "Place", "name": "Dundrum" },
+      { "@type": "Place", "name": "Goatstown" },
       { "@type": "Place", "name": "Kilmacud" }
-    ],
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }
+      ],
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dublingutter.ie/" },
+        { "@type": "ListItem", "position": 2, "name": "Areas We Cover", "item": "https://dublingutter.ie/near-me" },
+        { "@type": "ListItem", "position": 3, "name": "South Dublin", "item": "https://dublingutter.ie/gutter-services-south-dublin" },
+        { "@type": "ListItem", "position": 4, "name": "Stillorgan", "item": "https://dublingutter.ie/gutter-services-stillorgan" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+      { "@type": "Question", "name": "Do you cover all of Stillorgan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we cover Stillorgan and the surrounding areas including Mount Merrion, Blackrock, Sandyford, Dundrum. If you're nearby and unsure, just give us a call." } },
+      { "@type": "Question", "name": "Can you come out same-day in Stillorgan?", "acceptedAnswer": { "@type": "Answer", "text": "For anything urgent we'll do our best to get there the same day. There's no premium for an emergency call-out in South Dublin." } },
+      { "@type": "Question", "name": "How much does a gutter repair cost?", "acceptedAnswer": { "@type": "Answer", "text": "Every job is different, so we quote on-site after a quick inspection. There's no call-out fee and the price is agreed upfront before any work begins — no surprises on the bill." } },
+      { "@type": "Question", "name": "What causes most gutter problems in Stillorgan?", "acceptedAnswer": { "@type": "Answer", "text": "Mid-century estates now at replacement age, plenty of mature planting, and a good deal of commercial property along the Lower Kilmacud Road that needs a different approach again." } },
+      { "@type": "Question", "name": "Are you insured and is the work guaranteed?", "acceptedAnswer": { "@type": "Answer", "text": "We carry full public liability insurance and guarantee our work. Paperwork is available on request before we start." } }
+      ]
+    }
+    ]
   }
   </script>
 </head>
@@ -82,6 +112,7 @@
         <a href="/" class="nav-link">Home</a>
         <a href="/services" class="nav-link">Services</a>
         <a href="/near-me" class="nav-link active">Near Me</a>
+        <a href="/blog" class="nav-link">Blog</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/contact" class="nav-link">Contact</a>
       </nav>
@@ -93,14 +124,14 @@
   <section class="service-hero">
     <div class="container service-hero-inner">
       <div class="service-hero-content">
-        <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/near-me">Near Me</a><span>/</span><span>Stillorgan</span></div>
-        <h1>Gutter Services in Stillorgan, South Dublin</h1>
-        <p>Local gutter repair, cleaning and replacement for homes and businesses across Stillorgan and the wider South Dublin area. Our mobile teams know the local roads well and can often be with you the same day — with an upfront price agreed before any work starts.</p>
+        <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/near-me">Areas</a><span>/</span><a href="/gutter-services-south-dublin">South Dublin</a><span>/</span><span>Stillorgan</span></div>
+        <h1>Gutter Services in Stillorgan, Co. Dublin</h1>
+        <p>We've been repairing, clearing and replacing gutters across Stillorgan for three decades. Whatever's going on with yours, we'll tell you straight what it needs, what it costs, and get it done without the runaround.</p>
         <ul class="service-hero-bullets">
-          <li><i class="fas fa-check-circle"></i> Same-day call-outs across Stillorgan &amp; South Dublin</li>
-          <li><i class="fas fa-check-circle"></i> Upfront price agreed before work starts</li>
-          <li><i class="fas fa-check-circle"></i> 30 years of gutter experience in South Dublin</li>
-          <li><i class="fas fa-check-circle"></i> Fully insured &amp; guaranteed work</li>
+          <li><i class="fas fa-check-circle"></i> Local teams working across South Dublin daily</li>
+          <li><i class="fas fa-check-circle"></i> Free inspection and honest advice before you commit</li>
+          <li><i class="fas fa-check-circle"></i> Three decades of Dublin gutter work behind us</li>
+          <li><i class="fas fa-check-circle"></i> Insured, guaranteed and fully tax compliant</li>
         </ul>
         <div class="service-hero-ctas">
           <a href="/quote" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get Free Quote</a>
@@ -113,17 +144,12 @@
             style="width:100%;height:493px;border:none;border-radius:var(--radius-lg)"
             id="inline-b3qFYv3eyajJCp7nJblw"
             data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Quotation Form"
-            data-height="493"
+            data-trigger-type="alwaysShow" data-trigger-value=""
+            data-activation-type="alwaysActivated" data-activation-value=""
+            data-deactivation-type="neverDeactivate" data-deactivation-value=""
+            data-form-name="Quotation Form" data-height="493"
             data-layout-iframe-id="inline-b3qFYv3eyajJCp7nJblw"
-            data-form-id="b3qFYv3eyajJCp7nJblw"
-            title="Quotation Form">
+            data-form-id="b3qFYv3eyajJCp7nJblw" title="Quotation Form">
           </iframe>
           <script src="https://api.twolabsleadgen.com/js/form_embed.js"></script>
       </div>
@@ -144,17 +170,17 @@
       <div class="content-split-text">
         <span class="section-tag">Your Local Gutter Team</span>
         <h2>Trusted Gutter Specialists in Stillorgan</h2>
-        <p>Stillorgan sits at the heart of South Dublin, surrounded by Foxrock, Mount Merrion, Kilmacud and Goatstown. It's an area of well-kept family homes where keeping gutters and fascia in good order really shows.</p>
-        <p>Mature trees along the roads here drop a lot into gutters every autumn, and a blocked gutter quickly becomes overflow and damp. We clear, repair and realign so water drains cleanly, and replace full systems when they've had their day.</p>
+        <p>Stillorgan mixes 1950s and 60s estate housing around the village and Kilmacud with larger detached homes towards Mount Merrion and newer apartments near the shopping centre.</p>
+        <p>Mid-century estates now at replacement age, plenty of mature planting, and a good deal of commercial property along the Lower Kilmacud Road that needs a different approach again.</p>
         <ul>
-          <li><i class="fas fa-check"></i> We cover Stillorgan and all the surrounding areas</li>
-          <li><i class="fas fa-check"></i> Honest advice — we repair before we replace</li>
-          <li><i class="fas fa-check"></i> No call-out fee and no obligation to proceed</li>
-          <li><i class="fas fa-check"></i> Tidy work and full clean-up when we're done</li>
+          <li><i class="fas fa-check"></i> Familiar with the housing stock right across Stillorgan</li>
+          <li><i class="fas fa-check"></i> Straight answers about what needs doing and what doesn't</li>
+          <li><i class="fas fa-check"></i> Fixed pricing agreed in advance</li>
+          <li><i class="fas fa-check"></i> Fully insured for your peace of mind</li>
         </ul>
         <a href="/quote" class="btn btn-primary">Get a Free Quote</a>
       </div>
-      <div class="content-split-img"><img src="images/gutter-repairs-dublin.webp" alt="Gutter repair and installation in Stillorgan, South Dublin" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div class="content-split-img"><img src="/images/services/fascia-soffit-upvc-dublin.webp" alt="uPVC fascia, soffit and gutter on a Dublin roofline in Stillorgan" width="1200" height="675" loading="lazy" decoding="async" /></div>
     </div>
   </section>
 
@@ -167,9 +193,9 @@
       </div>
       <div class="services-grid">
         <a href="/gutter-repairs" class="service-card"><div class="service-icon"><i class="fas fa-wrench"></i></div><h3>Gutter Repairs</h3><p>Leaking joints, sagging runs and loose brackets repaired fast across Stillorgan. Same-day available.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/gutter-cleaning" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>Leaves and moss block gutters fast around Stillorgan. We clear and flush the full system.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/gutter-cleaning" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>Clearing, flushing and a check-over of the whole system — the Stillorgan houses we do yearly never have trouble.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
         <a href="/new-gutters" class="service-card"><div class="service-icon"><i class="fas fa-plus"></i></div><h3>New Gutters</h3><p>Full PVC or aluminium gutter replacement in a range of colours to match your Stillorgan home.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/fascia-soffit" class="service-card"><div class="service-icon"><i class="fas fa-house-chimney"></i></div><h3>Fascia &amp; Soffit</h3><p>New uPVC fascia and soffit to smarten your roofline and stop water getting behind the gutter.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/fascia-soffit" class="service-card"><div class="service-icon"><i class="fas fa-house-chimney"></i></div><h3>Fascia &amp; Soffit</h3><p>Maintenance-free uPVC roofline that transforms how a house looks and keeps water out for good.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
         <a href="/downpipes" class="service-card"><div class="service-icon"><i class="fas fa-arrows-down-to-line"></i></div><h3>Downpipes</h3><p>Blocked, detached or damaged downpipes cleared, resecured or replaced anywhere in Stillorgan.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
         <a href="/commercial-guttering" class="service-card"><div class="service-icon"><i class="fas fa-building"></i></div><h3>Commercial Guttering</h3><p>Gutter services for shops, schools, offices and apartment blocks across Stillorgan.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
       </div>
@@ -184,16 +210,17 @@
         <p>If you're in or near any of these areas, we can help</p>
       </div>
       <div class="local-areas">
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Foxrock</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Leopardstown</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Sandyford</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Mount Merrion</div>
+        <a href="/gutter-services-mount-merrion" class="local-area"><i class="fas fa-map-marker-alt"></i> Mount Merrion</a>
+        <a href="/gutter-services-blackrock" class="local-area"><i class="fas fa-map-marker-alt"></i> Blackrock</a>
+        <a href="/gutter-services-sandyford" class="local-area"><i class="fas fa-map-marker-alt"></i> Sandyford</a>
+        <a href="/gutter-services-dundrum" class="local-area"><i class="fas fa-map-marker-alt"></i> Dundrum</a>
+        <a href="/gutter-services-goatstown" class="local-area"><i class="fas fa-map-marker-alt"></i> Goatstown</a>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Kilmacud</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Goatstown</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Dundrum</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Clonskeagh</div>
+        <a href="/gutter-services-leopardstown" class="local-area"><i class="fas fa-map-marker-alt"></i> Leopardstown</a>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Newtownpark</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Galloping Green</div>
       </div>
-      <p class="areas-note" style="margin-top: 28px;">Not sure if we reach you? <a href="/contact">Contact us</a> — we cover all of South Dublin and the surrounding area.</p>
+      <p class="areas-note" style="margin-top: 28px;">Not sure if we reach you? <a href="/contact">Contact us</a> — we cover Stillorgan and all of South Dublin.</p>
     </div>
   </section>
 
@@ -201,9 +228,9 @@
     <div class="container">
       <div class="section-header"><span class="section-tag">Reviews</span><h2>What Stillorgan Customers Say</h2></div>
       <div class="reviews-grid">
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Excellent — cleared and repaired the gutters and replaced a cracked downpipe. Spotless finish."</p><div class="review-author"><div class="review-avatar">B</div><div><strong>Bernard K.</strong><span>Mount Merrion</span></div></div></div>
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"New fascia, soffit and gutters on a large home. Faultless and tidy throughout."</p><div class="review-author"><div class="review-avatar">S</div><div><strong>Susan D.</strong><span>Foxrock</span></div></div></div>
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Prompt, honest and good value. Repaired rather than replaced and saved me a fortune."</p><div class="review-author"><div class="review-avatar">G</div><div><strong>Gerry H.</strong><span>Stillorgan</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;1960s house, original gutters. Replaced the lot and it looks great.&rdquo;</p><div class="review-author"><div class="review-avatar">E</div><div><strong>Eileen H.</strong><span>Kilmacud</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Commercial unit on the Lower Kilmacud Road. Handled it professionally.&rdquo;</p><div class="review-author"><div class="review-avatar">O</div><div><strong>Owner</strong><span>Stillorgan</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Reasonable price and they stuck to it.&rdquo;</p><div class="review-author"><div class="review-avatar">A</div><div><strong>Aidan M.</strong><span>Galloping Green</span></div></div></div>
       </div>
     </div>
   </section>
@@ -212,18 +239,39 @@
     <div class="container">
       <div class="section-header"><span class="section-tag">FAQ</span><h2>Stillorgan Gutter Questions</h2></div>
       <div class="faq-grid">
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you cover all of Stillorgan? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we cover Stillorgan and the surrounding areas including Foxrock, Leopardstown, Sandyford, Mount Merrion, Kilmacud. If you're nearby and unsure, just give us a call.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you come out same-day in Stillorgan? <i class="fas fa-plus"></i></button><div class="faq-a"><p>In most cases, yes. We run mobile teams across South Dublin, so for urgent leaks or storm damage we can usually get to you the same day at no extra charge.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you cover all of Stillorgan? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we cover Stillorgan and the surrounding areas including Mount Merrion, Blackrock, Sandyford, Dundrum. If you're nearby and unsure, just give us a call.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you come out same-day in Stillorgan? <i class="fas fa-plus"></i></button><div class="faq-a"><p>For anything urgent we'll do our best to get there the same day. There's no premium for an emergency call-out in South Dublin.</p></div></div>
         <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does a gutter repair cost? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Every job is different, so we quote on-site after a quick inspection. There's no call-out fee and the price is agreed upfront before any work begins — no surprises on the bill.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Will you try to sell me new gutters I don't need? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Never. We always repair where possible and only recommend replacement when it's genuinely the better option. You'll get both options explained honestly.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you insured and is the work guaranteed? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we're fully insured and all our work is guaranteed. If a repaired section fails, we'll come back and put it right at no charge.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What causes most gutter problems in Stillorgan? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Mid-century estates now at replacement age, plenty of mature planting, and a good deal of commercial property along the Lower Kilmacud Road that needs a different approach again.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you insured and is the work guaranteed? <i class="fas fa-plus"></i></button><div class="faq-a"><p>We carry full public liability insurance and guarantee our work. Paperwork is available on request before we start.</p></div></div>
       </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nearby</span>
+        <h2>Gutter Services Near Stillorgan</h2>
+        <p>We work right across South Dublin — here are the areas closest to Stillorgan</p>
+      </div>
+      <div class="nearby-links">
+        <a href="/gutter-services-mount-merrion" class="nearby-link"><i class="fas fa-location-dot"></i> Mount Merrion</a>
+        <a href="/gutter-services-blackrock" class="nearby-link"><i class="fas fa-location-dot"></i> Blackrock</a>
+        <a href="/gutter-services-sandyford" class="nearby-link"><i class="fas fa-location-dot"></i> Sandyford</a>
+        <a href="/gutter-services-dundrum" class="nearby-link"><i class="fas fa-location-dot"></i> Dundrum</a>
+        <a href="/gutter-services-goatstown" class="nearby-link"><i class="fas fa-location-dot"></i> Goatstown</a>
+        <a href="/gutter-services-leopardstown" class="nearby-link"><i class="fas fa-location-dot"></i> Leopardstown</a>
+        <a href="/gutter-services-dun-laoghaire" class="nearby-link"><i class="fas fa-location-dot"></i> Dún Laoghaire</a>
+        <a href="/gutter-services-dalkey" class="nearby-link"><i class="fas fa-location-dot"></i> Dalkey</a>
+      </div>
+      <p class="areas-note" style="margin-top: 28px;">See every area we cover in <a href="/gutter-services-south-dublin">South Dublin</a>, or browse <a href="/near-me">all Dublin areas</a>.</p>
     </div>
   </section>
 
   <section class="cta-banner">
     <div class="container cta-inner">
-      <div class="cta-text"><h2>Need a Gutter Expert in Stillorgan?</h2><p>Get a free, no-obligation quote today. Same-day service available across South Dublin.</p></div>
+      <div class="cta-text"><h2>Need a Gutter Expert in Stillorgan?</h2><p>Free quote, fixed price, no call-out fee. We're working across South Dublin every day of the week.</p></div>
       <div class="cta-actions">
         <a href="tel:012339526" class="btn btn-white"><i class="fas fa-phone"></i> (01) 233 9526</a>
         <a href="/quote" class="btn btn-outline-white">Get Free Quote</a>
@@ -232,7 +280,7 @@
   </section>
 
   <section class="map-section">
-    <iframe src="https://www.google.com/maps?q=Stillorgan%2C%20Co.%20Dublin%2C%20Ireland&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Stillorgan, South Dublin"></iframe>
+    <iframe src="https://www.google.com/maps?q=Stillorgan%2C+Dublin%2C+Ireland&amp;output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Stillorgan"></iframe>
   </section>
 
   <footer class="footer">
@@ -243,10 +291,10 @@
         <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
       </div>
       <div class="footer-col"><h4>Services</h4><ul><li><a href="/gutter-repairs">Gutter Repairs</a></li><li><a href="/gutter-cleaning">Gutter Cleaning</a></li><li><a href="/new-gutters">New Gutters</a></li><li><a href="/fascia-soffit">Fascia &amp; Soffit</a></li><li><a href="/downpipes">Downpipes Repair</a></li><li><a href="/commercial-guttering">Commercial Guttering</a></li></ul></div>
-      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about">About Us</a></li><li><a href="/near-me">Areas We Cover</a></li><li><a href="/quote">Get a Free Quote</a></li><li><a href="/contact">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012339526">(01) 233 9526</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon–Sun: 7am–9pm</li></ul></div>
+      <div class="footer-col"><h4>Areas We Cover</h4><ul><li><a href="/gutter-services-north-dublin">North Dublin</a></li><li><a href="/gutter-services-south-dublin">South Dublin</a></li><li><a href="/near-me">All Areas</a></li><li><a href="/blog">Gutter Advice</a></li><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012339526">(01) 233 9526</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon&ndash;Sun: 7am&ndash;9pm</li></ul></div>
     </div>
-    <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing & Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing &amp; Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
   </footer>
 
   <div class="float-ctas">

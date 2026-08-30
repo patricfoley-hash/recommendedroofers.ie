@@ -405,3 +405,11 @@ ul { list-style: none; }
   .footer-inner { grid-template-columns: 1fr; }
   .about-stats { grid-template-columns: 1fr; }
 }
+
+/* ---- HOMEPAGE AREA REGIONS ---- */
+.area-region-title { display: flex; align-items: baseline; gap: 12px; font-size: 1.1rem; color: var(--grey-dark); margin: 34px 0 16px; padding-bottom: 10px; border-bottom: 2px solid var(--blue-light); }
+.area-region-title a { color: var(--blue); text-decoration: none; }
+.area-region-title a:hover { text-decoration: underline; }
+.area-region-title span { font-family: 'Open Sans', sans-serif; font-size: 0.8rem; font-weight: 600; color: var(--grey); }
+.area-pill-more { background: var(--blue); color: var(--white); border-color: var(--blue); }
+.area-pill-more:hover { background: var(--blue-dark); border-color: var(--blue-dark); color: var(--white); }

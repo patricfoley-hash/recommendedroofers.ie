@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://dublingutter.ie/gutter-services-dunboyne" />
   <title>Gutter Services Dunboyne | Repairs, Cleaning &amp; New Gutters | Recommended Roofing &amp; Guttering</title>
-  <meta name="description" content="Gutter repairs, cleaning and replacement in Dunboyne, Co. Meath. Same-day call-outs across Clonee, Dunshaughlin &amp; Ratoath. Free quotes, upfront pricing." />
+  <meta name="description" content="Gutter repairs, cleaning and replacement in Dunboyne, Co. Meath. Same-day call-outs across Clonee, Ongar, Blanchardstown, Ratoath. Free quotes, upfront pricing." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -23,15 +23,21 @@
     .service-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
     .service-hero-form { background: var(--white); border-radius: var(--radius-lg); padding: 14px; }
     .content-split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .content-split-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .content-split-text h2 { font-size: 1.7rem; margin-bottom: 14px; }
     .content-split-text p { color: var(--grey); margin-bottom: 14px; line-height: 1.75; }
     .content-split-text ul { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
     .content-split-text li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.92rem; color: var(--text); }
     .content-split-text li i { color: var(--yellow-dark); margin-top: 3px; flex-shrink: 0; }
     .local-areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
-    .local-area { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; font-weight: 600; color: var(--grey-dark); }
+    .local-area { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
+    a.local-area:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); box-shadow: var(--shadow); }
     .local-area i { color: var(--blue); }
+    .nearby-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .nearby-link { display: inline-flex; align-items: center; gap: 7px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; padding: 9px 16px; font-size: 0.88rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
+    .nearby-link:hover { border-color: var(--blue); color: var(--blue); }
+    .nearby-link i { color: var(--yellow-dark); font-size: 0.8rem; }
     @media (max-width: 1024px) {
       .service-hero-inner { grid-template-columns: 1fr; }
       .content-split { grid-template-columns: 1fr; }
@@ -40,23 +46,47 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Recommended Roofing & Guttering — Dunboyne",
-    "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
-    "url": "https://dublingutter.ie/gutter-services-dunboyne",
-    "telephone": "+35312339526",
-    "email": "info@recommendedroofing.ie",
-    "priceRange": "€€",
-    "address": { "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" },
-    "areaServed": [
-      { "@type": "Place", "name": "Dunboyne, Co. Meath" },
+    "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Recommended Roofing & Guttering — Dunboyne",
+      "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
+      "url": "https://dublingutter.ie/gutter-services-dunboyne",
+      "telephone": "+35312339526",
+      "email": "info@recommendedroofing.ie",
+      "priceRange": "€€",
+      "address": { "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" },
+      "areaServed": [
+      { "@type": "Place", "name": "Dunboyne" },
       { "@type": "Place", "name": "Clonee" },
-      { "@type": "Place", "name": "Dunshaughlin" },
+      { "@type": "Place", "name": "Ongar" },
+      { "@type": "Place", "name": "Blanchardstown" },
       { "@type": "Place", "name": "Ratoath" },
-      { "@type": "Place", "name": "Maynooth" },
-      { "@type": "Place", "name": "Kilcock" }
-    ],
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }
+      { "@type": "Place", "name": "Summerhill" },
+      { "@type": "Place", "name": "Castaheany" }
+      ],
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dublingutter.ie/" },
+        { "@type": "ListItem", "position": 2, "name": "Areas We Cover", "item": "https://dublingutter.ie/near-me" },
+        { "@type": "ListItem", "position": 3, "name": "North Dublin", "item": "https://dublingutter.ie/gutter-services-north-dublin" },
+        { "@type": "ListItem", "position": 4, "name": "Dunboyne", "item": "https://dublingutter.ie/gutter-services-dunboyne" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+      { "@type": "Question", "name": "Do you cover all of Dunboyne?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we cover Dunboyne and the surrounding areas including Clonee, Ongar, Blanchardstown, Ratoath. If you're nearby and unsure, just give us a call." } },
+      { "@type": "Question", "name": "Can you come out same-day in Dunboyne?", "acceptedAnswer": { "@type": "Answer", "text": "Usually. We keep teams working across North West Commuter Belt every day, so an emergency in Dunboyne can normally be seen the same day." } },
+      { "@type": "Question", "name": "How much does a gutter repair cost?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the height, the length of the run and what's wrong. We'll look at it for free, give you a fixed price, and you decide from there." } },
+      { "@type": "Question", "name": "What causes most gutter problems in Dunboyne?", "acceptedAnswer": { "@type": "Answer", "text": "Open Meath countryside on three sides means wind-driven rain hits gutters hard here. On the newer estates it's fitting quality; on the older village houses and bungalows it's genuinely worn-out systems." } },
+      { "@type": "Question", "name": "Are you insured and is the work guaranteed?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we're fully insured and all our work is guaranteed. If a repaired section fails, we'll come back and put it right at no charge." } }
+      ]
+    }
+    ]
   }
   </script>
 </head>
@@ -82,6 +112,7 @@
         <a href="/" class="nav-link">Home</a>
         <a href="/services" class="nav-link">Services</a>
         <a href="/near-me" class="nav-link active">Near Me</a>
+        <a href="/blog" class="nav-link">Blog</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/contact" class="nav-link">Contact</a>
       </nav>
@@ -93,14 +124,14 @@
   <section class="service-hero">
     <div class="container service-hero-inner">
       <div class="service-hero-content">
-        <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/near-me">Near Me</a><span>/</span><span>Dunboyne</span></div>
+        <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/near-me">Areas</a><span>/</span><a href="/gutter-services-north-dublin">North Dublin</a><span>/</span><span>Dunboyne</span></div>
         <h1>Gutter Services in Dunboyne, Co. Meath</h1>
-        <p>Local gutter repair, cleaning and replacement for homes and businesses across Dunboyne and the wider the Meath border area. Our mobile teams know the local roads well and can often be with you the same day — with an upfront price agreed before any work starts.</p>
+        <p>We've been repairing, clearing and replacing gutters across Dunboyne for three decades. Whatever's going on with yours, we'll tell you straight what it needs, what it costs, and get it done without the runaround.</p>
         <ul class="service-hero-bullets">
-          <li><i class="fas fa-check-circle"></i> Same-day call-outs across Dunboyne &amp; the Meath border</li>
-          <li><i class="fas fa-check-circle"></i> Upfront price agreed before work starts</li>
-          <li><i class="fas fa-check-circle"></i> 30 years of gutter experience in the Meath border</li>
-          <li><i class="fas fa-check-circle"></i> Fully insured &amp; guaranteed work</li>
+          <li><i class="fas fa-check-circle"></i> Fast response throughout Dunboyne</li>
+          <li><i class="fas fa-check-circle"></i> You'll know the price before we begin</li>
+          <li><i class="fas fa-check-circle"></i> We fix the cause, not just the symptom</li>
+          <li><i class="fas fa-check-circle"></i> Guaranteed work — if it fails, we come back</li>
         </ul>
         <div class="service-hero-ctas">
           <a href="/quote" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get Free Quote</a>
@@ -113,17 +144,12 @@
             style="width:100%;height:493px;border:none;border-radius:var(--radius-lg)"
             id="inline-b3qFYv3eyajJCp7nJblw"
             data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Quotation Form"
-            data-height="493"
+            data-trigger-type="alwaysShow" data-trigger-value=""
+            data-activation-type="alwaysActivated" data-activation-value=""
+            data-deactivation-type="neverDeactivate" data-deactivation-value=""
+            data-form-name="Quotation Form" data-height="493"
             data-layout-iframe-id="inline-b3qFYv3eyajJCp7nJblw"
-            data-form-id="b3qFYv3eyajJCp7nJblw"
-            title="Quotation Form">
+            data-form-id="b3qFYv3eyajJCp7nJblw" title="Quotation Form">
           </iframe>
           <script src="https://api.twolabsleadgen.com/js/form_embed.js"></script>
       </div>
@@ -144,17 +170,17 @@
       <div class="content-split-text">
         <span class="section-tag">Your Local Gutter Team</span>
         <h2>Trusted Gutter Specialists in Dunboyne</h2>
-        <p>Just over the Dublin border, Dunboyne and its neighbours Clonee and Dunshaughlin have seen huge growth, with plenty of newer commuter homes alongside older village properties. We cover the whole area and know the local builds well.</p>
-        <p>Out here on the open Meath border the wind has a clear run at your roofline, and that's what works brackets loose and splits joints over time. We make repairs that hold, and replace full runs cleanly when that's the smarter spend.</p>
+        <p>Dunboyne has an old village core with a great deal of 2000s estate housing built around it, plus larger detached houses and bungalows on the roads out towards Clonee and Summerhill.</p>
+        <p>Open Meath countryside on three sides means wind-driven rain hits gutters hard here. On the newer estates it's fitting quality; on the older village houses and bungalows it's genuinely worn-out systems.</p>
         <ul>
-          <li><i class="fas fa-check"></i> We cover Dunboyne and all the surrounding areas</li>
-          <li><i class="fas fa-check"></i> Honest advice — we repair before we replace</li>
-          <li><i class="fas fa-check"></i> No call-out fee and no obligation to proceed</li>
-          <li><i class="fas fa-check"></i> Tidy work and full clean-up when we're done</li>
+          <li><i class="fas fa-check"></i> Local to Dunboyne, so we're not charging you travel</li>
+          <li><i class="fas fa-check"></i> You get told what's actually wrong, not what sells</li>
+          <li><i class="fas fa-check"></i> A written price before anything starts</li>
+          <li><i class="fas fa-check"></i> Everything cleared away before we leave</li>
         </ul>
         <a href="/quote" class="btn btn-primary">Get a Free Quote</a>
       </div>
-      <div class="content-split-img"><img src="images/gutter-supply-fit.webp" alt="Gutter repair and installation in Dunboyne, Co. Meath" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div class="content-split-img"><img src="/images/services/gutter-repairs-dublin.webp" alt="Gutter repair work on a Dublin home in Dunboyne" width="1200" height="675" loading="lazy" decoding="async" /></div>
     </div>
   </section>
 
@@ -166,12 +192,12 @@
         <p>Our full range of gutter services is available right across Dunboyne and nearby</p>
       </div>
       <div class="services-grid">
-        <a href="/gutter-repairs" class="service-card"><div class="service-icon"><i class="fas fa-wrench"></i></div><h3>Gutter Repairs</h3><p>Leaking joints, sagging runs and loose brackets repaired fast across Dunboyne. Same-day available.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/gutter-cleaning" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>Leaves and moss block gutters fast around Dunboyne. We clear and flush the full system.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/new-gutters" class="service-card"><div class="service-icon"><i class="fas fa-plus"></i></div><h3>New Gutters</h3><p>Full PVC or aluminium gutter replacement in a range of colours to match your Dunboyne home.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/gutter-repairs" class="service-card"><div class="service-icon"><i class="fas fa-wrench"></i></div><h3>Gutter Repairs</h3><p>We fix the cause rather than patching the symptom, so Dunboyne gutters keep working through the next storm.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/gutter-cleaning" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>A blocked gutter is how water gets behind a fascia. We clear Dunboyne gutters before that happens.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/new-gutters" class="service-card"><div class="service-icon"><i class="fas fa-plus"></i></div><h3>New Gutters</h3><p>When a system is past repair we replace it properly — measured, made to fit and colour matched in Dunboyne.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
         <a href="/fascia-soffit" class="service-card"><div class="service-icon"><i class="fas fa-house-chimney"></i></div><h3>Fascia &amp; Soffit</h3><p>New uPVC fascia and soffit to smarten your roofline and stop water getting behind the gutter.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/downpipes" class="service-card"><div class="service-icon"><i class="fas fa-arrows-down-to-line"></i></div><h3>Downpipes</h3><p>Blocked, detached or damaged downpipes cleared, resecured or replaced anywhere in Dunboyne.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/commercial-guttering" class="service-card"><div class="service-icon"><i class="fas fa-building"></i></div><h3>Commercial Guttering</h3><p>Gutter services for shops, schools, offices and apartment blocks across Dunboyne.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/downpipes" class="service-card"><div class="service-icon"><i class="fas fa-arrows-down-to-line"></i></div><h3>Downpipes</h3><p>Cracked, loose or blocked downpipes sorted — including rerouting discharge away from walls and drives.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/commercial-guttering" class="service-card"><div class="service-icon"><i class="fas fa-building"></i></div><h3>Commercial Guttering</h3><p>Industrial and commercial roofs need a different approach to a house. We do both across Dunboyne.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
       </div>
     </div>
   </section>
@@ -185,15 +211,16 @@
       </div>
       <div class="local-areas">
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Clonee</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Dunshaughlin</div>
+        <a href="/gutter-services-ongar" class="local-area"><i class="fas fa-map-marker-alt"></i> Ongar</a>
+        <a href="/gutter-services-blanchardstown" class="local-area"><i class="fas fa-map-marker-alt"></i> Blanchardstown</a>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Ratoath</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Maynooth</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Kilcock</div>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Summerhill</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Batterstown</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Castaheany</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Pace</div>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Rooske</div>
+        <a href="/gutter-services-maynooth" class="local-area"><i class="fas fa-map-marker-alt"></i> Maynooth</a>
       </div>
-      <p class="areas-note" style="margin-top: 28px;">Not sure if we reach you? <a href="/contact">Contact us</a> — we cover all of Co. Meath and the surrounding area.</p>
+      <p class="areas-note" style="margin-top: 28px;">Not sure if we reach you? <a href="/contact">Contact us</a> — we cover Dunboyne and all of North Dublin.</p>
     </div>
   </section>
 
@@ -201,9 +228,9 @@
     <div class="container">
       <div class="section-header"><span class="section-tag">Reviews</span><h2>What Dunboyne Customers Say</h2></div>
       <div class="reviews-grid">
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Excellent service. Realigned a sagging gutter and replaced a cracked downpipe in a couple of hours."</p><div class="review-author"><div class="review-avatar">M</div><div><strong>Mark T.</strong><span>Clonee</span></div></div></div>
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Tidy, on time and reasonably priced. The gutters haven't overflowed since."</p><div class="review-author"><div class="review-avatar">S</div><div><strong>Sinead H.</strong><span>Ratoath</span></div></div></div>
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Honest advice — talked me out of a full replacement I didn't need and just did the repair. Rare these days."</p><div class="review-author"><div class="review-avatar">K</div><div><strong>Kevin O.</strong><span>Dunboyne</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Wind and rain off the fields had the gutters overflowing at the gable. Sorted with a bigger downpipe.&rdquo;</p><div class="review-author"><div class="review-avatar">N</div><div><strong>Nigel W.</strong><span>Dunboyne</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Bungalow on the Summerhill road. Full new gutters, fascia and soffit. Delighted.&rdquo;</p><div class="review-author"><div class="review-avatar">K</div><div><strong>Kathleen M.</strong><span>Rooske</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Came out from Dublin without charging extra for the distance.&rdquo;</p><div class="review-author"><div class="review-avatar">F</div><div><strong>Fergal D.</strong><span>Pace</span></div></div></div>
       </div>
     </div>
   </section>
@@ -212,18 +239,39 @@
     <div class="container">
       <div class="section-header"><span class="section-tag">FAQ</span><h2>Dunboyne Gutter Questions</h2></div>
       <div class="faq-grid">
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you cover all of Dunboyne? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we cover Dunboyne and the surrounding areas including Clonee, Dunshaughlin, Ratoath, Maynooth, Kilcock. If you're nearby and unsure, just give us a call.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you come out same-day in Dunboyne? <i class="fas fa-plus"></i></button><div class="faq-a"><p>In most cases, yes. We run mobile teams across the Meath border, so for urgent leaks or storm damage we can usually get to you the same day at no extra charge.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does a gutter repair cost? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Every job is different, so we quote on-site after a quick inspection. There's no call-out fee and the price is agreed upfront before any work begins — no surprises on the bill.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Will you try to sell me new gutters I don't need? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Never. We always repair where possible and only recommend replacement when it's genuinely the better option. You'll get both options explained honestly.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you cover all of Dunboyne? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we cover Dunboyne and the surrounding areas including Clonee, Ongar, Blanchardstown, Ratoath. If you're nearby and unsure, just give us a call.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you come out same-day in Dunboyne? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Usually. We keep teams working across North West Commuter Belt every day, so an emergency in Dunboyne can normally be seen the same day.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does a gutter repair cost? <i class="fas fa-plus"></i></button><div class="faq-a"><p>It depends on the height, the length of the run and what's wrong. We'll look at it for free, give you a fixed price, and you decide from there.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What causes most gutter problems in Dunboyne? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Open Meath countryside on three sides means wind-driven rain hits gutters hard here. On the newer estates it's fitting quality; on the older village houses and bungalows it's genuinely worn-out systems.</p></div></div>
         <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you insured and is the work guaranteed? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we're fully insured and all our work is guaranteed. If a repaired section fails, we'll come back and put it right at no charge.</p></div></div>
       </div>
     </div>
   </section>
 
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nearby</span>
+        <h2>Gutter Services Near Dunboyne</h2>
+        <p>We work right across North Dublin — here are the areas closest to Dunboyne</p>
+      </div>
+      <div class="nearby-links">
+        <a href="/gutter-services-ongar" class="nearby-link"><i class="fas fa-location-dot"></i> Ongar</a>
+        <a href="/gutter-services-blanchardstown" class="nearby-link"><i class="fas fa-location-dot"></i> Blanchardstown</a>
+        <a href="/gutter-services-maynooth" class="nearby-link"><i class="fas fa-location-dot"></i> Maynooth</a>
+        <a href="/gutter-services-swords" class="nearby-link"><i class="fas fa-location-dot"></i> Swords</a>
+        <a href="/gutter-services-malahide" class="nearby-link"><i class="fas fa-location-dot"></i> Malahide</a>
+        <a href="/gutter-services-portmarnock" class="nearby-link"><i class="fas fa-location-dot"></i> Portmarnock</a>
+        <a href="/gutter-services-howth" class="nearby-link"><i class="fas fa-location-dot"></i> Howth</a>
+        <a href="/gutter-services-sutton" class="nearby-link"><i class="fas fa-location-dot"></i> Sutton</a>
+      </div>
+      <p class="areas-note" style="margin-top: 28px;">See every area we cover in <a href="/gutter-services-north-dublin">North Dublin</a>, or browse <a href="/near-me">all Dublin areas</a>.</p>
+    </div>
+  </section>
+
   <section class="cta-banner">
     <div class="container cta-inner">
-      <div class="cta-text"><h2>Need a Gutter Expert in Dunboyne?</h2><p>Get a free, no-obligation quote today. Same-day service available across Co. Meath.</p></div>
+      <div class="cta-text"><h2>Need a Gutter Expert in Dunboyne?</h2><p>No obligation, no pressure, no call-out charge. Just a straight price for the work in Dunboyne.</p></div>
       <div class="cta-actions">
         <a href="tel:012339526" class="btn btn-white"><i class="fas fa-phone"></i> (01) 233 9526</a>
         <a href="/quote" class="btn btn-outline-white">Get Free Quote</a>
@@ -232,7 +280,7 @@
   </section>
 
   <section class="map-section">
-    <iframe src="https://www.google.com/maps?q=Dunboyne%2C%20Co.%20Meath%2C%20Ireland&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dunboyne, Co. Meath"></iframe>
+    <iframe src="https://www.google.com/maps?q=Dunboyne%2C+Dublin%2C+Ireland&amp;output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dunboyne"></iframe>
   </section>
 
   <footer class="footer">
@@ -243,10 +291,10 @@
         <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
       </div>
       <div class="footer-col"><h4>Services</h4><ul><li><a href="/gutter-repairs">Gutter Repairs</a></li><li><a href="/gutter-cleaning">Gutter Cleaning</a></li><li><a href="/new-gutters">New Gutters</a></li><li><a href="/fascia-soffit">Fascia &amp; Soffit</a></li><li><a href="/downpipes">Downpipes Repair</a></li><li><a href="/commercial-guttering">Commercial Guttering</a></li></ul></div>
-      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about">About Us</a></li><li><a href="/near-me">Areas We Cover</a></li><li><a href="/quote">Get a Free Quote</a></li><li><a href="/contact">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012339526">(01) 233 9526</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon–Sun: 7am–9pm</li></ul></div>
+      <div class="footer-col"><h4>Areas We Cover</h4><ul><li><a href="/gutter-services-north-dublin">North Dublin</a></li><li><a href="/gutter-services-south-dublin">South Dublin</a></li><li><a href="/near-me">All Areas</a></li><li><a href="/blog">Gutter Advice</a></li><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012339526">(01) 233 9526</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon&ndash;Sun: 7am&ndash;9pm</li></ul></div>
     </div>
-    <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing & Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing &amp; Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
   </footer>
 
   <div class="float-ctas">

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://dublingutter.ie/gutter-services-swords" />
   <title>Gutter Services Swords | Repairs, Cleaning &amp; New Gutters | Recommended Roofing &amp; Guttering</title>
-  <meta name="description" content="Gutter repairs, cleaning and replacement in Swords, North County Dublin. Same-day call-outs across Malahide, Donabate, Rivervalley &amp; Boroimhe. Free quotes, upfront pricing." />
+  <meta name="description" content="Gutter repairs, cleaning and replacement in Swords, Co. Dublin. Same-day call-outs across Malahide, Donabate, Portmarnock, Kinsealy. Free quotes, upfront pricing." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -23,15 +23,21 @@
     .service-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
     .service-hero-form { background: var(--white); border-radius: var(--radius-lg); padding: 14px; }
     .content-split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .content-split-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .content-split-text h2 { font-size: 1.7rem; margin-bottom: 14px; }
     .content-split-text p { color: var(--grey); margin-bottom: 14px; line-height: 1.75; }
     .content-split-text ul { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
     .content-split-text li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.92rem; color: var(--text); }
     .content-split-text li i { color: var(--yellow-dark); margin-top: 3px; flex-shrink: 0; }
     .local-areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
-    .local-area { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; font-weight: 600; color: var(--grey-dark); }
+    .local-area { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
+    a.local-area:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); box-shadow: var(--shadow); }
     .local-area i { color: var(--blue); }
+    .nearby-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .nearby-link { display: inline-flex; align-items: center; gap: 7px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; padding: 9px 16px; font-size: 0.88rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
+    .nearby-link:hover { border-color: var(--blue); color: var(--blue); }
+    .nearby-link i { color: var(--yellow-dark); font-size: 0.8rem; }
     @media (max-width: 1024px) {
       .service-hero-inner { grid-template-columns: 1fr; }
       .content-split { grid-template-columns: 1fr; }
@@ -40,23 +46,47 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Recommended Roofing & Guttering — Swords",
-    "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
-    "url": "https://dublingutter.ie/gutter-services-swords",
-    "telephone": "+35312339526",
-    "email": "info@recommendedroofing.ie",
-    "priceRange": "€€",
-    "address": { "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" },
-    "areaServed": [
-      { "@type": "Place", "name": "Swords, North County Dublin" },
+    "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Recommended Roofing & Guttering — Swords",
+      "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
+      "url": "https://dublingutter.ie/gutter-services-swords",
+      "telephone": "+35312339526",
+      "email": "info@recommendedroofing.ie",
+      "priceRange": "€€",
+      "address": { "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" },
+      "areaServed": [
+      { "@type": "Place", "name": "Swords" },
       { "@type": "Place", "name": "Malahide" },
       { "@type": "Place", "name": "Donabate" },
       { "@type": "Place", "name": "Portmarnock" },
       { "@type": "Place", "name": "Kinsealy" },
-      { "@type": "Place", "name": "Rivervalley" }
-    ],
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }
+      { "@type": "Place", "name": "Rivervalley" },
+      { "@type": "Place", "name": "Boroimhe" }
+      ],
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dublingutter.ie/" },
+        { "@type": "ListItem", "position": 2, "name": "Areas We Cover", "item": "https://dublingutter.ie/near-me" },
+        { "@type": "ListItem", "position": 3, "name": "North Dublin", "item": "https://dublingutter.ie/gutter-services-north-dublin" },
+        { "@type": "ListItem", "position": 4, "name": "Swords", "item": "https://dublingutter.ie/gutter-services-swords" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+      { "@type": "Question", "name": "Do you cover all of Swords?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we cover Swords and the surrounding areas including Malahide, Donabate, Portmarnock, Kinsealy. If you're nearby and unsure, just give us a call." } },
+      { "@type": "Question", "name": "Can you come out same-day in Swords?", "acceptedAnswer": { "@type": "Answer", "text": "Often, yes — especially for leaks and storm damage. Ring us and we'll tell you honestly whether we can reach you today or tomorrow." } },
+      { "@type": "Question", "name": "How much does a gutter repair cost?", "acceptedAnswer": { "@type": "Answer", "text": "We price each job on what it actually needs rather than a flat rate. The inspection and quote are free, and whatever we quote is what you pay." } },
+      { "@type": "Question", "name": "What causes most gutter problems in Swords?", "acceptedAnswer": { "@type": "Answer", "text": "Being flat and open, with the airport just down the road, Swords catches a lot of wind. Loose brackets and joints that have worked themselves apart are the two things we're called out for most." } },
+      { "@type": "Question", "name": "Are you insured and is the work guaranteed?", "acceptedAnswer": { "@type": "Answer", "text": "Yes to both. Insurance details can be sent over before we come out, and the guarantee covers everything we install or repair." } }
+      ]
+    }
+    ]
   }
   </script>
 </head>
@@ -82,6 +112,7 @@
         <a href="/" class="nav-link">Home</a>
         <a href="/services" class="nav-link">Services</a>
         <a href="/near-me" class="nav-link active">Near Me</a>
+        <a href="/blog" class="nav-link">Blog</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/contact" class="nav-link">Contact</a>
       </nav>
@@ -93,9 +124,9 @@
   <section class="service-hero">
     <div class="container service-hero-inner">
       <div class="service-hero-content">
-        <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/near-me">Near Me</a><span>/</span><span>Swords</span></div>
-        <h1>Gutter Services in Swords, North County Dublin</h1>
-        <p>Local gutter repair, cleaning and replacement for homes and businesses across Swords and the wider North County Dublin area. Our mobile teams know the local roads well and can often be with you the same day — with an upfront price agreed before any work starts.</p>
+        <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/near-me">Areas</a><span>/</span><a href="/gutter-services-north-dublin">North Dublin</a><span>/</span><span>Swords</span></div>
+        <h1>Gutter Services in Swords, Co. Dublin</h1>
+        <p>Blocked, leaking or sagging gutters in Swords? We cover the whole of North County Dublin with same-day call-outs where we can, a fixed price agreed before we start, and no call-out fee either way.</p>
         <ul class="service-hero-bullets">
           <li><i class="fas fa-check-circle"></i> Same-day call-outs across Swords &amp; North County Dublin</li>
           <li><i class="fas fa-check-circle"></i> Upfront price agreed before work starts</li>
@@ -113,17 +144,12 @@
             style="width:100%;height:493px;border:none;border-radius:var(--radius-lg)"
             id="inline-b3qFYv3eyajJCp7nJblw"
             data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Quotation Form"
-            data-height="493"
+            data-trigger-type="alwaysShow" data-trigger-value=""
+            data-activation-type="alwaysActivated" data-activation-value=""
+            data-deactivation-type="neverDeactivate" data-deactivation-value=""
+            data-form-name="Quotation Form" data-height="493"
             data-layout-iframe-id="inline-b3qFYv3eyajJCp7nJblw"
-            data-form-id="b3qFYv3eyajJCp7nJblw"
-            title="Quotation Form">
+            data-form-id="b3qFYv3eyajJCp7nJblw" title="Quotation Form">
           </iframe>
           <script src="https://api.twolabsleadgen.com/js/form_embed.js"></script>
       </div>
@@ -144,17 +170,17 @@
       <div class="content-split-text">
         <span class="section-tag">Your Local Gutter Team</span>
         <h2>Trusted Gutter Specialists in Swords</h2>
-        <p>Swords has grown from a village into one of North County Dublin's biggest towns, taking in Rivervalley, Brackenstown, Applewood and Boroimhe along the way. Whether it's a 70s semi or a new estate house, we know the gutter systems around the town inside out.</p>
-        <p>Being close to the coast and Dublin Airport, Swords catches a lot of weather coming in off the Irish Sea, and salt-laden wind is hard on older PVC and cast iron. We repair, reseal and replace to keep water where it belongs — off your walls.</p>
+        <p>Swords has grown from a village into one of the biggest towns in the county, and the housing tells that story — the older streets around Main Street and Seatown, the big 1970s and 80s estates at River Valley and Boroimhe, and the newer apartment blocks out towards Airside.</p>
+        <p>Being flat and open, with the airport just down the road, Swords catches a lot of wind. Loose brackets and joints that have worked themselves apart are the two things we're called out for most.</p>
         <ul>
-          <li><i class="fas fa-check"></i> We cover Swords and all the surrounding areas</li>
-          <li><i class="fas fa-check"></i> Honest advice — we repair before we replace</li>
-          <li><i class="fas fa-check"></i> No call-out fee and no obligation to proceed</li>
-          <li><i class="fas fa-check"></i> Tidy work and full clean-up when we're done</li>
+          <li><i class="fas fa-check"></i> Working Swords roofs for three decades</li>
+          <li><i class="fas fa-check"></i> Repair recommended wherever repair will do</li>
+          <li><i class="fas fa-check"></i> Free inspection and quote, no strings</li>
+          <li><i class="fas fa-check"></i> Guaranteed work, in writing</li>
         </ul>
         <a href="/quote" class="btn btn-primary">Get a Free Quote</a>
       </div>
-      <div class="content-split-img"><img src="images/gutter-cleaning.webp" alt="Gutter repair and installation in Swords, North County Dublin" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div class="content-split-img"><img src="/images/services/gutter-repairs-dublin.webp" alt="Gutter repair work on a Dublin home in Swords" width="1200" height="675" loading="lazy" decoding="async" /></div>
     </div>
   </section>
 
@@ -166,11 +192,11 @@
         <p>Our full range of gutter services is available right across Swords and nearby</p>
       </div>
       <div class="services-grid">
-        <a href="/gutter-repairs" class="service-card"><div class="service-icon"><i class="fas fa-wrench"></i></div><h3>Gutter Repairs</h3><p>Leaking joints, sagging runs and loose brackets repaired fast across Swords. Same-day available.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/gutter-cleaning" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>Leaves and moss block gutters fast around Swords. We clear and flush the full system.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/new-gutters" class="service-card"><div class="service-icon"><i class="fas fa-plus"></i></div><h3>New Gutters</h3><p>Full PVC or aluminium gutter replacement in a range of colours to match your Swords home.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/fascia-soffit" class="service-card"><div class="service-icon"><i class="fas fa-house-chimney"></i></div><h3>Fascia &amp; Soffit</h3><p>New uPVC fascia and soffit to smarten your roofline and stop water getting behind the gutter.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/downpipes" class="service-card"><div class="service-icon"><i class="fas fa-arrows-down-to-line"></i></div><h3>Downpipes</h3><p>Blocked, detached or damaged downpipes cleared, resecured or replaced anywhere in Swords.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/gutter-repairs" class="service-card"><div class="service-icon"><i class="fas fa-wrench"></i></div><h3>Gutter Repairs</h3><p>Most gutter faults in Swords are a repair, not a replacement. We'll tell you honestly which yours is.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/gutter-cleaning" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>Clearing, flushing and a check-over of the whole system — the Swords houses we do yearly never have trouble.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/new-gutters" class="service-card"><div class="service-icon"><i class="fas fa-plus"></i></div><h3>New Gutters</h3><p>When a system is past repair we replace it properly — measured, made to fit and colour matched in Swords.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/fascia-soffit" class="service-card"><div class="service-icon"><i class="fas fa-house-chimney"></i></div><h3>Fascia &amp; Soffit</h3><p>Fascia and soffit renewal, usually done alongside the gutters so it's one visit and one price.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/downpipes" class="service-card"><div class="service-icon"><i class="fas fa-arrows-down-to-line"></i></div><h3>Downpipes</h3><p>Cracked, loose or blocked downpipes sorted — including rerouting discharge away from walls and drives.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
         <a href="/commercial-guttering" class="service-card"><div class="service-icon"><i class="fas fa-building"></i></div><h3>Commercial Guttering</h3><p>Gutter services for shops, schools, offices and apartment blocks across Swords.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
       </div>
     </div>
@@ -184,18 +210,20 @@
         <p>If you're in or near any of these areas, we can help</p>
       </div>
       <div class="local-areas">
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Malahide</div>
+        <a href="/gutter-services-malahide" class="local-area"><i class="fas fa-map-marker-alt"></i> Malahide</a>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Donabate</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Portmarnock</div>
+        <a href="/gutter-services-portmarnock" class="local-area"><i class="fas fa-map-marker-alt"></i> Portmarnock</a>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Kinsealy</div>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Rivervalley</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Brackenstown</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Applewood</div>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Boroimhe</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Brackenstown</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Airside</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Balheary</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> St Doulagh's</div>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Lissenhall</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Rathbeale</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Forrest Little</div>
       </div>
-      <p class="areas-note" style="margin-top: 28px;">Not sure if we reach you? <a href="/contact">Contact us</a> — we cover all of North County Dublin and the surrounding area.</p>
+      <p class="areas-note" style="margin-top: 28px;">Not sure if we reach you? <a href="/contact">Contact us</a> — we cover Swords and all of North Dublin.</p>
     </div>
   </section>
 
@@ -203,9 +231,9 @@
     <div class="container">
       <div class="section-header"><span class="section-tag">Reviews</span><h2>What Swords Customers Say</h2></div>
       <div class="reviews-grid">
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Brilliant from start to finish. Booked a gutter clean and minor repair, they were on time and charged exactly what was quoted."</p><div class="review-author"><div class="review-avatar">L</div><div><strong>Linda K.</strong><span>Rivervalley</span></div></div></div>
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Storm pulled a length of gutter off the back of the house. Replaced the brackets and resealed it the same week. Great job."</p><div class="review-author"><div class="review-avatar">T</div><div><strong>Tom H.</strong><span>Malahide</span></div></div></div>
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Friendly, professional and tidy. Would happily recommend to anyone in Swords."</p><div class="review-author"><div class="review-avatar">R</div><div><strong>Rachel D.</strong><span>Boroimhe</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Gutters had come away from the fascia at the back and were pouring down the wall. Fixed and resecured the same week.&rdquo;</p><div class="review-author"><div class="review-avatar">D</div><div><strong>Declan M.</strong><span>River Valley</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Full replacement on a 1980s semi. Matched the colour, tidied up after themselves, no complaints at all.&rdquo;</p><div class="review-author"><div class="review-avatar">A</div><div><strong>Aoife K.</strong><span>Boroimhe</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Called about a blockage, they found the downpipe was cracked underground. Explained it properly instead of just guessing.&rdquo;</p><div class="review-author"><div class="review-avatar">T</div><div><strong>Tom B.</strong><span>Brackenstown</span></div></div></div>
       </div>
     </div>
   </section>
@@ -214,18 +242,39 @@
     <div class="container">
       <div class="section-header"><span class="section-tag">FAQ</span><h2>Swords Gutter Questions</h2></div>
       <div class="faq-grid">
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you cover all of Swords? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we cover Swords and the surrounding areas including Malahide, Donabate, Portmarnock, Kinsealy, Rivervalley. If you're nearby and unsure, just give us a call.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you come out same-day in Swords? <i class="fas fa-plus"></i></button><div class="faq-a"><p>In most cases, yes. We run mobile teams across North County Dublin, so for urgent leaks or storm damage we can usually get to you the same day at no extra charge.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does a gutter repair cost? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Every job is different, so we quote on-site after a quick inspection. There's no call-out fee and the price is agreed upfront before any work begins — no surprises on the bill.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Will you try to sell me new gutters I don't need? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Never. We always repair where possible and only recommend replacement when it's genuinely the better option. You'll get both options explained honestly.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you insured and is the work guaranteed? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we're fully insured and all our work is guaranteed. If a repaired section fails, we'll come back and put it right at no charge.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you cover all of Swords? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we cover Swords and the surrounding areas including Malahide, Donabate, Portmarnock, Kinsealy. If you're nearby and unsure, just give us a call.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you come out same-day in Swords? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Often, yes — especially for leaks and storm damage. Ring us and we'll tell you honestly whether we can reach you today or tomorrow.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does a gutter repair cost? <i class="fas fa-plus"></i></button><div class="faq-a"><p>We price each job on what it actually needs rather than a flat rate. The inspection and quote are free, and whatever we quote is what you pay.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What causes most gutter problems in Swords? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Being flat and open, with the airport just down the road, Swords catches a lot of wind. Loose brackets and joints that have worked themselves apart are the two things we're called out for most.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you insured and is the work guaranteed? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes to both. Insurance details can be sent over before we come out, and the guarantee covers everything we install or repair.</p></div></div>
       </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nearby</span>
+        <h2>Gutter Services Near Swords</h2>
+        <p>We work right across North Dublin — here are the areas closest to Swords</p>
+      </div>
+      <div class="nearby-links">
+        <a href="/gutter-services-malahide" class="nearby-link"><i class="fas fa-location-dot"></i> Malahide</a>
+        <a href="/gutter-services-portmarnock" class="nearby-link"><i class="fas fa-location-dot"></i> Portmarnock</a>
+        <a href="/gutter-services-howth" class="nearby-link"><i class="fas fa-location-dot"></i> Howth</a>
+        <a href="/gutter-services-sutton" class="nearby-link"><i class="fas fa-location-dot"></i> Sutton</a>
+        <a href="/gutter-services-baldoyle" class="nearby-link"><i class="fas fa-location-dot"></i> Baldoyle</a>
+        <a href="/gutter-services-donaghmede" class="nearby-link"><i class="fas fa-location-dot"></i> Donaghmede</a>
+        <a href="/gutter-services-clontarf" class="nearby-link"><i class="fas fa-location-dot"></i> Clontarf</a>
+        <a href="/gutter-services-raheny" class="nearby-link"><i class="fas fa-location-dot"></i> Raheny</a>
+      </div>
+      <p class="areas-note" style="margin-top: 28px;">See every area we cover in <a href="/gutter-services-north-dublin">North Dublin</a>, or browse <a href="/near-me">all Dublin areas</a>.</p>
     </div>
   </section>
 
   <section class="cta-banner">
     <div class="container cta-inner">
-      <div class="cta-text"><h2>Need a Gutter Expert in Swords?</h2><p>Get a free, no-obligation quote today. Same-day service available across North County Dublin.</p></div>
+      <div class="cta-text"><h2>Need a Gutter Expert in Swords?</h2><p>Get a free, no-obligation quote today. Same-day service available across Swords and North County Dublin.</p></div>
       <div class="cta-actions">
         <a href="tel:012339526" class="btn btn-white"><i class="fas fa-phone"></i> (01) 233 9526</a>
         <a href="/quote" class="btn btn-outline-white">Get Free Quote</a>
@@ -234,7 +283,7 @@
   </section>
 
   <section class="map-section">
-    <iframe src="https://www.google.com/maps?q=Swords%2C%20Co.%20Dublin%2C%20Ireland&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Swords, North County Dublin"></iframe>
+    <iframe src="https://www.google.com/maps?q=Swords%2C+Dublin%2C+Ireland&amp;output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Swords"></iframe>
   </section>
 
   <footer class="footer">
@@ -245,10 +294,10 @@
         <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
       </div>
       <div class="footer-col"><h4>Services</h4><ul><li><a href="/gutter-repairs">Gutter Repairs</a></li><li><a href="/gutter-cleaning">Gutter Cleaning</a></li><li><a href="/new-gutters">New Gutters</a></li><li><a href="/fascia-soffit">Fascia &amp; Soffit</a></li><li><a href="/downpipes">Downpipes Repair</a></li><li><a href="/commercial-guttering">Commercial Guttering</a></li></ul></div>
-      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about">About Us</a></li><li><a href="/near-me">Areas We Cover</a></li><li><a href="/quote">Get a Free Quote</a></li><li><a href="/contact">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012339526">(01) 233 9526</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon–Sun: 7am–9pm</li></ul></div>
+      <div class="footer-col"><h4>Areas We Cover</h4><ul><li><a href="/gutter-services-north-dublin">North Dublin</a></li><li><a href="/gutter-services-south-dublin">South Dublin</a></li><li><a href="/near-me">All Areas</a></li><li><a href="/blog">Gutter Advice</a></li><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012339526">(01) 233 9526</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon&ndash;Sun: 7am&ndash;9pm</li></ul></div>
     </div>
-    <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing & Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing &amp; Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
   </footer>
 
   <div class="float-ctas">

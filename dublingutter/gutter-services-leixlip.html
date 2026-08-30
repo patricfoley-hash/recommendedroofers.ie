@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://dublingutter.ie/gutter-services-leixlip" />
   <title>Gutter Services Leixlip | Repairs, Cleaning &amp; New Gutters | Recommended Roofing &amp; Guttering</title>
-  <meta name="description" content="Gutter repairs, cleaning and replacement in Leixlip, Co. Kildare. Same-day call-outs across Maynooth, Celbridge, Confey &amp; Lucan. Free quotes, upfront pricing." />
+  <meta name="description" content="Gutter repairs, cleaning and replacement in Leixlip, Co. Kildare. Same-day call-outs across Lucan, Celbridge, Maynooth, Confey. Free quotes, upfront pricing." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -23,15 +23,21 @@
     .service-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
     .service-hero-form { background: var(--white); border-radius: var(--radius-lg); padding: 14px; }
     .content-split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .content-split-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .content-split-text h2 { font-size: 1.7rem; margin-bottom: 14px; }
     .content-split-text p { color: var(--grey); margin-bottom: 14px; line-height: 1.75; }
     .content-split-text ul { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
     .content-split-text li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.92rem; color: var(--text); }
     .content-split-text li i { color: var(--yellow-dark); margin-top: 3px; flex-shrink: 0; }
     .local-areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
-    .local-area { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; font-weight: 600; color: var(--grey-dark); }
+    .local-area { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
+    a.local-area:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); box-shadow: var(--shadow); }
     .local-area i { color: var(--blue); }
+    .nearby-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .nearby-link { display: inline-flex; align-items: center; gap: 7px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; padding: 9px 16px; font-size: 0.88rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
+    .nearby-link:hover { border-color: var(--blue); color: var(--blue); }
+    .nearby-link i { color: var(--yellow-dark); font-size: 0.8rem; }
     @media (max-width: 1024px) {
       .service-hero-inner { grid-template-columns: 1fr; }
       .content-split { grid-template-columns: 1fr; }
@@ -40,23 +46,47 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Recommended Roofing & Guttering — Leixlip",
-    "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
-    "url": "https://dublingutter.ie/gutter-services-leixlip",
-    "telephone": "+35312339526",
-    "email": "info@recommendedroofing.ie",
-    "priceRange": "€€",
-    "address": { "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" },
-    "areaServed": [
-      { "@type": "Place", "name": "Leixlip, Co. Kildare" },
-      { "@type": "Place", "name": "Maynooth" },
-      { "@type": "Place", "name": "Celbridge" },
+    "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Recommended Roofing & Guttering — Leixlip",
+      "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
+      "url": "https://dublingutter.ie/gutter-services-leixlip",
+      "telephone": "+35312339526",
+      "email": "info@recommendedroofing.ie",
+      "priceRange": "€€",
+      "address": { "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" },
+      "areaServed": [
+      { "@type": "Place", "name": "Leixlip" },
       { "@type": "Place", "name": "Lucan" },
+      { "@type": "Place", "name": "Celbridge" },
+      { "@type": "Place", "name": "Maynooth" },
       { "@type": "Place", "name": "Confey" },
-      { "@type": "Place", "name": "Collinstown" }
-    ],
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }
+      { "@type": "Place", "name": "Captain's Hill" },
+      { "@type": "Place", "name": "Easton" }
+      ],
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dublingutter.ie/" },
+        { "@type": "ListItem", "position": 2, "name": "Areas We Cover", "item": "https://dublingutter.ie/near-me" },
+        { "@type": "ListItem", "position": 3, "name": "South Dublin", "item": "https://dublingutter.ie/gutter-services-south-dublin" },
+        { "@type": "ListItem", "position": 4, "name": "Leixlip", "item": "https://dublingutter.ie/gutter-services-leixlip" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+      { "@type": "Question", "name": "Do you cover all of Leixlip?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we cover Leixlip and the surrounding areas including Lucan, Celbridge, Maynooth, Confey. If you're nearby and unsure, just give us a call." } },
+      { "@type": "Question", "name": "Can you come out same-day in Leixlip?", "acceptedAnswer": { "@type": "Answer", "text": "Often, yes — especially for leaks and storm damage. Ring us and we'll tell you honestly whether we can reach you today or tomorrow." } },
+      { "@type": "Question", "name": "How much does a gutter repair cost?", "acceptedAnswer": { "@type": "Answer", "text": "We price each job on what it actually needs rather than a flat rate. The inspection and quote are free, and whatever we quote is what you pay." } },
+      { "@type": "Question", "name": "What causes most gutter problems in Leixlip?", "acceptedAnswer": { "@type": "Answer", "text": "The Liffey valley planting drops a lot into gutters, and the estate housing from the seventies and eighties is now at the age where original systems are giving out across whole roads at once." } },
+      { "@type": "Question", "name": "Are you insured and is the work guaranteed?", "acceptedAnswer": { "@type": "Answer", "text": "Yes to both. Insurance details can be sent over before we come out, and the guarantee covers everything we install or repair." } }
+      ]
+    }
+    ]
   }
   </script>
 </head>
@@ -82,6 +112,7 @@
         <a href="/" class="nav-link">Home</a>
         <a href="/services" class="nav-link">Services</a>
         <a href="/near-me" class="nav-link active">Near Me</a>
+        <a href="/blog" class="nav-link">Blog</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/contact" class="nav-link">Contact</a>
       </nav>
@@ -93,14 +124,14 @@
   <section class="service-hero">
     <div class="container service-hero-inner">
       <div class="service-hero-content">
-        <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/near-me">Near Me</a><span>/</span><span>Leixlip</span></div>
+        <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/near-me">Areas</a><span>/</span><a href="/gutter-services-south-dublin">South Dublin</a><span>/</span><span>Leixlip</span></div>
         <h1>Gutter Services in Leixlip, Co. Kildare</h1>
-        <p>Local gutter repair, cleaning and replacement for homes and businesses across Leixlip and the wider the Kildare border area. Our mobile teams know the local roads well and can often be with you the same day — with an upfront price agreed before any work starts.</p>
+        <p>Gutter problems don't wait for a convenient moment. We run mobile teams throughout West Commuter Belt, so if something's overflowing or hanging off in Leixlip we can usually be there today.</p>
         <ul class="service-hero-bullets">
-          <li><i class="fas fa-check-circle"></i> Same-day call-outs across Leixlip &amp; the Kildare border</li>
-          <li><i class="fas fa-check-circle"></i> Upfront price agreed before work starts</li>
-          <li><i class="fas fa-check-circle"></i> 30 years of gutter experience in the Kildare border</li>
-          <li><i class="fas fa-check-circle"></i> Fully insured &amp; guaranteed work</li>
+          <li><i class="fas fa-check-circle"></i> No call-out fee anywhere in Leixlip</li>
+          <li><i class="fas fa-check-circle"></i> Fixed quote before a tool comes out of the van</li>
+          <li><i class="fas fa-check-circle"></i> Repairs first — we only replace when it's genuinely needed</li>
+          <li><i class="fas fa-check-circle"></i> Fully insured, with all work guaranteed</li>
         </ul>
         <div class="service-hero-ctas">
           <a href="/quote" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get Free Quote</a>
@@ -113,17 +144,12 @@
             style="width:100%;height:493px;border:none;border-radius:var(--radius-lg)"
             id="inline-b3qFYv3eyajJCp7nJblw"
             data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Quotation Form"
-            data-height="493"
+            data-trigger-type="alwaysShow" data-trigger-value=""
+            data-activation-type="alwaysActivated" data-activation-value=""
+            data-deactivation-type="neverDeactivate" data-deactivation-value=""
+            data-form-name="Quotation Form" data-height="493"
             data-layout-iframe-id="inline-b3qFYv3eyajJCp7nJblw"
-            data-form-id="b3qFYv3eyajJCp7nJblw"
-            title="Quotation Form">
+            data-form-id="b3qFYv3eyajJCp7nJblw" title="Quotation Form">
           </iframe>
           <script src="https://api.twolabsleadgen.com/js/form_embed.js"></script>
       </div>
@@ -144,17 +170,17 @@
       <div class="content-split-text">
         <span class="section-tag">Your Local Gutter Team</span>
         <h2>Trusted Gutter Specialists in Leixlip</h2>
-        <p>Just across the Kildare border, Leixlip mixes long-established homes around the village and Confey with newer developments near the Intel campus. We cover the whole town and the neighbouring Maynooth and Celbridge areas.</p>
-        <p>Sitting where the Liffey meets the Rye Water, Leixlip sees plenty of damp and leaf fall that clog gutters and downpipes. We get water flowing freely again and fix the leaks that let damp into walls and soffits.</p>
+        <p>Leixlip has an old village core along the Liffey with large 1970s and 80s estates at Captain's Hill, Easton and Riverforest, plus newer development towards Confey.</p>
+        <p>The Liffey valley planting drops a lot into gutters, and the estate housing from the seventies and eighties is now at the age where original systems are giving out across whole roads at once.</p>
         <ul>
-          <li><i class="fas fa-check"></i> We cover Leixlip and all the surrounding areas</li>
-          <li><i class="fas fa-check"></i> Honest advice — we repair before we replace</li>
-          <li><i class="fas fa-check"></i> No call-out fee and no obligation to proceed</li>
-          <li><i class="fas fa-check"></i> Tidy work and full clean-up when we're done</li>
+          <li><i class="fas fa-check"></i> Working Leixlip roofs for three decades</li>
+          <li><i class="fas fa-check"></i> Repair recommended wherever repair will do</li>
+          <li><i class="fas fa-check"></i> Free inspection and quote, no strings</li>
+          <li><i class="fas fa-check"></i> Guaranteed work, in writing</li>
         </ul>
         <a href="/quote" class="btn btn-primary">Get a Free Quote</a>
       </div>
-      <div class="content-split-img"><img src="images/gutter-repairs-dublin.webp" alt="Gutter repair and installation in Leixlip, Co. Kildare" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div class="content-split-img"><img src="/images/services/commercial-guttering-dublin.webp" alt="Commercial guttering work in Dublin in Leixlip" width="1200" height="675" loading="lazy" decoding="async" /></div>
     </div>
   </section>
 
@@ -167,11 +193,11 @@
       </div>
       <div class="services-grid">
         <a href="/gutter-repairs" class="service-card"><div class="service-icon"><i class="fas fa-wrench"></i></div><h3>Gutter Repairs</h3><p>Leaking joints, sagging runs and loose brackets repaired fast across Leixlip. Same-day available.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/gutter-cleaning" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>Leaves and moss block gutters fast around Leixlip. We clear and flush the full system.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/new-gutters" class="service-card"><div class="service-icon"><i class="fas fa-plus"></i></div><h3>New Gutters</h3><p>Full PVC or aluminium gutter replacement in a range of colours to match your Leixlip home.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/gutter-cleaning" class="service-card"><div class="service-icon"><i class="fas fa-broom"></i></div><h3>Gutter Cleaning</h3><p>A blocked gutter is how water gets behind a fascia. We clear Leixlip gutters before that happens.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/new-gutters" class="service-card"><div class="service-icon"><i class="fas fa-plus"></i></div><h3>New Gutters</h3><p>Complete replacement in PVC, aluminium or cast iron, sized correctly for your Leixlip roof.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
         <a href="/fascia-soffit" class="service-card"><div class="service-icon"><i class="fas fa-house-chimney"></i></div><h3>Fascia &amp; Soffit</h3><p>New uPVC fascia and soffit to smarten your roofline and stop water getting behind the gutter.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
         <a href="/downpipes" class="service-card"><div class="service-icon"><i class="fas fa-arrows-down-to-line"></i></div><h3>Downpipes</h3><p>Blocked, detached or damaged downpipes cleared, resecured or replaced anywhere in Leixlip.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/commercial-guttering" class="service-card"><div class="service-icon"><i class="fas fa-building"></i></div><h3>Commercial Guttering</h3><p>Gutter services for shops, schools, offices and apartment blocks across Leixlip.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/commercial-guttering" class="service-card"><div class="service-icon"><i class="fas fa-building"></i></div><h3>Commercial Guttering</h3><p>Box gutters, valley gutters and internal outlets on commercial buildings in and around Leixlip.</p><span class="service-link">Learn more <i class="fas fa-arrow-right"></i></span></a>
       </div>
     </div>
   </section>
@@ -184,16 +210,17 @@
         <p>If you're in or near any of these areas, we can help</p>
       </div>
       <div class="local-areas">
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Maynooth</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Celbridge</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Lucan</div>
+        <a href="/gutter-services-lucan" class="local-area"><i class="fas fa-map-marker-alt"></i> Lucan</a>
+        <a href="/gutter-services-celbridge" class="local-area"><i class="fas fa-map-marker-alt"></i> Celbridge</a>
+        <a href="/gutter-services-maynooth" class="local-area"><i class="fas fa-map-marker-alt"></i> Maynooth</a>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Confey</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Collinstown</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Kilcock</div>
-        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Straffan</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Captain's Hill</div>
         <div class="local-area"><i class="fas fa-map-marker-alt"></i> Easton</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Riverforest</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Louisa Bridge</div>
+        <div class="local-area"><i class="fas fa-map-marker-alt"></i> Collinstown</div>
       </div>
-      <p class="areas-note" style="margin-top: 28px;">Not sure if we reach you? <a href="/contact">Contact us</a> — we cover all of Co. Kildare and the surrounding area.</p>
+      <p class="areas-note" style="margin-top: 28px;">Not sure if we reach you? <a href="/contact">Contact us</a> — we cover Leixlip and all of South Dublin.</p>
     </div>
   </section>
 
@@ -201,9 +228,9 @@
     <div class="container">
       <div class="section-header"><span class="section-tag">Reviews</span><h2>What Leixlip Customers Say</h2></div>
       <div class="reviews-grid">
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Great job clearing and resealing the gutters. Prompt and well priced."</p><div class="review-author"><div class="review-avatar">P</div><div><strong>Pádraig M.</strong><span>Confey</span></div></div></div>
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Replaced a full run of gutter that was past saving. Clean, quick and tidy."</p><div class="review-author"><div class="review-avatar">H</div><div><strong>Helen K.</strong><span>Maynooth</span></div></div></div>
-        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Came out same day for a leak. Sorted in an hour. Couldn't fault them."</p><div class="review-author"><div class="review-avatar">G</div><div><strong>Gary D.</strong><span>Leixlip</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Liffey valley trees mean constant leaves. Regular clean has sorted us.&rdquo;</p><div class="review-author"><div class="review-avatar">B</div><div><strong>Brendan M.</strong><span>Riverforest</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;80s estate, original gutters gone. Full replacement, neatly done.&rdquo;</p><div class="review-author"><div class="review-avatar">C</div><div><strong>Carmel D.</strong><span>Captain's Hill</span></div></div></div>
+        <div class="review-card"><div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>&ldquo;Good price and no travel charge from Dublin.&rdquo;</p><div class="review-author"><div class="review-avatar">I</div><div><strong>Ian F.</strong><span>Confey</span></div></div></div>
       </div>
     </div>
   </section>
@@ -212,18 +239,39 @@
     <div class="container">
       <div class="section-header"><span class="section-tag">FAQ</span><h2>Leixlip Gutter Questions</h2></div>
       <div class="faq-grid">
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you cover all of Leixlip? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we cover Leixlip and the surrounding areas including Maynooth, Celbridge, Lucan, Confey, Collinstown. If you're nearby and unsure, just give us a call.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you come out same-day in Leixlip? <i class="fas fa-plus"></i></button><div class="faq-a"><p>In most cases, yes. We run mobile teams across the Kildare border, so for urgent leaks or storm damage we can usually get to you the same day at no extra charge.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does a gutter repair cost? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Every job is different, so we quote on-site after a quick inspection. There's no call-out fee and the price is agreed upfront before any work begins — no surprises on the bill.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Will you try to sell me new gutters I don't need? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Never. We always repair where possible and only recommend replacement when it's genuinely the better option. You'll get both options explained honestly.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you insured and is the work guaranteed? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we're fully insured and all our work is guaranteed. If a repaired section fails, we'll come back and put it right at no charge.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you cover all of Leixlip? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes — we cover Leixlip and the surrounding areas including Lucan, Celbridge, Maynooth, Confey. If you're nearby and unsure, just give us a call.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you come out same-day in Leixlip? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Often, yes — especially for leaks and storm damage. Ring us and we'll tell you honestly whether we can reach you today or tomorrow.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does a gutter repair cost? <i class="fas fa-plus"></i></button><div class="faq-a"><p>We price each job on what it actually needs rather than a flat rate. The inspection and quote are free, and whatever we quote is what you pay.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What causes most gutter problems in Leixlip? <i class="fas fa-plus"></i></button><div class="faq-a"><p>The Liffey valley planting drops a lot into gutters, and the estate housing from the seventies and eighties is now at the age where original systems are giving out across whole roads at once.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you insured and is the work guaranteed? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes to both. Insurance details can be sent over before we come out, and the guarantee covers everything we install or repair.</p></div></div>
       </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nearby</span>
+        <h2>Gutter Services Near Leixlip</h2>
+        <p>We work right across South Dublin — here are the areas closest to Leixlip</p>
+      </div>
+      <div class="nearby-links">
+        <a href="/gutter-services-lucan" class="nearby-link"><i class="fas fa-location-dot"></i> Lucan</a>
+        <a href="/gutter-services-celbridge" class="nearby-link"><i class="fas fa-location-dot"></i> Celbridge</a>
+        <a href="/gutter-services-maynooth" class="nearby-link"><i class="fas fa-location-dot"></i> Maynooth</a>
+        <a href="/gutter-services-dun-laoghaire" class="nearby-link"><i class="fas fa-location-dot"></i> Dún Laoghaire</a>
+        <a href="/gutter-services-dalkey" class="nearby-link"><i class="fas fa-location-dot"></i> Dalkey</a>
+        <a href="/gutter-services-killiney" class="nearby-link"><i class="fas fa-location-dot"></i> Killiney</a>
+        <a href="/gutter-services-glenageary" class="nearby-link"><i class="fas fa-location-dot"></i> Glenageary</a>
+        <a href="/gutter-services-monkstown" class="nearby-link"><i class="fas fa-location-dot"></i> Monkstown</a>
+      </div>
+      <p class="areas-note" style="margin-top: 28px;">See every area we cover in <a href="/gutter-services-south-dublin">South Dublin</a>, or browse <a href="/near-me">all Dublin areas</a>.</p>
     </div>
   </section>
 
   <section class="cta-banner">
     <div class="container cta-inner">
-      <div class="cta-text"><h2>Need a Gutter Expert in Leixlip?</h2><p>Get a free, no-obligation quote today. Same-day service available across Co. Kildare.</p></div>
+      <div class="cta-text"><h2>Need a Gutter Expert in Leixlip?</h2><p>Get a free, no-obligation quote today. Same-day service available across Leixlip and West Commuter Belt.</p></div>
       <div class="cta-actions">
         <a href="tel:012339526" class="btn btn-white"><i class="fas fa-phone"></i> (01) 233 9526</a>
         <a href="/quote" class="btn btn-outline-white">Get Free Quote</a>
@@ -232,7 +280,7 @@
   </section>
 
   <section class="map-section">
-    <iframe src="https://www.google.com/maps?q=Leixlip%2C%20Co.%20Kildare%2C%20Ireland&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Leixlip, Co. Kildare"></iframe>
+    <iframe src="https://www.google.com/maps?q=Leixlip%2C+Dublin%2C+Ireland&amp;output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Leixlip"></iframe>
   </section>
 
   <footer class="footer">
@@ -243,10 +291,10 @@
         <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
       </div>
       <div class="footer-col"><h4>Services</h4><ul><li><a href="/gutter-repairs">Gutter Repairs</a></li><li><a href="/gutter-cleaning">Gutter Cleaning</a></li><li><a href="/new-gutters">New Gutters</a></li><li><a href="/fascia-soffit">Fascia &amp; Soffit</a></li><li><a href="/downpipes">Downpipes Repair</a></li><li><a href="/commercial-guttering">Commercial Guttering</a></li></ul></div>
-      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about">About Us</a></li><li><a href="/near-me">Areas We Cover</a></li><li><a href="/quote">Get a Free Quote</a></li><li><a href="/contact">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012339526">(01) 233 9526</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon–Sun: 7am–9pm</li></ul></div>
+      <div class="footer-col"><h4>Areas We Cover</h4><ul><li><a href="/gutter-services-north-dublin">North Dublin</a></li><li><a href="/gutter-services-south-dublin">South Dublin</a></li><li><a href="/near-me">All Areas</a></li><li><a href="/blog">Gutter Advice</a></li><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012339526">(01) 233 9526</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon&ndash;Sun: 7am&ndash;9pm</li></ul></div>
     </div>
-    <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing & Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing &amp; Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
   </footer>
 
   <div class="float-ctas">
