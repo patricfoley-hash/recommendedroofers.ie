@@ -114,7 +114,7 @@ def topbar_header(active):
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="topbar-left">
-        <span><i class="fas fa-phone"></i> {PHONE}</span>
+        <span><i class="fas fa-phone"></i> <a href="tel:{PHONE_HREF}">{PHONE}</a></span>
         <span><i class="fas fa-envelope"></i> info@recommendedroofing.ie</span>
       </div>
       <div class="topbar-right">
@@ -129,6 +129,7 @@ def topbar_header(active):
       <a href="/" class="logo"><img src="images/logo-recommended-roofing.svg" alt="Recommended Roofing &amp; Guttering" height="80" /></a>
       <nav class="nav" id="nav">{nav}
       </nav>
+      <a href="tel:012658463" class="btn btn-outline-blue header-call" aria-label="Call (01) 265 8463"><i class="fas fa-phone"></i> <span>(01) 265 8463</span></a>
       <a href="/quote" class="btn btn-primary header-cta">Get Free Quote</a>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -152,7 +153,6 @@ FOOTER = """
 
   <div class="float-ctas">
     <a href="tel:012658463" class="float-btn float-phone"><i class="fas fa-phone"></i></a>
-    <a href="https://wa.me/353858614050" class="float-btn float-whatsapp"><i class="fab fa-whatsapp"></i></a>
   </div>
 
   <script>

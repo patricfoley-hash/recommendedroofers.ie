@@ -86,10 +86,13 @@ ul { list-style: none; }
 .logo-light .logo-icon { background: rgba(255,255,255,0.15); }
 
 .nav { display: flex; align-items: center; gap: 4px; }
-.nav-link { padding: 8px 14px; border-radius: 8px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.9rem; color: var(--grey-dark); transition: all var(--transition); }
+.nav-link { padding: 8px 14px; border-radius: 8px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.9rem; color: var(--grey-dark); transition: all var(--transition); white-space: nowrap; }
 .nav-link:hover, .nav-link.active { color: var(--blue); background: var(--blue-xlight); }
 
 .header-cta { padding: 10px 22px; font-size: 0.88rem; }
+.header-call { padding: 10px 18px; font-size: 0.88rem; font-weight: 600; white-space: nowrap; }
+.topbar-left a { color: inherit; }
+.topbar-left a:hover { color: var(--white); }
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--grey-dark); transition: all var(--transition); border-radius: 2px; }
 .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -279,7 +282,6 @@ ul { list-style: none; }
 .float-btn:hover { transform: scale(1.1); color: var(--white); }
 .float-phone { background: var(--yellow); color: var(--grey-dark); }
 .float-phone:hover { color: var(--grey-dark); }
-.float-whatsapp { background: #25D366; }
 
 /* ---- PAGE HERO (inner pages) ---- */
 .page-hero { background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%); padding: 60px 0; text-align: center; }
@@ -376,6 +378,8 @@ ul { list-style: none; }
   .nav.open { display: flex; }
   .hamburger { display: flex; }
   .header-cta { display: none; }
+  .header-inner { gap: 10px; }
+  .header-call { padding: 9px 12px; font-size: 0.78rem; }
   .services-grid { grid-template-columns: 1fr; }
   .reviews-grid { grid-template-columns: 1fr; }
   .process-steps { flex-direction: column; }
@@ -404,6 +408,13 @@ ul { list-style: none; }
   .trust-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
   .footer-inner { grid-template-columns: 1fr; }
   .about-stats { grid-template-columns: 1fr; }
+}
+
+/* Narrower than ~400px the number itself won't fit beside the burger —
+   the icon alone still dials. Must stay AFTER the 768/480 blocks. */
+@media (max-width: 400px) {
+  .header-call span { display: none; }
+  .header-call { padding: 9px 11px; }
 }
 
 /* ---- HOMEPAGE AREA REGIONS ---- */
