@@ -6,7 +6,7 @@ from areas_south import SOUTH
 import variants as V
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "dublingutter")
-PHONE, PHONE_HREF = "(01) 233 9526", "012339526"
+PHONE, PHONE_HREF = "(01) 265 8463", "012658463"
 HUBS = {"north": ("gutter-services-north-dublin", "North Dublin"),
         "south": ("gutter-services-south-dublin", "South Dublin")}
 
@@ -145,14 +145,14 @@ FOOTER = """
       </div>
       <div class="footer-col"><h4>Services</h4><ul><li><a href="/gutter-repairs">Gutter Repairs</a></li><li><a href="/gutter-cleaning">Gutter Cleaning</a></li><li><a href="/new-gutters">New Gutters</a></li><li><a href="/fascia-soffit">Fascia &amp; Soffit</a></li><li><a href="/downpipes">Downpipes Repair</a></li><li><a href="/commercial-guttering">Commercial Guttering</a></li></ul></div>
       <div class="footer-col"><h4>Areas We Cover</h4><ul><li><a href="/gutter-services-north-dublin">North Dublin</a></li><li><a href="/gutter-services-south-dublin">South Dublin</a></li><li><a href="/near-me">All Areas</a></li><li><a href="/blog">Gutter Advice</a></li><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012339526">(01) 233 9526</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon&ndash;Sun: 7am&ndash;9pm</li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012658463">(01) 265 8463</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon&ndash;Sun: 7am&ndash;9pm</li></ul></div>
     </div>
     <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing &amp; Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
   </footer>
 
   <div class="float-ctas">
-    <a href="tel:012339526" class="float-btn float-phone"><i class="fas fa-phone"></i></a>
-    <a href="https://wa.me/35312339526" class="float-btn float-whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:012658463" class="float-btn float-phone"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/35312658463" class="float-btn float-whatsapp"><i class="fab fa-whatsapp"></i></a>
   </div>
 
   <script>
@@ -265,7 +265,7 @@ def area_page(a, i):
       "name": "Recommended Roofing & Guttering — {esc(A)}",
       "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
       "url": "https://dublingutter.ie/gutter-services-{slug}",
-      "telephone": "+35312339526",
+      "telephone": "+35312658463",
       "email": "info@recommendedroofing.ie",
       "priceRange": "€€",
       "address": {{ "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" }},
@@ -489,7 +489,7 @@ def hub_page(region):
       "name": "Recommended Roofing & Guttering — {name}",
       "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
       "url": "https://dublingutter.ie/{slug}",
-      "telephone": "+35312339526",
+      "telephone": "+35312658463",
       "email": "info@recommendedroofing.ie",
       "priceRange": "€€",
       "address": {{ "@type": "PostalAddress", "streetAddress": "24A Baggot Street Upper", "addressLocality": "Dublin", "postalCode": "D04 N528", "addressCountry": "IE" }},
