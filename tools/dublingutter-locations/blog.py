@@ -6,7 +6,7 @@ sys.path.insert(0,'.')
 from gen import (OUT, HEAD_CSS, topbar_header, FOOTER, QUOTE_FORM, PHONE, PHONE_HREF,
                  esc, jsonstr, ALL, HUBS)
 
-POSTS = [
+HAND_WRITTEN = [
  dict(slug="how-often-should-you-clean-gutters-ireland",
   title="How Often Should You Clean Your Gutters in Ireland?",
   desc="Most Dublin homes need gutters cleared twice a year — but it depends on the trees around you. Here's how to tell what your house needs.",
@@ -73,6 +73,21 @@ POSTS = [
   links=[("/gutter-services-north-dublin","North Dublin areas"),("/gutter-services-south-dublin","South Dublin areas"),("/commercial-guttering","Commercial guttering")]),
 ]
 
+# Posts written by the Core content pipeline live in their own file, so
+# publish-dublingutter-blog.mjs can rewrite that file wholesale without ever
+# risking the hand-written posts above. Newest date first, so the index leads
+# with the newest work and every post's "Keep Reading" block follows suit.
+try:
+    from posts_generated import POSTS as _PIPELINE
+except ImportError:
+    _PIPELINE = []
+
+# A hand-written post always wins a slug clash — the pipeline must never
+# silently overwrite something a person wrote.
+_HAND = {p["slug"] for p in HAND_WRITTEN}
+_merged = HAND_WRITTEN + [p for p in _PIPELINE if p["slug"] not in _HAND]
+POSTS = sorted(_merged, key=lambda x: x["date"], reverse=True)
+
 BLOG_CSS = """  <style>
     .post-body { max-width: 72ch; margin: 0 auto; }
     .post-body h2 { font-size: 1.45rem; margin: 44px 0 14px; color: var(--grey-dark); }
@@ -107,7 +122,10 @@ def post_page(p):
         f'<div class="faq-a"><p>{esc(a)}</p></div></div>' for q, a in p["faq"])
     chips = "\n        ".join(
         f'<a href="{h}" class="post-link-chip"><i class="fas fa-arrow-right"></i> {t}</a>' for h, t in p["links"])
-    others = [o for o in POSTS if o["slug"] != p["slug"]]
+    # Capped at 3. With two hand-written posts "every other post" was a
+    # sensible Keep Reading block; once the pipeline is feeding this blog it
+    # would be a wall of twenty cards under every article.
+    others = [o for o in POSTS if o["slug"] != p["slug"]][:3]
     more = "\n        ".join(
         f'<a href="/blog/{o["slug"]}" class="blog-card"><span class="post-cat">{esc(o["cat"])}</span>'
         f'<h2>{esc(o["title"])}</h2><p>{esc(o["desc"])}</p>'
