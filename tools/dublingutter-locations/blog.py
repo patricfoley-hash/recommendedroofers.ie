@@ -3,7 +3,7 @@
 actually types, and links back into the service and area pages."""
 import sys, os, html, re
 sys.path.insert(0,'.')
-from gen import (OUT, HEAD_CSS, topbar_header, FOOTER, QUOTE_FORM, PHONE, PHONE_HREF,
+from gen import (OUT, FACTS, HEAD_CSS, topbar_header, FOOTER, QUOTE_FORM, PHONE, PHONE_HREF,
                  esc, jsonstr, ALL, HUBS)
 
 HAND_WRITTEN = [
@@ -54,7 +54,7 @@ HAND_WRITTEN = [
   title="The Gutter Problems We See Most in Dublin — by Type of House",
   desc="Georgian, 1930s corporation, 1970s estate or a new build — the age of your house predicts the gutter problem you'll get.",
   cat="Local Knowledge", read=8, date="2026-08-30",
-  lede="After thirty years on Dublin roofs, you can usually guess the fault from the address. The housing stock in this city falls into a handful of eras, and each one fails in its own way.",
+  lede="After enough years on Dublin roofs, you can usually guess the fault from the address. The housing stock in this city falls into a handful of eras, and each one fails in its own way.",
   body=[
    ("Georgian and Victorian: parapet and valley gutters","<p>In the city centre, Dublin 4, Rathmines, Ranelagh and along the coast, the gutter is often not on the front of the house at all. It sits behind a parapet wall or in a valley between two roof slopes, draining into a hopper head and down a cast iron pipe.</p>"
     "<p>These leak inward. By the time you see a stain on a bedroom ceiling, water has been tracking through the structure for months. They need inspecting on a schedule, not waiting for a symptom.</p>"),
@@ -244,7 +244,7 @@ def blog_index():
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://dublingutter.ie/blog" />
   <title>Gutter Advice for Dublin Homeowners | Recommended Roofing &amp; Guttering</title>
-  <meta name="description" content="Practical gutter advice from 30 years working on Dublin roofs — when to clean, when to repair, when to replace, and what goes wrong on each type of Dublin house." />
+  <meta name="description" content="Practical gutter advice from the crews working on Dublin roofs every week — when to clean, when to repair, when to replace, and what goes wrong on each type of Dublin house." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -271,16 +271,16 @@ def blog_index():
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a><span>/</span><span>Gutter Advice</span></div>
       <h1 style="color:var(--white);font-size:clamp(1.8rem,3.5vw,2.6rem);margin:14px 0 14px;">Gutter Advice for Dublin Homes</h1>
-      <p style="color:rgba(255,255,255,0.85);max-width:62ch;font-size:1.05rem;">Thirty years on Dublin roofs, written down. No filler — just what actually goes wrong, why it goes wrong here, and what it takes to put right.</p>
+      <p style="color:rgba(255,255,255,0.85);max-width:62ch;font-size:1.05rem;">What we see on Dublin roofs every week, written down. No filler — just what actually goes wrong, why it goes wrong here, and what it takes to put right.</p>
     </div>
   </section>
 
   <section class="trust-bar">
     <div class="container trust-bar-inner">
       <div class="trust-item"><i class="fas fa-bolt"></i><div><strong>Same-Day Available</strong><span>7 days a week</span></div></div>
-      <div class="trust-item"><i class="fas fa-hard-hat"></i><div><strong>30 Years Experience</strong><span>Trusted since 1994</span></div></div>
+      <div class="trust-item"><i class="fas fa-hard-hat"></i><div><strong>{FACTS["trust_headline"]}</strong><span>{FACTS["trust_sub"]}</span></div></div>
       <div class="trust-item"><i class="fas fa-tag"></i><div><strong>Upfront Pricing</strong><span>No hidden charges</span></div></div>
-      <div class="trust-item"><i class="fab fa-google"></i><div><strong>20+ Google Reviews</strong><span>Rated 4.9 / 5 stars</span></div></div>
+      <div class="trust-item"><i class="fab fa-google"></i><div><strong>{FACTS["reviews"]} Google Reviews</strong><span>Rated {FACTS["rating"]} / 5 stars</span></div></div>
     </div>
   </section>
 

@@ -9,20 +9,20 @@ HERO = [
  "Local gutter repair, cleaning and replacement for homes and businesses across {A} and the wider {S} area. Our teams know the local roads well and can often be with you the same day, with an upfront price agreed before any work starts.",
  "We've been repairing, clearing and replacing gutters across {A} for three decades. Whatever's going on with yours, we'll tell you straight what it needs, what it costs, and get it done without the runaround.",
  "Blocked, leaking or sagging gutters in {A}? We cover the whole of {S} with same-day call-outs where we can, a fixed price agreed before we start, and no call-out fee either way.",
- "From a single leaking joint to a full replacement, we handle gutter work of every size across {A}. Thirty years on {S} roofs means we've usually seen your problem before — and know the quickest honest fix.",
+ "From a single leaking joint to a full replacement, we handle gutter work of every size across {A}. We are on {S} roofs every week, so we have usually seen your problem before — and know the quickest honest fix.",
  "Gutter problems don't wait for a convenient moment. We run mobile teams throughout {S}, so if something's overflowing or hanging off in {A} we can usually be there today.",
- "Straightforward gutter work in {A} — repairs, cleaning, downpipes, fascia and soffit, and full replacements. Free quotes, a price agreed up front, and a guarantee on everything we do.",
+ "Straightforward gutter work in {A} — repairs, cleaning, downpipes, fascia and soffit, and full replacements. Free quotes, a price agreed up front, and a 10-year written guarantee on the work.",
 ]
 
 BULLETS = [
  ["Same-day call-outs across {A} &amp; {S}", "Upfront price agreed before work starts",
-  "30 years of gutter experience in {S}", "Fully insured &amp; guaranteed work"],
+  "Directly employed crews working in {S}", "Fully insured, 10-year written guarantee"],
  ["No call-out fee anywhere in {A}", "Fixed quote before a tool comes out of the van",
-  "Repairs first — we only replace when it's genuinely needed", "Fully insured, with all work guaranteed"],
+  "Repairs first — we only replace when it's genuinely needed", "Fully insured, with a 10-year written guarantee"],
  ["Covering every road in {A} and around it", "Emergency and storm damage handled same day",
   "Clear pricing with nothing added at the end", "Tidy work and a full clean-up afterwards"],
  ["Local teams working across {S} daily", "Free inspection and honest advice before you commit",
-  "Three decades of Dublin gutter work behind us", "Insured, guaranteed and fully tax compliant"],
+  "Crews we employ ourselves, never subcontracted", "Insured, guaranteed and fully tax compliant"],
  ["Fast response throughout {A}", "You'll know the price before we begin",
   "We fix the cause, not just the symptom", "Guaranteed work — if it fails, we come back"],
 ]
@@ -85,10 +85,10 @@ FAQ_COST = [
 ]
 
 FAQ_GUARANTEE = [
- "Yes — we're fully insured and all our work is guaranteed. If a repaired section fails, we'll come back and put it right at no charge.",
- "Fully insured, and everything we do is guaranteed. If something we've fixed gives trouble, we return and sort it for nothing.",
- "We carry full public liability insurance and guarantee our work. Paperwork is available on request before we start.",
- "Yes to both. Insurance details can be sent over before we come out, and the guarantee covers everything we install or repair.",
+ "Yes — we're fully insured and every job carries a 10-year written guarantee. If a repaired section fails, we come back and put it right at no charge. A full gutter replacement also carries our Lifetime Leak Guarantee.",
+ "Fully insured, and everything we do carries a 10-year written guarantee. If something we've fixed gives trouble, we return and sort it for nothing.",
+ "We carry full public liability insurance and give a 10-year written guarantee. Paperwork is available on request before we start.",
+ "Yes to both. Insurance details can be sent over before we come out, and the 10-year written guarantee covers everything we install or repair.",
 ]
 
 FAQ_SAMEDAY = [

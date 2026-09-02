@@ -7,6 +7,38 @@ import variants as V
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "dublingutter")
 PHONE, PHONE_HREF = "(01) 265 8463", "012658463"
+
+# ── FACTS — the single source of truth for anything this site claims ─────────
+#
+# This site is Recommended Roofing & Guttering, so its facts must be THAT
+# company's facts. Until 2026-09-02 they were not: 97 pages said "trusted since
+# 1994" and "30 Years Experience" for a company founded in 2019, and 97 said the
+# Google rating was 4.9 when it is 5.0 (8 pages already said 5.0 — the site
+# disagreed with itself). Opening hours said Mon–Sun 7am–9pm against the group's
+# actual Mon–Sat 8–6, closed Sunday.
+#
+# Canonical source: reference/rr canonical facts + the RR knowledge base.
+# Change a claim HERE, never in a template — that is how the site drifted.
+#
+# ⚠️ No blanket "years experience" number. The company was founded in 2019 and
+# Patrick's standing call is not to publish an averaged crew-experience figure —
+# so the trust slot sells directly-employed crews instead, which is true, checkable
+# and a stronger claim than a number nobody can verify.
+FACTS = {
+    "founded": 2019,
+    "rating": "5.0",
+    "reviews": "20+",
+    # Repairs and partial work: the 10-year written workmanship guarantee.
+    # FULL replacements also carry the Lifetime Leak Guarantee. The scope travels
+    # with the claim — an unqualified "lifetime guarantee" on a repairs page
+    # promises something the business does not offer.
+    "guarantee": "10-year written guarantee",
+    "leak_guarantee": "Lifetime Leak Guarantee on every full replacement",
+    "hours_text": "Mon&ndash;Sat: 8am&ndash;6pm",
+    "hours_short": "Mon–Sat, 8am–6pm",
+    "trust_headline": "Directly Employed Crews",
+    "trust_sub": "We never subcontract",
+}
 HUBS = {"north": ("gutter-services-north-dublin", "North Dublin"),
         "south": ("gutter-services-south-dublin", "South Dublin")}
 
@@ -118,7 +150,7 @@ def topbar_header(active):
         <span><i class="fas fa-envelope"></i> info@recommendedroofing.ie</span>
       </div>
       <div class="topbar-right">
-        <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.9 Google Reviews</span>
+        <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> {FACTS["rating"]} Google Reviews</span>
         <span><i class="fas fa-shield-halved"></i> Fully Insured</span>
       </div>
     </div>
@@ -141,12 +173,12 @@ FOOTER = """
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="/" class="logo logo-light"><img src="images/logo-recommended-roofing.svg" alt="Recommended Roofing &amp; Guttering" height="80" /></a>
-        <p>Dublin's trusted gutter repair and replacement experts. Serving homeowners and businesses across Dublin for over 30 years.</p>
+        <p>Dublin's trusted gutter repair and replacement experts. Directly employed crews, a price agreed before we start, and a %GUARANTEE% on the work.</p>
         <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
       </div>
       <div class="footer-col"><h4>Services</h4><ul><li><a href="/gutter-repairs">Gutter Repairs</a></li><li><a href="/gutter-cleaning">Gutter Cleaning</a></li><li><a href="/new-gutters">New Gutters</a></li><li><a href="/fascia-soffit">Fascia &amp; Soffit</a></li><li><a href="/downpipes">Downpipes Repair</a></li><li><a href="/commercial-guttering">Commercial Guttering</a></li></ul></div>
       <div class="footer-col"><h4>Areas We Cover</h4><ul><li><a href="/gutter-services-north-dublin">North Dublin</a></li><li><a href="/gutter-services-south-dublin">South Dublin</a></li><li><a href="/near-me">All Areas</a></li><li><a href="/blog">Gutter Advice</a></li><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012658463">(01) 265 8463</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon&ndash;Sun: 7am&ndash;9pm</li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i> <a href="tel:012658463">(01) 265 8463</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> %HOURS%</li></ul></div>
     </div>
     <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing &amp; Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
   </footer>
@@ -163,6 +195,11 @@ FOOTER = """
 </body>
 </html>
 """
+
+# FOOTER carries inline JS, so it can never be an f-string — its two FACTS
+# values are substituted here instead. Keep any new footer claim in FACTS.
+FOOTER = FOOTER.replace("%GUARANTEE%", FACTS["guarantee"]).replace("%HOURS%", FACTS["hours_text"])
+
 
 QUOTE_FORM = """<iframe
             src="https://api.twolabsleadgen.com/widget/form/b3qFYv3eyajJCp7nJblw"
@@ -318,9 +355,9 @@ def area_page(a, i):
   <section class="trust-bar">
     <div class="container trust-bar-inner">
       <div class="trust-item"><i class="fas fa-bolt"></i><div><strong>Same-Day Available</strong><span>7 days a week</span></div></div>
-      <div class="trust-item"><i class="fas fa-hard-hat"></i><div><strong>30 Years Experience</strong><span>Trusted since 1994</span></div></div>
+      <div class="trust-item"><i class="fas fa-hard-hat"></i><div><strong>{FACTS["trust_headline"]}</strong><span>{FACTS["trust_sub"]}</span></div></div>
       <div class="trust-item"><i class="fas fa-tag"></i><div><strong>Upfront Pricing</strong><span>No hidden charges</span></div></div>
-      <div class="trust-item"><i class="fab fa-google"></i><div><strong>20+ Google Reviews</strong><span>Rated 4.9 / 5 stars</span></div></div>
+      <div class="trust-item"><i class="fab fa-google"></i><div><strong>{FACTS["reviews"]} Google Reviews</strong><span>Rated {FACTS["rating"]} / 5 stars</span></div></div>
     </div>
   </section>
 
@@ -462,7 +499,7 @@ def hub_page(region):
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://dublingutter.ie/{slug}" />
   <title>Gutter Services {name} | Repairs, Cleaning &amp; Replacement | Recommended Roofing &amp; Guttering</title>
-  <meta name="description" content="Gutter repairs, cleaning and replacement across {name}. Covering {len(areas)} areas with same-day call-outs, upfront pricing and 30 years' experience. Free quotes." />
+  <meta name="description" content="Gutter repairs, cleaning and replacement across {name}. Covering {len(areas)} areas with same-day call-outs, upfront pricing and directly employed crews. Free quotes." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -538,9 +575,9 @@ def hub_page(region):
   <section class="trust-bar">
     <div class="container trust-bar-inner">
       <div class="trust-item"><i class="fas fa-bolt"></i><div><strong>Same-Day Available</strong><span>7 days a week</span></div></div>
-      <div class="trust-item"><i class="fas fa-hard-hat"></i><div><strong>30 Years Experience</strong><span>Trusted since 1994</span></div></div>
+      <div class="trust-item"><i class="fas fa-hard-hat"></i><div><strong>{FACTS["trust_headline"]}</strong><span>{FACTS["trust_sub"]}</span></div></div>
       <div class="trust-item"><i class="fas fa-tag"></i><div><strong>Upfront Pricing</strong><span>No hidden charges</span></div></div>
-      <div class="trust-item"><i class="fab fa-google"></i><div><strong>20+ Google Reviews</strong><span>Rated 4.9 / 5 stars</span></div></div>
+      <div class="trust-item"><i class="fab fa-google"></i><div><strong>{FACTS["reviews"]} Google Reviews</strong><span>Rated {FACTS["rating"]} / 5 stars</span></div></div>
     </div>
   </section>
 
@@ -688,9 +725,9 @@ def near_me_page():
   <section class="trust-bar">
     <div class="container trust-bar-inner">
       <div class="trust-item"><i class="fas fa-bolt"></i><div><strong>Same-Day Available</strong><span>7 days a week</span></div></div>
-      <div class="trust-item"><i class="fas fa-hard-hat"></i><div><strong>30 Years Experience</strong><span>Trusted since 1994</span></div></div>
+      <div class="trust-item"><i class="fas fa-hard-hat"></i><div><strong>{FACTS["trust_headline"]}</strong><span>{FACTS["trust_sub"]}</span></div></div>
       <div class="trust-item"><i class="fas fa-tag"></i><div><strong>Upfront Pricing</strong><span>No hidden charges</span></div></div>
-      <div class="trust-item"><i class="fab fa-google"></i><div><strong>20+ Google Reviews</strong><span>Rated 4.9 / 5 stars</span></div></div>
+      <div class="trust-item"><i class="fab fa-google"></i><div><strong>{FACTS["reviews"]} Google Reviews</strong><span>Rated {FACTS["rating"]} / 5 stars</span></div></div>
     </div>
   </section>
 
