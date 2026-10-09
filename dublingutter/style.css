@@ -512,3 +512,27 @@ h1, h2, .hero-headline { text-transform: uppercase; }
 .creds-track i { color: #FF3B42; font-style: normal; font-weight: 600; margin-right: 6px; text-transform: uppercase; font-size: .72rem; letter-spacing: .08em; }
 @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .creds-track { animation: none; } }
+
+/* ---- VIDEO GALLERY ---- */
+.video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+.vcard { display: flex; flex-direction: column; text-align: left; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; padding: 0; font-family: inherit; transition: all var(--transition); }
+.vcard:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.vthumb { position: relative; display: block; aspect-ratio: 4 / 3; background: #0F172A; overflow: hidden; }
+.vthumb img { width: 100%; height: 100%; object-fit: cover; }
+.vplay { position: absolute; inset: 0; margin: auto; width: 56px; height: 56px; border-radius: 50%; background: var(--yellow); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; padding-left: 3px; box-shadow: 0 4px 16px rgba(0,0,0,.35); }
+.vtitle { display: block; padding: 14px 16px 4px; font-weight: 700; font-size: 0.92rem; line-height: 1.35; color: var(--grey-dark); }
+.vloc { display: block; padding: 0 16px 16px; font-size: 0.8rem; color: var(--grey); }
+.vloc i { color: var(--yellow); margin-right: 4px; }
+.vmodal { position: fixed; inset: 0; background: rgba(10,16,32,.92); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.vmodal[hidden] { display: none; }
+.vframe { width: min(420px, 100%); aspect-ratio: 9 / 16; max-height: 90vh; background: #000; border-radius: 12px; overflow: hidden; }
+.vframe iframe { width: 100%; height: 100%; border: 0; }
+.vclose { position: absolute; top: 14px; right: 14px; width: 44px; height: 44px; border-radius: 50%; border: none; background: #fff; color: #0F172A; font-size: 1.2rem; cursor: pointer; }
+@media (max-width: 768px) { .video-grid { grid-template-columns: 1fr 1fr; gap: 14px; } .vtitle { font-size: .8rem; padding: 10px 12px 4px; } .vloc { padding: 0 12px 12px; font-size: .72rem; } }
+
+.logo { flex-shrink: 0; }
+.logo img { max-width: none; }
+.nav-link { padding: 8px 11px; }
+.vthumb { aspect-ratio: 3 / 4; }
+.vthumb img { object-position: center 30%; }
+@media (max-width: 1180px) { .header-call span { display: none; } .header-call { padding: 10px 13px; } }
