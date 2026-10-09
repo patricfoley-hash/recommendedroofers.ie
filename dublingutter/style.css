@@ -504,3 +504,11 @@ h1, h2, .hero-headline { text-transform: uppercase; }
 
 .hero-badge { color: #fff; }
 @media (max-width: 768px) { .hero-badge { color: #FF3B42; } }
+
+/* Credentials strip (moving) — same as recommendedroofing.ie */
+.creds { background: #0F172A; color: #e7e5e4; overflow: hidden; white-space: nowrap; border-bottom: 1px solid #1E293B; }
+.creds-track { display: inline-flex; gap: 56px; padding: 16px 0; animation: slide 38s linear infinite; }
+.creds-track span { font-size: .84rem; letter-spacing: .04em; color: #d6d3d1; }
+.creds-track i { color: #FF3B42; font-style: normal; font-weight: 600; margin-right: 6px; text-transform: uppercase; font-size: .72rem; letter-spacing: .08em; }
+@keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .creds-track { animation: none; } }
