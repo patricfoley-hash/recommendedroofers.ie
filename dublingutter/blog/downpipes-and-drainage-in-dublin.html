@@ -44,7 +44,21 @@
     }
   </style>
   <style>
-    .post-body { max-width: 72ch; margin: 0 auto; }
+    .post-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 56px; align-items: start; }
+    .post-body { min-width: 0; }
+    .post-body p, .post-body li { font-size: 1.05rem; }
+    .post-aside { position: sticky; top: 110px; display: flex; flex-direction: column; gap: 20px; }
+    .aside-card { background: #fff; border: 1.5px solid var(--border); border-radius: 14px; padding: 22px; }
+    .aside-card h3 { font-size: 1.05rem; margin: 0 0 10px; color: var(--grey-dark); }
+    .aside-cta { background: #fff5f5; border-color: #E11B22; text-align: center; }
+    .aside-cta p { font-size: .92rem; margin: 0 0 14px; color: var(--text); }
+    .aside-cta .btn { display: flex; justify-content: center; width: 100%; margin-bottom: 10px; }
+    .aside-toc ol { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+    .aside-toc a { font-size: .9rem; color: var(--text); text-decoration: none; line-height: 1.4; display: block; }
+    .aside-toc a:hover { color: #E11B22; }
+    .post-hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important; padding: 56px 0 48px; }
+    .post-hero h1 { max-width: 30ch !important; font-size: clamp(2rem, 4vw, 3rem) !important; line-height: 1.12; }
+    @media (max-width: 960px) { .post-layout { grid-template-columns: 1fr; gap: 32px; } .post-aside { position: static; } .aside-toc { display: none; } }
     .post-body h2 { font-size: 1.45rem; margin: 44px 0 14px; color: var(--grey-dark); }
     .post-body p { color: var(--text); line-height: 1.85; margin-bottom: 16px; }
     .post-lede { font-size: 1.12rem; color: var(--grey-dark); line-height: 1.8; padding-bottom: 26px; margin-bottom: 10px; border-bottom: 2px solid var(--blue-light); }
@@ -137,10 +151,10 @@
     </div>
   </header>
 
-  <section class="service-hero">
+  <section class="service-hero post-hero">
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Gutter Advice</a><span>/</span><span>Downpipes and Drainage in Dublin&hellip;</span></div>
-      <h1 style="color:var(--white);max-width:20ch;font-size:clamp(1.8rem,3.5vw,2.6rem);margin:14px 0 18px;">Downpipes and Drainage in Dublin</h1>
+      <h1 style="color:var(--white);margin:14px 0 18px;">Downpipes and Drainage in Dublin</h1>
       <div class="post-meta">
         <span class="post-cat">Costs</span>
         <span><i class="fas fa-clock"></i> 11 min read</span>
@@ -151,43 +165,44 @@
 
   <section class="section">
     <div class="container">
+      <div class="post-layout">
       <div class="post-body">
         <p class="post-lede">On most Dublin houses the downpipe discharges into a trapped gully at the base of the wall, which connects to either a combined sewer (Georgian and Victorian terraces, inner city) or a separate surface-water drain (post-1970s estates). Pooling and damp at the wall base almost always mean the gully is blocked, cracked, or the pipe is discharging beside it rather than into it.</p>
-        <h2>Downpipes and Drainage in Dublin at a Glance</h2>
+        <h2 id="downpipes-and-drainage-in-dublin-at-a-glance">Downpipes and Drainage in Dublin at a Glance</h2>
         <ul class="post-list"><li><strong>Roughly 15–20 metres of gutter</strong> on a standard Dublin three-bed semi feeds two to four downpipes, each carrying the runoff from around 30–50 m² of roof.</li><li><strong>Pre-1970s inner-city terraces are on combined sewers</strong> — one pipe carries both foul waste and rainwater to the Ringsend treatment works, which is why Uisce Éireann restricts new surface-water connections into it.</li><li><strong>Newer estates from the 1970s onward</strong> are typically on separate systems, where the downpipe must go to the surface-water drain and never into the foul.</li><li><strong>A trapped gully with a 100mm water seal</strong> is what stops sewer smells rising back up the downpipe on a combined system — a dry or cracked gully is a common cause of drain odour at the front door.</li><li><strong>Damp at the base of the wall within 300mm of a downpipe</strong> points to the gully, the shoe, or the pipe joint above it — not to rising damp, and not to the gutter itself.</li><li><strong>Gutter repair on a Dublin semi runs €500–€800</strong> for a small job and <strong>€1,000–€1,900</strong> for a typical downpipe-and-alignment fix (indicative — confirmed free after a survey).</li></ul>
-        <h2>Where the water goes when it leaves the roof</h2>
+        <h2 id="where-the-water-goes-when-it-leaves-the-roof">Where the water goes when it leaves the roof</h2>
         <p>The gutter is the easy bit. The harder question — and the one that decides whether a wall stays dry — is what happens in the last two metres, between the shoe at the bottom of the downpipe and the ground.</p>
         <p>On a Dublin house the water has one of three destinations:</p>
         <ol class="post-list"><li><strong>A trapped gully</strong> set into the path or the front garden, connected below ground to either a combined sewer or a surface-water drain.</li><li><strong>A back-inlet gully</strong> where the downpipe enters the drain below the grating, common on rear elevations and shared yards.</li><li><strong>A soakaway or channel drain</strong> on newer estates where the ground can take it, or where Uisce Éireann has required surface water to be dealt with on site.</li></ol>
         <p>Which one you have is almost entirely a function of when the house was built and where in the city it sits. That is where the diagnosis starts.</p>
-        <h2>1930s and 1940s semis — Cabra, Crumlin, Terenure, Clontarf</h2>
+        <h2 id="1930s-and-1940s-semis-cabra-crumlin-terenure-clontarf">1930s and 1940s semis — Cabra, Crumlin, Terenure, Clontarf</h2>
         <p>The classic pattern here is a two-pipe front elevation feeding trapped gullies in the front garden, with a single rear downpipe into a back-inlet gully in the yard. The original cast-iron pipes have almost all been replaced with 68mm uPVC round or 65mm square profile over the last thirty years.</p>
         <p>Two things go wrong repeatedly on this stock:</p>
         <p><strong>The gully cracks or silts up.</strong> The original clayware gullies are now ninety years old. Fine grit from the roof — moss, felt granules from a re-covered roof, wind-blown soil — builds up in the trap until water backs up and overflows onto the path. From there it tracks along the wall and shows up inside as damp on the skirting.</p>
         <p><strong>The shoe misses the grating.</strong> A downpipe that has been re-clipped over the years often ends 100–150mm off-centre from the gully below. In light rain the water finds the drain anyway. In a Dublin downpour — the kind that dropped 40mm in an hour in the November 2023 event — half of it lands on the concrete beside the gully and soaks straight into the wall.</p>
         <p>The fix is usually a new shoe, a new bearing on the lowest bracket, and a proper rod-and-jet of the gully. If the clayware trap has cracked, the gully itself gets swapped for a modern PVC one with a removable silt bucket. Our <a href="https://dublingutter.ie/">gutter repairs</a> page covers the typical scope; the <a href="https://dublingutter.ie/">downpipes</a> section deals specifically with the shoe-to-gully alignment.</p>
-        <h2>Georgian and Victorian terraces — Rathmines, Portobello, Phibsborough, Drumcondra</h2>
+        <h2 id="georgian-and-victorian-terraces-rathmines-portobello-phibsbo">Georgian and Victorian terraces — Rathmines, Portobello, Phibsborough, Drumcondra</h2>
         <p>These are the awkward ones, and the ones where a bad diagnosis costs the most.</p>
         <p>The front elevation is straightforward — usually a single cast-iron downpipe at the party wall, discharging to a gully at the base of the steps or into a hopper at basement level. It is the <strong>rear</strong> that causes the arguments. A Victorian terrace typically has a shared rear yard, a shared return, and drainage that runs under someone else's flags before it reaches the main sewer at the front.</p>
         <p>A few things worth knowing before spending money:</p>
         <ul class="post-list"><li><strong>The connection is almost always combined.</strong> Everything inside the old canal ring — foul, surface water, the lot — goes to one pipe and ends up at Ringsend. Uisce Éireann's stated position is that new surface-water connections into the combined network are not permitted where a separate outfall exists, but on Victorian stock a separate outfall usually does not exist, so the combined arrangement stays.</li><li><strong>The gully at the base of the rear downpipe is the smell trap for the whole yard.</strong> If it dries out in summer — no rain for a fortnight in Rathmines — the water seal fails and sewer gas rises up the downpipe. The fix is a bucket of water down the gully once a fortnight in dry weather, not a new drain.</li><li><strong>The party-wall downpipe is often shared.</strong> Cast-iron pipes on the boundary between two houses were sometimes installed as one pipe collecting both roofs via a hopper at eaves level. Repairs and replacements need agreement with the neighbour, and the <a href="https://dublingutter.ie/">cast iron on period property</a> work carries a materials cost of around €50 per metre against €10 for uPVC.</li></ul>
         <p>Where a Victorian rear yard is pooling in heavy rain, the cause is usually one of three things: the shared gully is silted, the below-ground pipe has a root intrusion at a clay joint, or the yard's own gully — separate from the downpipe — has failed. Only the first is a roofline job. The second is drainage. The third is paving.</p>
-        <h2>1970s estates — Tallaght, Clondalkin, Coolock, Ballymun</h2>
+        <h2 id="1970s-estates-tallaght-clondalkin-coolock-ballymun">1970s estates — Tallaght, Clondalkin, Coolock, Ballymun</h2>
         <p>Separate systems from here on. The rainwater downpipe <strong>must</strong> go to the surface-water drain, and the foul stack goes to the foul. Cross-connections — a rainwater pipe plumbed into the foul, or a washing machine draining into the surface-water gully — are a genuine problem in this age band and one Uisce Éireann has been active on since the misconnections work in the Dodder and Camac catchments.</p>
         <p>The typical failure here is different again. The 112mm half-round gutter on a 1970s semi is often undersized for the roof it serves, so in a heavy shower the gutter overflows along the whole run rather than at the outlet. The downpipe never gets the water in the first place. Owners call for a downpipe clear; what they actually need is a <strong>125mm deep-flow upgrade</strong>, which is a full replacement on that elevation.</p>
         <p>The <a href="https://dublingutter.ie/">gutter cleaning</a> call sorts a blocked outlet. The overflow-along-the-run pattern is a sizing issue and a <a href="https://dublingutter.ie/">full replacement</a> job.</p>
-        <h2>Newer developments — Citywest, Adamstown, Clonsilla</h2>
+        <h2 id="newer-developments-citywest-adamstown-clonsilla">Newer developments — Citywest, Adamstown, Clonsilla</h2>
         <p>Post-2000 estates are generally sound. Surface water is separated at the boundary, downpipes discharge to purpose-built gullies with silt buckets, and many sites have an on-plot soakaway or an attenuation tank that the downpipe feeds via a channel drain. The calls here are almost always blockages — a tennis ball in a hopper, a nesting bird in an offset — rather than design problems.</p>
         <p>Two things to check on this stock before calling anyone:</p>
         <ul class="post-list"><li><strong>The gully grating lifts off.</strong> Have a look. Nine times out of ten there is a mat of oak or sycamore leaves sitting on top of the silt bucket. Lift it out, empty it, put it back. That is the whole job.</li><li><strong>The channel drain across the driveway is not the downpipe's drain.</strong> The downpipe has its own gully. If the channel drain is blocked, the driveway floods but the downpipe still runs.</li></ul>
-        <h2>Diagnosing damp at the base of the wall</h2>
+        <h2 id="diagnosing-damp-at-the-base-of-the-wall">Diagnosing damp at the base of the wall</h2>
         <p>This is the call we get most often in October and November, once the first sustained wet week hits. The pattern to test for, in order:</p>
         <ol class="post-list"><li><strong>Is the damp within 300mm of a downpipe?</strong> If yes, the downpipe or its gully is the first suspect, not rising damp.</li><li><strong>Does it worsen in heavy rain within an hour?</strong> Rising damp is slow and constant. Downpipe-related damp tracks the weather.</li><li><strong>Is there staining on the render or the brick above the gully?</strong> A splash pattern 200–400mm up the wall means water is leaving the pipe and hitting the wall rather than entering the gully.</li><li><strong>Does the gully hold water when you pour a bucket in?</strong> A working trap holds the water. A cracked trap drains it away within seconds — that is the fault.</li><li><strong>Is there moss or a green stain running down the wall from a joint in the pipe?</strong> A split at a socket joint, common on brittle uPVC in south- and west-facing elevations after twenty years of UV.</li></ol>
         <p>If four of the five point at the downpipe, it is a downpipe job. If none of them do, the damp is coming from somewhere else — a defective flashing, a cracked render, a leaking waste pipe — and a gutter contractor is the wrong first call.</p>
-        <h2>What Uisce Éireann's rules mean for you in practice</h2>
+        <h2 id="what-uisce-ireann-s-rules-mean-for-you-in-practice">What Uisce Éireann's rules mean for you in practice</h2>
         <p>The rules are simpler than they sound:</p>
         <ul class="post-list"><li>On a <strong>combined system</strong> (most pre-1970 inner Dublin), the existing downpipe-to-gully arrangement stays as it is. New work matches what is there.</li><li>On a <strong>separate system</strong> (most post-1970 estates), rainwater goes to the surface-water drain and only to the surface-water drain. A misconnection into the foul is a defect the seller has to disclose on a property sale.</li><li><strong>New impermeable area</strong> — a paved-over front garden, an extension — can trigger a requirement for on-site attenuation or a soakaway rather than a straight connection. This is a design question, not a gutter question, but it is worth knowing before the downpipe is moved.</li></ul>
-        <h2>Indicative costs for downpipe and drainage work</h2>
+        <h2 id="indicative-costs-for-downpipe-and-drainage-work">Indicative costs for downpipe and drainage work</h2>
         <p>All figures are indicative and confirmed free after a site survey.</p>
         <div style="overflow-x:auto"><table><thead><tr><th>Job</th><th>Typical cost</th></tr></thead><tbody><tr><td>Clear a blocked downpipe and gully, single stack</td><td>€500 – €800</td></tr><tr><td>Renew shoe, realign to gully, refix lowest bracket</td><td>€500 – €800</td></tr><tr><td>Replace one full uPVC downpipe (two-storey)</td><td>€1,000 – €1,900</td></tr><tr><td>Replace cast iron downpipe on period property</td><td>€1,900 – €3,000</td></tr><tr><td>Full elevation replacement including downpipes</td><td>See our <a href="https://dublingutter.ie/">pricing page</a></td></tr></tbody></table></div>
         <p>Below-ground drainage — root intrusion in the clay pipe under the path, a collapsed connection to the main sewer — is a drain contractor's job, not a guttering job. We will say so on the survey rather than quote for work that will not fix the fault.</p>
@@ -205,6 +220,16 @@
         <a href="/gutter-repairs" class="post-link-chip"><i class="fas fa-arrow-right"></i> Gutter repairs</a>
         <a href="/fascia-soffit" class="post-link-chip"><i class="fas fa-arrow-right"></i> Fascia & soffit</a>
         </div>
+      </div>
+      <aside class="post-aside">
+        <div class="aside-card aside-cta">
+          <h3>Free quote, fixed price</h3>
+          <p>A free survey, a written price before we start and no call-out fee, anywhere in Dublin.</p>
+          <a href="tel:012658463" class="btn btn-primary"><i class="fas fa-phone"></i> (01) 265 8463</a>
+          <a href="/quote" class="btn btn-outline-blue">Get Free Quote</a>
+        </div>
+        <div class="aside-card aside-toc"><h3>In this article</h3><ol><li><a href="#downpipes-and-drainage-in-dublin-at-a-glance">Downpipes and Drainage in Dublin at a Glance</a></li><li><a href="#where-the-water-goes-when-it-leaves-the-roof">Where the water goes when it leaves the roof</a></li><li><a href="#1930s-and-1940s-semis-cabra-crumlin-terenure-clontarf">1930s and 1940s semis — Cabra, Crumlin, Terenure, Clontarf</a></li><li><a href="#georgian-and-victorian-terraces-rathmines-portobello-phibsbo">Georgian and Victorian terraces — Rathmines, Portobello, Phibsborough, Drumcondra</a></li><li><a href="#1970s-estates-tallaght-clondalkin-coolock-ballymun">1970s estates — Tallaght, Clondalkin, Coolock, Ballymun</a></li><li><a href="#newer-developments-citywest-adamstown-clonsilla">Newer developments — Citywest, Adamstown, Clonsilla</a></li><li><a href="#diagnosing-damp-at-the-base-of-the-wall">Diagnosing damp at the base of the wall</a></li><li><a href="#what-uisce-ireann-s-rules-mean-for-you-in-practice">What Uisce Éireann's rules mean for you in practice</a></li><li><a href="#indicative-costs-for-downpipe-and-drainage-work">Indicative costs for downpipe and drainage work</a></li></ol></div>
+      </aside>
       </div>
     </div>
   </section>

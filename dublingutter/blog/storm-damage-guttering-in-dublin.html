@@ -44,7 +44,21 @@
     }
   </style>
   <style>
-    .post-body { max-width: 72ch; margin: 0 auto; }
+    .post-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 56px; align-items: start; }
+    .post-body { min-width: 0; }
+    .post-body p, .post-body li { font-size: 1.05rem; }
+    .post-aside { position: sticky; top: 110px; display: flex; flex-direction: column; gap: 20px; }
+    .aside-card { background: #fff; border: 1.5px solid var(--border); border-radius: 14px; padding: 22px; }
+    .aside-card h3 { font-size: 1.05rem; margin: 0 0 10px; color: var(--grey-dark); }
+    .aside-cta { background: #fff5f5; border-color: #E11B22; text-align: center; }
+    .aside-cta p { font-size: .92rem; margin: 0 0 14px; color: var(--text); }
+    .aside-cta .btn { display: flex; justify-content: center; width: 100%; margin-bottom: 10px; }
+    .aside-toc ol { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+    .aside-toc a { font-size: .9rem; color: var(--text); text-decoration: none; line-height: 1.4; display: block; }
+    .aside-toc a:hover { color: #E11B22; }
+    .post-hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important; padding: 56px 0 48px; }
+    .post-hero h1 { max-width: 30ch !important; font-size: clamp(2rem, 4vw, 3rem) !important; line-height: 1.12; }
+    @media (max-width: 960px) { .post-layout { grid-template-columns: 1fr; gap: 32px; } .post-aside { position: static; } .aside-toc { display: none; } }
     .post-body h2 { font-size: 1.45rem; margin: 44px 0 14px; color: var(--grey-dark); }
     .post-body p { color: var(--text); line-height: 1.85; margin-bottom: 16px; }
     .post-lede { font-size: 1.12rem; color: var(--grey-dark); line-height: 1.8; padding-bottom: 26px; margin-bottom: 10px; border-bottom: 2px solid var(--blue-light); }
@@ -138,10 +152,10 @@
     </div>
   </header>
 
-  <section class="service-hero">
+  <section class="service-hero post-hero">
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Gutter Advice</a><span>/</span><span>Storm Damage Guttering in Dublin&hellip;</span></div>
-      <h1 style="color:var(--white);max-width:20ch;font-size:clamp(1.8rem,3.5vw,2.6rem);margin:14px 0 18px;">Storm Damage Guttering in Dublin</h1>
+      <h1 style="color:var(--white);margin:14px 0 18px;">Storm Damage Guttering in Dublin</h1>
       <div class="post-meta">
         <span class="post-cat">Costs</span>
         <span><i class="fas fa-clock"></i> 11 min read</span>
@@ -152,42 +166,43 @@
 
   <section class="section">
     <div class="container">
+      <div class="post-layout">
       <div class="post-body">
         <p class="post-lede">After a named Atlantic storm hits Dublin's coastal fringe — Howth, Sutton, Malahide, Dun Laoghaire, Dalkey — insurers expect photographs taken within 24–48 hours, a written contractor report, and a temporary repair where water is actively entering the building. Storm damage to guttering is usually covered under the storm peril subject to your excess; wear and tear is not.</p>
-        <h2>Storm Damage Guttering in Dublin at a Glance</h2>
+        <h2 id="storm-damage-guttering-in-dublin-at-a-glance">Storm Damage Guttering in Dublin at a Glance</h2>
         <ul class="post-list"><li>Photograph the damage before anything is touched — wide shot of the elevation, close-up of the failure, and one showing where water is now going instead.</li><li>Insurers separate storm damage from wear and tear, so your report needs to describe wind-lifted sections, sheared brackets or hopper impact damage in those exact terms.</li><li>Most home policies carry an excess of €250–€500, so a single length of uPVC pulled off a gable is often not worth claiming; a full run stripped from an exposed elevation almost always is.</li><li>A temporary repair to stop water entering the building is expected before the loss adjuster arrives — insurers will not penalise you for it, provided the damaged material is kept for inspection.</li><li>Named storms recorded by Met Éireann (Éowyn, Darragh, Isha, Kathleen among recent examples) give you a dated weather event to cite in the claim, which strengthens the storm-peril argument considerably.</li><li>On exposed coastal gables in Howth, Sutton and Dalkey, bracket spacing under 800mm is standard practice — anything wider that has failed in a storm is worth flagging as an installation issue on the report.</li></ul>
-        <h2>Why coastal Dublin gutters fail in named storms</h2>
+        <h2 id="why-coastal-dublin-gutters-fail-in-named-storms">Why coastal Dublin gutters fail in named storms</h2>
         <p>The exposed north-eastern and south-eastern coastal fringes of Dublin take wind loading that inland suburbs never see. When a named Atlantic storm tracks across Ireland — Éowyn in January 2025 brought gusts over 180 km/h to the east coast, Darragh and Isha before it — the pressure on a fully-loaded gutter running along a two-storey gable in Howth or Dalkey is an order of magnitude greater than the same run in Tallaght or Clondalkin.</p>
         <p>Three failure modes dominate the call-outs we see in the 48 hours after a storm warning lifts:</p>
         <p><strong>Wind-lifted sections.</strong> The wind gets under the front lip of the gutter, particularly where a bracket has already worked loose or a joint has crept. A gust pops the section out of its brackets in one movement. On uPVC this often takes a run of three to five metres away in one piece; on aluminium and cast iron the failure tends to be at the union.</p>
         <p><strong>Sheared or pulled-through brackets.</strong> The bracket itself stays screwed to the fascia, but the gutter has torn away from it — or, on older properties where the fascia board has softened, the entire bracket has pulled through the timber. This is the fault mode most commonly disputed by insurers as "pre-existing", which is why the photographs matter.</p>
         <p><strong>Hopper and downpipe impact damage.</strong> A dislodged slate, a piece of ridge tile or a section of gutter from next door strikes the hopper on the way down. Cast iron hoppers on period properties in Monkstown or Sandymount crack rather than dent, and the crack is often hairline until the next rainfall reveals it.</p>
-        <h2>What to photograph — and in what order</h2>
+        <h2 id="what-to-photograph-and-in-what-order">What to photograph — and in what order</h2>
         <p>Insurers and loss adjusters work from photographs first and site visits second. A claim supported by clear, dated images taken before any remedial work is materially more likely to be paid without argument. Take the following, in this sequence, on your phone:</p>
         <ol class="post-list"><li><strong>A wide shot of the whole elevation</strong> showing the damaged run in context — house, roof, gutter line, and enough of the surroundings to establish this is your property.</li><li><strong>A mid-range shot</strong> showing the extent of the failure — the length of gutter that has come away, the section of fascia now exposed, or the downpipe hanging free.</li><li><strong>Close-ups of the failure point itself</strong> — the sheared bracket, the split union, the cracked hopper. Get the daylight on it.</li><li><strong>The damaged material on the ground</strong> where it landed, before you move it. If it landed on a car, a shed roof, a fence or a planted bed, photograph that too.</li><li><strong>Where the water is going now</strong> — the staining down the render, the puddle against the wall, the wet patch appearing on the internal ceiling.</li><li><strong>A shot of the sky or a timestamp</strong> — most phones embed the date and location automatically, but a visible timestamp on one image removes any doubt.</li></ol>
         <p>Keep the physical damaged section. Do not skip it into a bin the same afternoon. The assessor may want to see it, and a piece of gutter with a torn bracket hole tells the storm-damage story more cleanly than any photograph.</p>
-        <h2>How to describe the damage to an Irish insurer</h2>
+        <h2 id="how-to-describe-the-damage-to-an-irish-insurer">How to describe the damage to an Irish insurer</h2>
         <p>The language on the claim form matters. Insurers train assessors to separate storm damage (covered) from wear and tear, gradual deterioration or maintenance failure (not covered). Vague wording invites the second interpretation.</p>
         <p><strong>Use, where accurate:</strong></p>
         <ul class="post-list"><li>"Wind-lifted section of guttering, approximately [X] metres, displaced from brackets during Storm [Name] on [date]."</li><li>"Bracket sheared / pulled through fascia under wind load during named storm event."</li><li>"Impact damage to cast iron hopper from wind-borne debris — visible crack, now leaking."</li><li>"Downpipe detached at swan-neck joint, consistent with wind loading rather than blockage."</li></ul>
         <p><strong>Avoid:</strong></p>
         <ul class="post-list"><li>"The gutter was old and finally gave way." (Reads as wear and tear.)</li><li>"It had been leaking on and off for a while." (Reads as pre-existing.)</li><li>"We were going to get it looked at anyway." (Volunteers a maintenance failure.)</li></ul>
         <p>Cite the named storm by name and date, and reference the Met Éireann status warning (yellow, orange or red) that was in force for your county. That single line converts the event from "bad weather" into a documented meteorological incident, which is the threshold most Irish policies use for the storm peril.</p>
-        <h2>When a temporary repair is expected — and when to wait</h2>
+        <h2 id="when-a-temporary-repair-is-expected-and-when-to-wait">When a temporary repair is expected — and when to wait</h2>
         <p>Irish home insurance policies impose a <strong>duty to mitigate</strong>. You are contractually required to take reasonable steps to prevent further damage once you are aware of it. In practice this means:</p>
         <ul class="post-list"><li>If water is actively entering the building, arrange a temporary repair immediately and photograph everything before and after. This is expected and will not compromise the claim.</li><li>If the damage is external only — a run pulled off a gable, no water tracking inside — you can generally wait 24–72 hours for the assessor to view it in situ, particularly for larger claims.</li><li>Keep receipts for any temporary work. Emergency call-out costs to stop water ingress are typically recoverable under the same claim.</li></ul>
         <p>A temporary repair on storm-damaged guttering usually means refitting the displaced section on new brackets, sealing a split union, or fitting a temporary shoe to a broken downpipe to divert water clear of the wall. It is not the permanent fix — that follows once the claim is settled and the full scope agreed.</p>
         <p>For urgent situations across Dublin, our <a href="https://dublingutter.ie/">emergency gutter repair service</a> prioritises same-day response where the diary allows. Say on the phone that water is entering the building and the job jumps the queue.</p>
-        <h2>What the insurer's report should contain</h2>
+        <h2 id="what-the-insurer-s-report-should-contain">What the insurer's report should contain</h2>
         <p>When we attend a storm-damage call-out on the coastal suburbs, the written report we issue for the insurer covers, at minimum:</p>
         <ul class="post-list"><li>Date and time of inspection, and the named storm event referenced.</li><li>Property address and the specific elevation affected.</li><li>A description of the damage in the language above — wind-lifted, sheared, impact — with measurements.</li><li>Photographs, dated and captioned.</li><li>A statement on whether the failure is consistent with storm-force wind loading or with pre-existing wear, and the reasoning.</li><li>The scope of temporary works carried out, if any.</li><li>A written quote for the permanent repair, with a breakdown.</li><li>Confirmation of insurance (€6.5M public liability, €13M employer liability), CIRI registration, and the written guarantee that will apply to the reinstated work (a minimum of 3 years on repairs, up to 10 on major repair work).</li></ul>
         <p>That last section matters more than it looks. Assessors are wary of quotes from contractors they cannot verify. A quote on headed paper from a CIRI-registered contractor with named insurances rarely gets challenged on the numbers.</p>
-        <h2>Indicative costs for storm-damage guttering work in Dublin</h2>
+        <h2 id="indicative-costs-for-storm-damage-guttering-work-in-dublin">Indicative costs for storm-damage guttering work in Dublin</h2>
         <p>All figures <strong>indicative</strong> — confirmed free after a site survey. Storm-damage claims settle on the actual scope agreed with the assessor, not a headline figure.</p>
         <div style="overflow-x:auto"><table><thead><tr><th>Scope</th><th>Typical cost</th></tr></thead><tbody><tr><td>Refit a wind-displaced uPVC section, new brackets, reseal joints</td><td>€500 – €800</td></tr><tr><td>Sagging run re-aligned, brackets renewed, joints re-sealed, one downpipe</td><td>€1,000 – €1,900</td></tr><tr><td>Multiple runs, cast iron restoration on a period property</td><td>€1,900 – €3,000</td></tr><tr><td>Full uPVC replacement, typical semi (~20m front and rear)</td><td>€1,000 – €1,400</td></tr><tr><td>Full aluminium replacement, larger detached (~50m)</td><td>€3,600 – €4,500</td></tr></tbody></table></div>
         <p>On exposed coastal gables in Howth, Sutton or Dalkey, we specify bracket spacing at 600–800mm rather than the 1,000mm often seen inland. That is the single detail most likely to prevent a repeat failure in the next storm, and it is worth including in the report scope so the assessor sees the upgraded specification is deliberate rather than incidental.</p>
         <p>Confirm exact rates after a survey — a claim quote priced from the driveway is worth what it costs.</p>
-        <h2>Which coastal suburbs see the most claims</h2>
+        <h2 id="which-coastal-suburbs-see-the-most-claims">Which coastal suburbs see the most claims</h2>
         <p>The pattern is consistent storm to storm. On the northside, <a href="https://dublingutter.ie/">gutter repairs in Howth</a> and Sutton dominate the call sheet, with Malahide and Portmarnock behind. On the southside, <a href="https://dublingutter.ie/">Dun Laoghaire gutter work</a>, Dalkey, Sandycove and Monkstown lead, with Sandymount and Blackrock close behind. Clontarf sits between — inland enough to be sheltered from the worst of it, but exposed enough on the seafront terraces to feature every named storm.</p>
         <p>Inland calls after a storm are almost always downpipe or hopper impact damage rather than wind-lifted runs. Coastal calls are the wind-lifted sections, and those are the ones the insurer expects to see photographed and described precisely.</p>
         <p>For scheduled maintenance that prevents the marginal failures becoming storm-day emergencies, see our notes on <a href="https://dublingutter.ie/">gutter cleaning schedules for Dublin</a> and the <a href="https://dublingutter.ie/">full gutter replacement service</a> for runs that have reached the end of their working life.</p>
@@ -205,6 +220,16 @@
         <a href="/new-gutters" class="post-link-chip"><i class="fas fa-arrow-right"></i> New gutters</a>
         <a href="/downpipes" class="post-link-chip"><i class="fas fa-arrow-right"></i> Downpipes</a>
         </div>
+      </div>
+      <aside class="post-aside">
+        <div class="aside-card aside-cta">
+          <h3>Free quote, fixed price</h3>
+          <p>A free survey, a written price before we start and no call-out fee, anywhere in Dublin.</p>
+          <a href="tel:012658463" class="btn btn-primary"><i class="fas fa-phone"></i> (01) 265 8463</a>
+          <a href="/quote" class="btn btn-outline-blue">Get Free Quote</a>
+        </div>
+        <div class="aside-card aside-toc"><h3>In this article</h3><ol><li><a href="#storm-damage-guttering-in-dublin-at-a-glance">Storm Damage Guttering in Dublin at a Glance</a></li><li><a href="#why-coastal-dublin-gutters-fail-in-named-storms">Why coastal Dublin gutters fail in named storms</a></li><li><a href="#what-to-photograph-and-in-what-order">What to photograph — and in what order</a></li><li><a href="#how-to-describe-the-damage-to-an-irish-insurer">How to describe the damage to an Irish insurer</a></li><li><a href="#when-a-temporary-repair-is-expected-and-when-to-wait">When a temporary repair is expected — and when to wait</a></li><li><a href="#what-the-insurer-s-report-should-contain">What the insurer's report should contain</a></li><li><a href="#indicative-costs-for-storm-damage-guttering-work-in-dublin">Indicative costs for storm-damage guttering work in Dublin</a></li><li><a href="#which-coastal-suburbs-see-the-most-claims">Which coastal suburbs see the most claims</a></li></ol></div>
+      </aside>
       </div>
     </div>
   </section>

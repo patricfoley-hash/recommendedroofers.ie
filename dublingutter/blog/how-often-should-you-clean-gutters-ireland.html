@@ -44,7 +44,21 @@
     }
   </style>
   <style>
-    .post-body { max-width: 72ch; margin: 0 auto; }
+    .post-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 56px; align-items: start; }
+    .post-body { min-width: 0; }
+    .post-body p, .post-body li { font-size: 1.05rem; }
+    .post-aside { position: sticky; top: 110px; display: flex; flex-direction: column; gap: 20px; }
+    .aside-card { background: #fff; border: 1.5px solid var(--border); border-radius: 14px; padding: 22px; }
+    .aside-card h3 { font-size: 1.05rem; margin: 0 0 10px; color: var(--grey-dark); }
+    .aside-cta { background: #fff5f5; border-color: #E11B22; text-align: center; }
+    .aside-cta p { font-size: .92rem; margin: 0 0 14px; color: var(--text); }
+    .aside-cta .btn { display: flex; justify-content: center; width: 100%; margin-bottom: 10px; }
+    .aside-toc ol { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+    .aside-toc a { font-size: .9rem; color: var(--text); text-decoration: none; line-height: 1.4; display: block; }
+    .aside-toc a:hover { color: #E11B22; }
+    .post-hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important; padding: 56px 0 48px; }
+    .post-hero h1 { max-width: 30ch !important; font-size: clamp(2rem, 4vw, 3rem) !important; line-height: 1.12; }
+    @media (max-width: 960px) { .post-layout { grid-template-columns: 1fr; gap: 32px; } .post-aside { position: static; } .aside-toc { display: none; } }
     .post-body h2 { font-size: 1.45rem; margin: 44px 0 14px; color: var(--grey-dark); }
     .post-body p { color: var(--text); line-height: 1.85; margin-bottom: 16px; }
     .post-lede { font-size: 1.12rem; color: var(--grey-dark); line-height: 1.8; padding-bottom: 26px; margin-bottom: 10px; border-bottom: 2px solid var(--blue-light); }
@@ -134,10 +148,10 @@
     </div>
   </header>
 
-  <section class="service-hero">
+  <section class="service-hero post-hero">
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Gutter Advice</a><span>/</span><span>How Often Should You Clean Your Gutters &hellip;</span></div>
-      <h1 style="color:var(--white);max-width:20ch;font-size:clamp(1.8rem,3.5vw,2.6rem);margin:14px 0 18px;">How Often Should You Clean Your Gutters in Ireland?</h1>
+      <h1 style="color:var(--white);margin:14px 0 18px;">How Often Should You Clean Your Gutters in Ireland?</h1>
       <div class="post-meta">
         <span class="post-cat">Maintenance</span>
         <span><i class="fas fa-clock"></i> 6 min read</span>
@@ -148,17 +162,18 @@
 
   <section class="section">
     <div class="container">
+      <div class="post-layout">
       <div class="post-body">
         <p class="post-lede">The honest answer is twice a year for most Dublin houses. But that's an average, and averages are no use if you live under a line of lime trees.</p>
-        <h2>The short answer</h2>
+        <h2 id="the-short-answer">The short answer</h2>
         <p>For a typical Dublin semi with no large trees overhanging the roof, <strong>once a year in late autumn</strong> is usually enough. Add a second clean in late spring if any of the following apply:</p><ul class="post-list"><li>Mature trees within about fifteen metres of the house</li><li>A north-facing roof that holds moss</li><li>Any gutter run that has overflowed in the last two years</li><li>A flat or shallow-pitched section that drains slowly</li></ul><p>Houses on heavily planted roads — Rathgar, Clontarf, Mount Merrion, Castleknock — routinely need two cleans. Newer estates on open ground often manage on one.</p>
-        <h2>Why autumn matters more than spring</h2>
+        <h2 id="why-autumn-matters-more-than-spring">Why autumn matters more than spring</h2>
         <p>Leaf fall is the obvious reason, but it's not the main one. The real damage happens when a gutter full of wet leaf sits through a Dublin winter. The debris holds water against the fascia board, the timber softens, and by spring you have a rot problem rather than a blockage problem.</p><p>Clearing in November, once the trees are bare, empties the gutter before the wet months do the harm. Clearing in March cleans up what the winter blew in.</p>
-        <h2>The signs you've left it too long</h2>
+        <h2 id="the-signs-you-ve-left-it-too-long">The signs you've left it too long</h2>
         <p>You don't need to get on a ladder to know. Watch for:</p><ul class="post-list"><li><strong>Water spilling over the front edge</strong> during rain — the classic sign of a blockage or a lost fall</li><li><strong>Staining down the wall</strong> beneath a joint or a gutter end</li><li><strong>Plants growing in the gutter</strong> — if something has rooted, there is soil up there</li><li><strong>Water running behind the gutter</strong> rather than out of the downpipe</li><li><strong>Damp patches inside</strong> on an upstairs wall or ceiling near the eaves</li></ul><p>The last one means it has already stopped being a gutter problem.</p>
-        <h2>What it costs to leave it</h2>
+        <h2 id="what-it-costs-to-leave-it">What it costs to leave it</h2>
         <p>A gutter clean is a modest job. The things a blocked gutter causes are not. Rotten fascia and soffit, damp penetrating a wall, and in the worst cases water tracking into a ceiling — all of them cost multiples of what the clean would have.</p><p>That is the whole argument for doing it on a schedule rather than waiting for a symptom.</p>
-        <h2>Doing it yourself</h2>
+        <h2 id="doing-it-yourself">Doing it yourself</h2>
         <p>If your house is a bungalow and you are comfortable and steady on a ladder, clearing your own gutters is reasonable. Wear gloves, work from a properly footed ladder, never lean sideways, and flush the downpipe with a hose when you have finished so you know it runs.</p><p>On a two-storey house — or anything with a steep roof, an awkward return, or no flat ground for a ladder — it is not worth the risk. That is most of what we get called to.</p>
         <div class="post-cta">
           <h2>Want a firm price for your house?</h2>
@@ -174,6 +189,16 @@
         <a href="/gutter-repairs" class="post-link-chip"><i class="fas fa-arrow-right"></i> Gutter repairs</a>
         <a href="/near-me" class="post-link-chip"><i class="fas fa-arrow-right"></i> Areas we cover</a>
         </div>
+      </div>
+      <aside class="post-aside">
+        <div class="aside-card aside-cta">
+          <h3>Free quote, fixed price</h3>
+          <p>A free survey, a written price before we start and no call-out fee, anywhere in Dublin.</p>
+          <a href="tel:012658463" class="btn btn-primary"><i class="fas fa-phone"></i> (01) 265 8463</a>
+          <a href="/quote" class="btn btn-outline-blue">Get Free Quote</a>
+        </div>
+        <div class="aside-card aside-toc"><h3>In this article</h3><ol><li><a href="#the-short-answer">The short answer</a></li><li><a href="#why-autumn-matters-more-than-spring">Why autumn matters more than spring</a></li><li><a href="#the-signs-you-ve-left-it-too-long">The signs you've left it too long</a></li><li><a href="#what-it-costs-to-leave-it">What it costs to leave it</a></li><li><a href="#doing-it-yourself">Doing it yourself</a></li></ol></div>
+      </aside>
       </div>
     </div>
   </section>

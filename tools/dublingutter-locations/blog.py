@@ -89,7 +89,21 @@ _merged = HAND_WRITTEN + [p for p in _PIPELINE if p["slug"] not in _HAND]
 POSTS = sorted(_merged, key=lambda x: x["date"], reverse=True)
 
 BLOG_CSS = """  <style>
-    .post-body { max-width: 72ch; margin: 0 auto; }
+    .post-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 56px; align-items: start; }
+    .post-body { min-width: 0; }
+    .post-body p, .post-body li { font-size: 1.05rem; }
+    .post-aside { position: sticky; top: 110px; display: flex; flex-direction: column; gap: 20px; }
+    .aside-card { background: #fff; border: 1.5px solid var(--border); border-radius: 14px; padding: 22px; }
+    .aside-card h3 { font-size: 1.05rem; margin: 0 0 10px; color: var(--grey-dark); }
+    .aside-cta { background: #fff5f5; border-color: #E11B22; text-align: center; }
+    .aside-cta p { font-size: .92rem; margin: 0 0 14px; color: var(--text); }
+    .aside-cta .btn { display: flex; justify-content: center; width: 100%; margin-bottom: 10px; }
+    .aside-toc ol { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+    .aside-toc a { font-size: .9rem; color: var(--text); text-decoration: none; line-height: 1.4; display: block; }
+    .aside-toc a:hover { color: #E11B22; }
+    .post-hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important; padding: 56px 0 48px; }
+    .post-hero h1 { max-width: 30ch !important; font-size: clamp(2rem, 4vw, 3rem) !important; line-height: 1.12; }
+    @media (max-width: 960px) { .post-layout { grid-template-columns: 1fr; gap: 32px; } .post-aside { position: static; } .aside-toc { display: none; } }
     .post-body h2 { font-size: 1.45rem; margin: 44px 0 14px; color: var(--grey-dark); }
     .post-body p { color: var(--text); line-height: 1.85; margin-bottom: 16px; }
     .post-lede { font-size: 1.12rem; color: var(--grey-dark); line-height: 1.8; padding-bottom: 26px; margin-bottom: 10px; border-bottom: 2px solid var(--blue-light); }
@@ -121,8 +135,13 @@ def _faq_ld(faq):
         '{ "@type": "Question", "name": %s, "acceptedAnswer": { "@type": "Answer", "text": %s } }'
         % (jsonstr(q), jsonstr(a)) for q, a in faq)
 
+def _sid(h):
+    return re.sub(r'[^a-z0-9]+', '-', h.lower()).strip('-')[:60]
+
+
 def post_page(p):
-    secs = "\n".join(f"        <h2>{esc(h)}</h2>\n        {b}" for h, b in p["body"])
+    secs = "\n".join(f'        <h2 id="{_sid(h)}">{esc(h)}</h2>\n        {b}' for h, b in p["body"])
+    toc = "".join(f'<li><a href="#{_sid(h)}">{esc(h)}</a></li>' for h, b in p["body"])
     faqs = "\n        ".join(
         f'<div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">{esc(q)} <i class="fas fa-plus"></i></button>'
         f'<div class="faq-a"><p>{esc(a)}</p></div></div>' for q, a in p["faq"])
@@ -184,10 +203,10 @@ def post_page(p):
 </head>
 <body>
 {topbar_header("Blog").replace('src="images/', 'src="/images/')}
-  <section class="service-hero">
+  <section class="service-hero post-hero">
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Gutter Advice</a><span>/</span><span>{esc(p['title'][:40])}&hellip;</span></div>
-      <h1 style="color:var(--white);max-width:20ch;font-size:clamp(1.8rem,3.5vw,2.6rem);margin:14px 0 18px;">{esc(p['title'])}</h1>
+      <h1 style="color:var(--white);margin:14px 0 18px;">{esc(p['title'])}</h1>
       <div class="post-meta">
         <span class="post-cat">{esc(p['cat'])}</span>
         <span><i class="fas fa-clock"></i> {p['read']} min read</span>
@@ -198,6 +217,7 @@ def post_page(p):
 
   <section class="section">
     <div class="container">
+      <div class="post-layout">
       <div class="post-body">
         <p class="post-lede">{esc(p['lede'])}</p>
 {secs}
@@ -213,6 +233,16 @@ def post_page(p):
         <div class="post-links">
         {chips}
         </div>
+      </div>
+      <aside class="post-aside">
+        <div class="aside-card aside-cta">
+          <h3>Free quote, fixed price</h3>
+          <p>A free survey, a written price before we start and no call-out fee, anywhere in Dublin.</p>
+          <a href="tel:012658463" class="btn btn-primary"><i class="fas fa-phone"></i> (01) 265 8463</a>
+          <a href="/quote" class="btn btn-outline-blue">Get Free Quote</a>
+        </div>
+        <div class="aside-card aside-toc"><h3>In this article</h3><ol>{toc}</ol></div>
+      </aside>
       </div>
     </div>
   </section>

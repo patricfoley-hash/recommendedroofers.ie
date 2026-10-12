@@ -44,7 +44,21 @@
     }
   </style>
   <style>
-    .post-body { max-width: 72ch; margin: 0 auto; }
+    .post-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 56px; align-items: start; }
+    .post-body { min-width: 0; }
+    .post-body p, .post-body li { font-size: 1.05rem; }
+    .post-aside { position: sticky; top: 110px; display: flex; flex-direction: column; gap: 20px; }
+    .aside-card { background: #fff; border: 1.5px solid var(--border); border-radius: 14px; padding: 22px; }
+    .aside-card h3 { font-size: 1.05rem; margin: 0 0 10px; color: var(--grey-dark); }
+    .aside-cta { background: #fff5f5; border-color: #E11B22; text-align: center; }
+    .aside-cta p { font-size: .92rem; margin: 0 0 14px; color: var(--text); }
+    .aside-cta .btn { display: flex; justify-content: center; width: 100%; margin-bottom: 10px; }
+    .aside-toc ol { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+    .aside-toc a { font-size: .9rem; color: var(--text); text-decoration: none; line-height: 1.4; display: block; }
+    .aside-toc a:hover { color: #E11B22; }
+    .post-hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important; padding: 56px 0 48px; }
+    .post-hero h1 { max-width: 30ch !important; font-size: clamp(2rem, 4vw, 3rem) !important; line-height: 1.12; }
+    @media (max-width: 960px) { .post-layout { grid-template-columns: 1fr; gap: 32px; } .post-aside { position: static; } .aside-toc { display: none; } }
     .post-body h2 { font-size: 1.45rem; margin: 44px 0 14px; color: var(--grey-dark); }
     .post-body p { color: var(--text); line-height: 1.85; margin-bottom: 16px; }
     .post-lede { font-size: 1.12rem; color: var(--grey-dark); line-height: 1.8; padding-bottom: 26px; margin-bottom: 10px; border-bottom: 2px solid var(--blue-light); }
@@ -137,10 +151,10 @@
     </div>
   </header>
 
-  <section class="service-hero">
+  <section class="service-hero post-hero">
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Gutter Advice</a><span>/</span><span>Fascia and Soffit Replacement in Dublin&hellip;</span></div>
-      <h1 style="color:var(--white);max-width:20ch;font-size:clamp(1.8rem,3.5vw,2.6rem);margin:14px 0 18px;">Fascia and Soffit Replacement in Dublin</h1>
+      <h1 style="color:var(--white);margin:14px 0 18px;">Fascia and Soffit Replacement in Dublin</h1>
       <div class="post-meta">
         <span class="post-cat">Costs</span>
         <span><i class="fas fa-clock"></i> 10 min read</span>
@@ -151,35 +165,36 @@
 
   <section class="section">
     <div class="container">
+      <div class="post-layout">
       <div class="post-body">
         <p class="post-lede">Fascia and soffit replacement on a Dublin red-brick terrace runs from around €50 per metre for uPVC through to aluminium capping over sound timber, and is almost always done with the guttering because the gutter has to come off to reach the board. Rot behind the gutter is the usual trigger, and specification decides whether it comes back.</p>
-        <h2>Fascia and Soffit Replacement in Dublin at a Glance</h2>
+        <h2 id="fascia-and-soffit-replacement-in-dublin-at-a-glance">Fascia and Soffit Replacement in Dublin at a Glance</h2>
         <ul class="post-list"><li>Fascia and soffit are priced with the guttering when done together, because the gutter has to be removed to reach the board — one visit is considerably cheaper than two.</li><li>On Phibsborough, Drumcondra and Portobello terraces the fascia sits behind a cast iron gutter, and the rot is almost always at the wall junction where the eaves close against the brick.</li><li>uPVC replacement board and soffit is the standard specification; aluminium capping over sound timber is a repair strategy, not a like-for-like replacement.</li><li>Soffit ventilation on a 1900s terrace is usually absent — a continuous 10mm vent strip or 25,000mm²/m equivalent should be specified when the soffit is renewed.</li><li>Every full replacement carries our 10-year written workmanship guarantee, and the roofline replacement also carries the Lifetime Leak Guarantee.</li><li>Indicative full uPVC gutter replacement on a typical Dublin semi runs €1,000–€1,400; fascia and soffit is quoted alongside after a free survey.</li></ul>
-        <h2>Why rot appears behind the gutter on Dublin terraces</h2>
+        <h2 id="why-rot-appears-behind-the-gutter-on-dublin-terraces">Why rot appears behind the gutter on Dublin terraces</h2>
         <p>The Victorian and Edwardian red-brick terraces that line <strong>Phibsborough, Drumcondra, Portobello, Ranelagh and Rathmines</strong> were built between roughly 1880 and 1915, and the roofline detail has barely changed in the intervening 120 years. A softwood fascia board is nailed to the rafter feet. A softwood soffit closes the eaves back to the brickwork. And a cast iron gutter — ogee or half-round — is bolted through the fascia into the rafter end.</p>
         <p>That detail worked for a century because the cast iron was maintained. Once the gutter starts to weep at a joint, or the fall goes off, water runs down the back of the gutter rather than through it. The fascia is the first thing it hits. Softwood behind a leaking cast iron gutter in a Dublin winter — 750–850mm of annual rainfall, weeks on end without drying — will go in five or six years.</p>
         <p>The rot then travels. Because the fascia meets the soffit at a right angle, water tracks along the top edge of the soffit and out to the wall junction, where the eaves close against the red brick. <strong>The wall junction is where you see it first from the ground</strong> — a stain on the brick, moss on the soffit corner, sometimes a soffit board that has dropped away entirely and left the rafter tail visible.</p>
         <p>If you can see the rafter tail from the footpath, the fascia behind it has almost certainly gone, and the gutter fixing is holding on to soft timber.</p>
-        <h2>How to tell fascia rot from a gutter leak</h2>
+        <h2 id="how-to-tell-fascia-rot-from-a-gutter-leak">How to tell fascia rot from a gutter leak</h2>
         <p>From the ground, the two look identical — water where it should not be. From a ladder they are obvious, and they need telling apart before money is spent. Our <a href="https://dublingutter.ie/">gutter repair service in Dublin</a> starts with a look rather than a price from the driveway, because the difference decides whether the job is €800 or €4,000.</p>
         <ul class="post-list"><li><strong>Gutter leak, board sound</strong> — the fascia paint is intact, the board rings solid when tapped, the leak is at a joint or a bracket. A repair.</li><li><strong>Board soft, gutter still holding</strong> — the paint bubbles, a screwdriver goes into the board without resistance, but the gutter is not yet sagging. Fascia replacement now, before the brackets pull through.</li><li><strong>Board gone, gutter sagging</strong> — the run has dropped between brackets, the fascia is black at the top edge, the soffit is stained at the wall. Full roofline replacement on that elevation.</li></ul>
         <p>The third case is what we most often see on terraces where the last cast iron repaint was in the 1990s. The gutter is no longer bolted to timber — it is bolted to compost. New brackets will not bite, which is why patching one elevation with a fresh run of uPVC on a rotted fascia fails inside two winters.</p>
-        <h2>uPVC or aluminium capping — what to specify</h2>
+        <h2 id="upvc-or-aluminium-capping-what-to-specify">uPVC or aluminium capping — what to specify</h2>
         <p>Two legitimate specifications exist for a Dublin terrace, and they solve different problems.</p>
         <p><strong>Full uPVC replacement.</strong> The rotted fascia and soffit are stripped back to the rafter feet. New tanalised timber is fitted where the rafter tails themselves are soft (which happens on north-facing rear elevations more often than owners expect). A 16mm or 18mm uPVC replacement fascia board is fixed through to sound timber, and a hollow or vented soffit is fitted underneath. This is the standard specification and what most Dublin houses end up with.</p>
         <p><strong>Aluminium capping over sound timber.</strong> A pre-formed aluminium cover is fitted over the existing fascia, which stays in place. This is a valid approach only where the underlying timber is genuinely sound and the owner wants to preserve the original board profile — most often on protected structures or in conservation areas where a heavier uPVC section would look wrong. Capping rotted timber is a way to hide a problem, not fix one, and we will say so.</p>
         <p>On the terraces of Portobello and Ranelagh, where the eaves detail is visible from the street and the neighbouring houses have kept a slim painted fascia, aluminium capping is worth the conversation. On a 1930s semi in Cabra or Crumlin, uPVC replacement is almost always the right call.</p>
         <p>We do not specify a slim square-edged uPVC board on a Victorian terrace where the original was an ogee profile with a moulded lower edge. The profile matters — the roofline reads from thirty metres away, and a flat board on a period house looks wrong for as long as it is up there.</p>
-        <h2>The ventilation gap that was never there</h2>
+        <h2 id="the-ventilation-gap-that-was-never-there">The ventilation gap that was never there</h2>
         <p>Here is the specification detail that gets missed on almost every fascia and soffit replacement in Dublin, and matters more now than it did when the house was built.</p>
         <p>Victorian and Edwardian terraces were built without soffit ventilation. The roof space breathed through gaps in the slating and around the ridge — leaky by modern standards, but it worked. Once a house has been re-slated, re-felted with a modern breather membrane, and had loft insulation upgraded to the current 300mm depth to qualify for a <strong><a href="https://www.seai.ie/grants/home-energy-grants/">SEAI Better Energy Home grant</a></strong>, that airflow disappears.</p>
         <p>The result is condensation on the underside of the roof felt in winter, which drips onto the top of the insulation, keeps the rafter feet damp, and rots the fascia from behind as well as in front.</p>
         <p>When we renew a soffit we specify continuous ventilation — either a 10mm continuous vent strip along the back edge of the soffit, or circular soffit vents at 300mm centres, delivering the equivalent of 25,000mm² of free airflow per linear metre. On a house that has been re-insulated in the last ten years this is not optional. Renewing the soffit without the vent strip is renewing the problem.</p>
-        <h2>What the job actually involves</h2>
+        <h2 id="what-the-job-actually-involves">What the job actually involves</h2>
         <p>A fascia, soffit and gutter replacement on one elevation of a Dublin terrace runs to a predictable sequence. The <a href="https://dublingutter.ie/">full roofline replacement process</a> is:</p>
         <ol class="post-list"><li>Scaffold or tower access set up, usually a single day for a front elevation off the street.</li><li>Cast iron gutter carefully lifted off — bagged for scrap value where the customer wants to keep it, or removed by us.</li><li>Rotted fascia and soffit stripped back to sound timber. Rafter feet inspected and replaced or sistered where necessary.</li><li>Felt eaves detail checked and, on older re-roofs, an eaves protector tray fitted to carry water off the felt and into the new gutter.</li><li>New uPVC fascia fixed to sound timber. Vented soffit fitted underneath. Trims closed at the wall junction with a proper stop end, not silicone.</li><li>New gutter run set to a fall of roughly 1:600 (about 5mm over 3 metres), on brackets at maximum 800mm centres — closer on coastal elevations in Clontarf, Sandymount and Sutton where wind loading matters.</li><li>Downpipes reconnected to the existing hoppers or renewed, and the run water-tested before we leave.</li></ol>
         <p>For a typical mid-terrace front elevation of 8–10 metres, this is a one to two day job with two crew. A full front-and-rear on a semi runs two to three days. Every full replacement carries the <a href="https://dublingutter.ie/">10-year written workmanship guarantee and the Lifetime Leak Guarantee</a>, handed over in writing before contracts are signed.</p>
-        <h2>Indicative costs</h2>
+        <h2 id="indicative-costs">Indicative costs</h2>
         <p>Prices below are indicative and confirmed free after a site survey. Fascia and soffit is priced with the guttering because the two are done together — the gutter has to come off to reach the board, and separating the invoices does not separate the labour.</p>
         <div style="overflow-x:auto"><table><thead><tr><th>Element</th><th>Indicative cost</th></tr></thead><tbody><tr><td>uPVC gutter, typical Dublin semi (~20m front + rear)</td><td>€1,000 – €1,400</td></tr><tr><td>Aluminium gutter, same house</td><td>€1,300 – €1,800</td></tr><tr><td>Cast iron replacement (heritage / conservation)</td><td>€2,100 – €2,800</td></tr><tr><td>Fascia and soffit renewal</td><td>Quoted with the guttering after survey</td></tr></tbody></table></div>
         <p>Material is the single biggest lever on the guttering side. Fascia and soffit costs are driven by the length of run, the height, whether the rafter feet are sound, and whether scaffold or a tower is needed for access. There is no call-out fee, and a written breakdown is handed over before anything is signed.</p>
@@ -197,6 +212,16 @@
         <a href="/new-gutters" class="post-link-chip"><i class="fas fa-arrow-right"></i> New gutters</a>
         <a href="/fascia-soffit" class="post-link-chip"><i class="fas fa-arrow-right"></i> Fascia & soffit</a>
         </div>
+      </div>
+      <aside class="post-aside">
+        <div class="aside-card aside-cta">
+          <h3>Free quote, fixed price</h3>
+          <p>A free survey, a written price before we start and no call-out fee, anywhere in Dublin.</p>
+          <a href="tel:012658463" class="btn btn-primary"><i class="fas fa-phone"></i> (01) 265 8463</a>
+          <a href="/quote" class="btn btn-outline-blue">Get Free Quote</a>
+        </div>
+        <div class="aside-card aside-toc"><h3>In this article</h3><ol><li><a href="#fascia-and-soffit-replacement-in-dublin-at-a-glance">Fascia and Soffit Replacement in Dublin at a Glance</a></li><li><a href="#why-rot-appears-behind-the-gutter-on-dublin-terraces">Why rot appears behind the gutter on Dublin terraces</a></li><li><a href="#how-to-tell-fascia-rot-from-a-gutter-leak">How to tell fascia rot from a gutter leak</a></li><li><a href="#upvc-or-aluminium-capping-what-to-specify">uPVC or aluminium capping — what to specify</a></li><li><a href="#the-ventilation-gap-that-was-never-there">The ventilation gap that was never there</a></li><li><a href="#what-the-job-actually-involves">What the job actually involves</a></li><li><a href="#indicative-costs">Indicative costs</a></li></ol></div>
+      </aside>
       </div>
     </div>
   </section>
