@@ -8,7 +8,7 @@
   <meta name="description" content="What to photograph, how to word the claim, and when a temporary repair is expected before the assessor calls" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="/style.css" />
   <style>
@@ -48,11 +48,17 @@
     .post-body h2 { font-size: 1.45rem; margin: 44px 0 14px; color: var(--grey-dark); }
     .post-body p { color: var(--text); line-height: 1.85; margin-bottom: 16px; }
     .post-lede { font-size: 1.12rem; color: var(--grey-dark); line-height: 1.8; padding-bottom: 26px; margin-bottom: 10px; border-bottom: 2px solid var(--blue-light); }
-    .post-list { display: flex; flex-direction: column; gap: 9px; margin: 0 0 18px; }
-    .post-list li { display: flex; align-items: flex-start; gap: 10px; color: var(--text); line-height: 1.7; }
-    .post-list li::before { content: '\2713'; color: var(--yellow-dark); font-weight: 700; flex-shrink: 0; }
+    .post-list { display: flex; flex-direction: column; gap: 9px; margin: 0 0 18px; list-style: none; padding-left: 0; }
+    .post-list li { position: relative; padding-left: 26px; color: var(--text); line-height: 1.7; }
+    .post-list li::before { content: '\2713'; position: absolute; left: 0; top: 0; color: var(--yellow-dark); font-weight: 700; }
+    .post-cta { background: #fff5f5; border: 2px solid #E11B22; border-radius: 14px; padding: 26px 28px; margin: 38px 0 10px; text-align: center; }
+    .post-cta h2 { margin: 0 0 8px !important; font-size: 1.35rem; color: var(--grey-dark); }
+    .post-cta p { margin: 0 0 16px; }
+    .post-cta .post-cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .post-cta .post-cta-note { font-size: .92rem; margin: 18px 0 0; }
+    .post-note a, .post-cta-note a { color: #E11B22; font-weight: 600; text-decoration: underline; }
     .post-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; color: rgba(255,255,255,0.8); font-size: 0.88rem; }
-    .post-cat { background: var(--yellow); color: var(--grey-dark); padding: 4px 12px; border-radius: 50px; font-weight: 700; font-size: 0.78rem; font-family: 'Sora', sans-serif; }
+    .post-cat { background: var(--yellow); color: var(--grey-dark); padding: 4px 12px; border-radius: 50px; font-weight: 700; font-size: 0.78rem; font-family: 'Poppins', sans-serif; }
     .post-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
     .post-link-chip { display: inline-flex; align-items: center; gap: 7px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; padding: 9px 16px; font-size: 0.88rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
     .post-link-chip:hover { border-color: var(--blue); color: var(--blue); }
@@ -62,7 +68,7 @@
     .blog-card .post-cat { align-self: flex-start; margin-bottom: 14px; }
     .blog-card h2 { font-size: 1.15rem; margin-bottom: 10px; color: var(--grey-dark); }
     .blog-card p { font-size: 0.9rem; color: var(--grey); line-height: 1.65; flex: 1; }
-    .blog-card .read { margin-top: 16px; font-size: 0.85rem; font-weight: 600; color: var(--yellow-dark); font-family: 'Sora', sans-serif; display: flex; align-items: center; gap: 6px; }
+    .blog-card .read { margin-top: 16px; font-size: 0.85rem; font-weight: 600; color: var(--yellow-dark); font-family: 'Poppins', sans-serif; display: flex; align-items: center; gap: 6px; }
   </style>
   <script type="application/ld+json">
   {
@@ -117,12 +123,11 @@
 
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="/" class="logo"><img src="/images/rg-logo-v2-500.webp" alt="Recommended Guttering" width="500" height="97" /></a>
+      <a href="/" class="logo"><img src="/images/logo-recommended-roofing.svg" alt="Recommended Roofing &amp; Guttering" height="80" /></a>
       <nav class="nav" id="nav">
         <a href="/" class="nav-link">Home</a>
         <a href="/services" class="nav-link">Services</a>
         <a href="/near-me" class="nav-link">Near Me</a>
-        <a href="/gallery" class="nav-link">Gallery</a>
         <a href="/blog" class="nav-link active">Blog</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/contact" class="nav-link">Contact</a>
@@ -149,7 +154,7 @@
     <div class="container">
       <div class="post-body">
         <p class="post-lede">After a named Atlantic storm hits Dublin's coastal fringe — Howth, Sutton, Malahide, Dun Laoghaire, Dalkey — insurers expect photographs taken within 24–48 hours, a written contractor report, and a temporary repair where water is actively entering the building. Storm damage to guttering is usually covered under the storm peril subject to your excess; wear and tear is not.</p>
-        <h2>The short version</h2>
+        <h2>Storm Damage Guttering in Dublin at a Glance</h2>
         <ul class="post-list"><li>Photograph the damage before anything is touched — wide shot of the elevation, close-up of the failure, and one showing where water is now going instead.</li><li>Insurers separate storm damage from wear and tear, so your report needs to describe wind-lifted sections, sheared brackets or hopper impact damage in those exact terms.</li><li>Most home policies carry an excess of €250–€500, so a single length of uPVC pulled off a gable is often not worth claiming; a full run stripped from an exposed elevation almost always is.</li><li>A temporary repair to stop water entering the building is expected before the loss adjuster arrives — insurers will not penalise you for it, provided the damaged material is kept for inspection.</li><li>Named storms recorded by Met Éireann (Éowyn, Darragh, Isha, Kathleen among recent examples) give you a dated weather event to cite in the claim, which strengthens the storm-peril argument considerably.</li><li>On exposed coastal gables in Howth, Sutton and Dalkey, bracket spacing under 800mm is standard practice — anything wider that has failed in a storm is worth flagging as an installation issue on the report.</li></ul>
         <h2>Why coastal Dublin gutters fail in named storms</h2>
         <p>The exposed north-eastern and south-eastern coastal fringes of Dublin take wind loading that inland suburbs never see. When a named Atlantic storm tracks across Ireland — Éowyn in January 2025 brought gusts over 180 km/h to the east coast, Darragh and Isha before it — the pressure on a fully-loaded gutter running along a two-storey gable in Howth or Dalkey is an order of magnitude greater than the same run in Tallaght or Clondalkin.</p>
@@ -175,7 +180,7 @@
         <p>For urgent situations across Dublin, our <a href="https://dublingutter.ie/">emergency gutter repair service</a> prioritises same-day response where the diary allows. Say on the phone that water is entering the building and the job jumps the queue.</p>
         <h2>What the insurer's report should contain</h2>
         <p>When we attend a storm-damage call-out on the coastal suburbs, the written report we issue for the insurer covers, at minimum:</p>
-        <ul class="post-list"><li>Date and time of inspection, and the named storm event referenced.</li><li>Property address and the specific elevation affected.</li><li>A description of the damage in the language above — wind-lifted, sheared, impact — with measurements.</li><li>Photographs, dated and captioned.</li><li>A statement on whether the failure is consistent with storm-force wind loading or with pre-existing wear, and the reasoning.</li><li>The scope of temporary works carried out, if any.</li><li>A written quote for the permanent repair, with a breakdown.</li><li>Confirmation of insurance (€6.5M public liability, €13M employer liability), CIRI registration, and the 10-year written guarantee that will apply to the reinstated work.</li></ul>
+        <ul class="post-list"><li>Date and time of inspection, and the named storm event referenced.</li><li>Property address and the specific elevation affected.</li><li>A description of the damage in the language above — wind-lifted, sheared, impact — with measurements.</li><li>Photographs, dated and captioned.</li><li>A statement on whether the failure is consistent with storm-force wind loading or with pre-existing wear, and the reasoning.</li><li>The scope of temporary works carried out, if any.</li><li>A written quote for the permanent repair, with a breakdown.</li><li>Confirmation of insurance (€6.5M public liability, €13M employer liability), CIRI registration, and the written guarantee that will apply to the reinstated work (a minimum of 3 years on repairs, up to 10 on major repair work).</li></ul>
         <p>That last section matters more than it looks. Assessors are wary of quotes from contractors they cannot verify. A quote on headed paper from a CIRI-registered contractor with named insurances rarely gets challenged on the numbers.</p>
         <h2>Indicative costs for storm-damage guttering work in Dublin</h2>
         <p>All figures <strong>indicative</strong> — confirmed free after a site survey. Storm-damage claims settle on the actual scope agreed with the assessor, not a headline figure.</p>
@@ -186,6 +191,15 @@
         <p>The pattern is consistent storm to storm. On the northside, <a href="https://dublingutter.ie/">gutter repairs in Howth</a> and Sutton dominate the call sheet, with Malahide and Portmarnock behind. On the southside, <a href="https://dublingutter.ie/">Dun Laoghaire gutter work</a>, Dalkey, Sandycove and Monkstown lead, with Sandymount and Blackrock close behind. Clontarf sits between — inland enough to be sheltered from the worst of it, but exposed enough on the seafront terraces to feature every named storm.</p>
         <p>Inland calls after a storm are almost always downpipe or hopper impact damage rather than wind-lifted runs. Coastal calls are the wind-lifted sections, and those are the ones the insurer expects to see photographed and described precisely.</p>
         <p>For scheduled maintenance that prevents the marginal failures becoming storm-day emergencies, see our notes on <a href="https://dublingutter.ie/">gutter cleaning schedules for Dublin</a> and the <a href="https://dublingutter.ie/">full gutter replacement service</a> for runs that have reached the end of their working life.</p>
+        <div class="post-cta">
+          <h2>Want a firm price for your house?</h2>
+          <p>Free survey, a written fixed price and no call-out fee, anywhere in Dublin.</p>
+          <div class="post-cta-actions">
+            <a href="tel:012658463" class="btn btn-primary"><i class="fas fa-phone"></i> (01) 265 8463</a>
+            <a href="/quote" class="btn btn-outline-blue">Get Free Quote</a>
+          </div>
+          <p class="post-cta-note">Outside Dublin? Munster Gutters covers Cork, Limerick, Kerry, Waterford, Clare and Tipperary: see their guide to <a href="https://munstergutters.ie/blog/average-cost-of-gutter-repairs/">gutter repair costs in Ireland</a>.</p>
+        </div>
         <div class="post-links">
         <a href="/gutter-repairs" class="post-link-chip"><i class="fas fa-arrow-right"></i> Gutter repairs</a>
         <a href="/new-gutters" class="post-link-chip"><i class="fas fa-arrow-right"></i> New gutters</a>
@@ -226,7 +240,7 @@
       <div class="blog-grid">
         <a href="/blog/downpipes-and-drainage-in-dublin" class="blog-card"><span class="post-cat">Costs</span><h2>Downpipes and Drainage in Dublin</h2><p>Front-garden gullies, shared rear yards, and combined sewers — where the water actually ends up on a city terrace</p><span class="read">Read more <i class="fas fa-arrow-right"></i></span></a>
         <a href="/blog/fascia-and-soffit-replacement-in-dublin" class="blog-card"><span class="post-cat">Costs</span><h2>Fascia and Soffit Replacement in Dublin</h2><p>Red-brick terraces, rot behind the gutter, and what to specify on a Victorian roofline</p><span class="read">Read more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/blog/gutter-repair-costs-in-dublin" class="blog-card"><span class="post-cat">Costs</span><h2>Gutter Repair Costs in Dublin</h2><p>What overflowing at the front actually costs to fix, and how to tell a €150 clean from a €1,500 realignment</p><span class="read">Read more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/blog/gutter-repair-costs-in-dublin" class="blog-card"><span class="post-cat">Costs</span><h2>Gutter Repair Costs in Dublin</h2><p>What overflowing at the front actually costs to fix, and how to tell a simple clean from a full realignment</p><span class="read">Read more <i class="fas fa-arrow-right"></i></span></a>
       </div>
     </div>
   </section>
@@ -234,7 +248,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="/" class="logo logo-light"><img src="/images/rg-logo-white-v2-500.webp" alt="Recommended Guttering" width="500" height="97" /></a>
+        <a href="/" class="logo logo-light"><img src="/images/logo-recommended-roofing.svg" alt="Recommended Roofing &amp; Guttering" height="80" /></a>
         <p>Dublin's trusted gutter repair and replacement experts. Directly employed crews, a price agreed before we start, and a 10-year written guarantee on the work.</p>
         <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
       </div>

@@ -8,7 +8,7 @@
   <meta name="description" content="Front-garden gullies, shared rear yards, and combined sewers — where the water actually ends up on a city terrace" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="/style.css" />
   <style>
@@ -48,11 +48,17 @@
     .post-body h2 { font-size: 1.45rem; margin: 44px 0 14px; color: var(--grey-dark); }
     .post-body p { color: var(--text); line-height: 1.85; margin-bottom: 16px; }
     .post-lede { font-size: 1.12rem; color: var(--grey-dark); line-height: 1.8; padding-bottom: 26px; margin-bottom: 10px; border-bottom: 2px solid var(--blue-light); }
-    .post-list { display: flex; flex-direction: column; gap: 9px; margin: 0 0 18px; }
-    .post-list li { display: flex; align-items: flex-start; gap: 10px; color: var(--text); line-height: 1.7; }
-    .post-list li::before { content: '\2713'; color: var(--yellow-dark); font-weight: 700; flex-shrink: 0; }
+    .post-list { display: flex; flex-direction: column; gap: 9px; margin: 0 0 18px; list-style: none; padding-left: 0; }
+    .post-list li { position: relative; padding-left: 26px; color: var(--text); line-height: 1.7; }
+    .post-list li::before { content: '\2713'; position: absolute; left: 0; top: 0; color: var(--yellow-dark); font-weight: 700; }
+    .post-cta { background: #fff5f5; border: 2px solid #E11B22; border-radius: 14px; padding: 26px 28px; margin: 38px 0 10px; text-align: center; }
+    .post-cta h2 { margin: 0 0 8px !important; font-size: 1.35rem; color: var(--grey-dark); }
+    .post-cta p { margin: 0 0 16px; }
+    .post-cta .post-cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .post-cta .post-cta-note { font-size: .92rem; margin: 18px 0 0; }
+    .post-note a, .post-cta-note a { color: #E11B22; font-weight: 600; text-decoration: underline; }
     .post-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; color: rgba(255,255,255,0.8); font-size: 0.88rem; }
-    .post-cat { background: var(--yellow); color: var(--grey-dark); padding: 4px 12px; border-radius: 50px; font-weight: 700; font-size: 0.78rem; font-family: 'Sora', sans-serif; }
+    .post-cat { background: var(--yellow); color: var(--grey-dark); padding: 4px 12px; border-radius: 50px; font-weight: 700; font-size: 0.78rem; font-family: 'Poppins', sans-serif; }
     .post-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
     .post-link-chip { display: inline-flex; align-items: center; gap: 7px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; padding: 9px 16px; font-size: 0.88rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
     .post-link-chip:hover { border-color: var(--blue); color: var(--blue); }
@@ -62,7 +68,7 @@
     .blog-card .post-cat { align-self: flex-start; margin-bottom: 14px; }
     .blog-card h2 { font-size: 1.15rem; margin-bottom: 10px; color: var(--grey-dark); }
     .blog-card p { font-size: 0.9rem; color: var(--grey); line-height: 1.65; flex: 1; }
-    .blog-card .read { margin-top: 16px; font-size: 0.85rem; font-weight: 600; color: var(--yellow-dark); font-family: 'Sora', sans-serif; display: flex; align-items: center; gap: 6px; }
+    .blog-card .read { margin-top: 16px; font-size: 0.85rem; font-weight: 600; color: var(--yellow-dark); font-family: 'Poppins', sans-serif; display: flex; align-items: center; gap: 6px; }
   </style>
   <script type="application/ld+json">
   {
@@ -93,7 +99,7 @@
       { "@type": "Question", "name": "The downpipe discharges onto a concrete path with no gully. Is that a problem?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, on a Dublin house it almost always is. The splash wets the wall in every shower and the ground beside the wall never dries. A trapped gully cut into the path and connected to the nearest drain is the fix. On a rented property this is the landlord's responsibility." } },
       { "@type": "Question", "name": "Can I connect my new extension's downpipe into the existing gully?", "acceptedAnswer": { "@type": "Answer", "text": "Usually yes, if the gully and the pipe below it can take the extra flow. On a combined system in an inner-city terrace, adding significant new roof area may require Uisce Éireann sign-off. Check before the roof goes on, not after." } },
       { "@type": "Question", "name": "Is a blocked downpipe covered by my home insurance if it causes damp?", "acceptedAnswer": { "@type": "Answer", "text": "Damage from a sudden burst or storm event is usually covered, subject to the excess. Gradual damage from a long-blocked downpipe is treated as wear and tear and is not. Photograph any storm damage immediately and get a written report before repair." } },
-      { "@type": "Question", "name": "Do you clear below-ground drains as well as downpipes?", "acceptedAnswer": { "@type": "Answer", "text": "We clear the downpipe and the gully. Below-ground blockages — beyond the gully, into the connection to the main sewer — are a drain contractor's job. We will say so clearly on the survey. To arrange a free survey of your downpipes and drainage, call (01) 265 8463 or use the form on the site. We give a written breakdown before anything starts, and every job carries our 10-year written guarantee." } }
+      { "@type": "Question", "name": "Do you clear below-ground drains as well as downpipes?", "acceptedAnswer": { "@type": "Answer", "text": "We clear the downpipe and the gully. Below-ground blockages — beyond the gully, into the connection to the main sewer — are a drain contractor's job. We will say so clearly on the survey. To arrange a free survey of your downpipes and drainage, call (01) 265 8463 or use the form on the site. We give a written breakdown before anything starts, and every job carries a written guarantee: a minimum of 3 years on repairs, up to 10 on major repair work, and the Lifetime Leak Guarantee on any job that replaces gutters or a roof." } }
     ] }
     ]
   }
@@ -116,12 +122,11 @@
 
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="/" class="logo"><img src="/images/rg-logo-v2-500.webp" alt="Recommended Guttering" width="500" height="97" /></a>
+      <a href="/" class="logo"><img src="/images/logo-recommended-roofing.svg" alt="Recommended Roofing &amp; Guttering" height="80" /></a>
       <nav class="nav" id="nav">
         <a href="/" class="nav-link">Home</a>
         <a href="/services" class="nav-link">Services</a>
         <a href="/near-me" class="nav-link">Near Me</a>
-        <a href="/gallery" class="nav-link">Gallery</a>
         <a href="/blog" class="nav-link active">Blog</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/contact" class="nav-link">Contact</a>
@@ -148,7 +153,7 @@
     <div class="container">
       <div class="post-body">
         <p class="post-lede">On most Dublin houses the downpipe discharges into a trapped gully at the base of the wall, which connects to either a combined sewer (Georgian and Victorian terraces, inner city) or a separate surface-water drain (post-1970s estates). Pooling and damp at the wall base almost always mean the gully is blocked, cracked, or the pipe is discharging beside it rather than into it.</p>
-        <h2>The short version</h2>
+        <h2>Downpipes and Drainage in Dublin at a Glance</h2>
         <ul class="post-list"><li><strong>Roughly 15–20 metres of gutter</strong> on a standard Dublin three-bed semi feeds two to four downpipes, each carrying the runoff from around 30–50 m² of roof.</li><li><strong>Pre-1970s inner-city terraces are on combined sewers</strong> — one pipe carries both foul waste and rainwater to the Ringsend treatment works, which is why Uisce Éireann restricts new surface-water connections into it.</li><li><strong>Newer estates from the 1970s onward</strong> are typically on separate systems, where the downpipe must go to the surface-water drain and never into the foul.</li><li><strong>A trapped gully with a 100mm water seal</strong> is what stops sewer smells rising back up the downpipe on a combined system — a dry or cracked gully is a common cause of drain odour at the front door.</li><li><strong>Damp at the base of the wall within 300mm of a downpipe</strong> points to the gully, the shoe, or the pipe joint above it — not to rising damp, and not to the gutter itself.</li><li><strong>Gutter repair on a Dublin semi runs €500–€800</strong> for a small job and <strong>€1,000–€1,900</strong> for a typical downpipe-and-alignment fix (indicative — confirmed free after a survey).</li></ul>
         <h2>Where the water goes when it leaves the roof</h2>
         <p>The gutter is the easy bit. The harder question — and the one that decides whether a wall stays dry — is what happens in the last two metres, between the shoe at the bottom of the downpipe and the ground.</p>
@@ -186,6 +191,15 @@
         <p>All figures are indicative and confirmed free after a site survey.</p>
         <div style="overflow-x:auto"><table><thead><tr><th>Job</th><th>Typical cost</th></tr></thead><tbody><tr><td>Clear a blocked downpipe and gully, single stack</td><td>€500 – €800</td></tr><tr><td>Renew shoe, realign to gully, refix lowest bracket</td><td>€500 – €800</td></tr><tr><td>Replace one full uPVC downpipe (two-storey)</td><td>€1,000 – €1,900</td></tr><tr><td>Replace cast iron downpipe on period property</td><td>€1,900 – €3,000</td></tr><tr><td>Full elevation replacement including downpipes</td><td>See our <a href="https://dublingutter.ie/">pricing page</a></td></tr></tbody></table></div>
         <p>Below-ground drainage — root intrusion in the clay pipe under the path, a collapsed connection to the main sewer — is a drain contractor's job, not a guttering job. We will say so on the survey rather than quote for work that will not fix the fault.</p>
+        <div class="post-cta">
+          <h2>Want a firm price for your house?</h2>
+          <p>Free survey, a written fixed price and no call-out fee, anywhere in Dublin.</p>
+          <div class="post-cta-actions">
+            <a href="tel:012658463" class="btn btn-primary"><i class="fas fa-phone"></i> (01) 265 8463</a>
+            <a href="/quote" class="btn btn-outline-blue">Get Free Quote</a>
+          </div>
+          <p class="post-cta-note">Outside Dublin? Munster Gutters covers Cork, Limerick, Kerry, Waterford, Clare and Tipperary: see their guide to <a href="https://munstergutters.ie/blog/average-cost-of-gutter-repairs/">gutter repair costs in Ireland</a>.</p>
+        </div>
         <div class="post-links">
         <a href="/gutter-cleaning" class="post-link-chip"><i class="fas fa-arrow-right"></i> Gutter cleaning</a>
         <a href="/gutter-repairs" class="post-link-chip"><i class="fas fa-arrow-right"></i> Gutter repairs</a>
@@ -204,7 +218,7 @@
         <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">The downpipe discharges onto a concrete path with no gully. Is that a problem? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes, on a Dublin house it almost always is. The splash wets the wall in every shower and the ground beside the wall never dries. A trapped gully cut into the path and connected to the nearest drain is the fix. On a rented property this is the landlord's responsibility.</p></div></div>
         <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can I connect my new extension's downpipe into the existing gully? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Usually yes, if the gully and the pipe below it can take the extra flow. On a combined system in an inner-city terrace, adding significant new roof area may require Uisce Éireann sign-off. Check before the roof goes on, not after.</p></div></div>
         <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is a blocked downpipe covered by my home insurance if it causes damp? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Damage from a sudden burst or storm event is usually covered, subject to the excess. Gradual damage from a long-blocked downpipe is treated as wear and tear and is not. Photograph any storm damage immediately and get a written report before repair.</p></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you clear below-ground drains as well as downpipes? <i class="fas fa-plus"></i></button><div class="faq-a"><p>We clear the downpipe and the gully. Below-ground blockages — beyond the gully, into the connection to the main sewer — are a drain contractor's job. We will say so clearly on the survey. To arrange a free survey of your downpipes and drainage, call (01) 265 8463 or use the form on the site. We give a written breakdown before anything starts, and every job carries our 10-year written guarantee.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you clear below-ground drains as well as downpipes? <i class="fas fa-plus"></i></button><div class="faq-a"><p>We clear the downpipe and the gully. Below-ground blockages — beyond the gully, into the connection to the main sewer — are a drain contractor's job. We will say so clearly on the survey. To arrange a free survey of your downpipes and drainage, call (01) 265 8463 or use the form on the site. We give a written breakdown before anything starts, and every job carries a written guarantee: a minimum of 3 years on repairs, up to 10 on major repair work, and the Lifetime Leak Guarantee on any job that replaces gutters or a roof.</p></div></div>
       </div>
     </div>
   </section>
@@ -225,7 +239,7 @@
       <div class="blog-grid">
         <a href="/blog/storm-damage-guttering-in-dublin" class="blog-card"><span class="post-cat">Costs</span><h2>Storm Damage Guttering in Dublin</h2><p>What to photograph, how to word the claim, and when a temporary repair is expected before the assessor calls</p><span class="read">Read more <i class="fas fa-arrow-right"></i></span></a>
         <a href="/blog/fascia-and-soffit-replacement-in-dublin" class="blog-card"><span class="post-cat">Costs</span><h2>Fascia and Soffit Replacement in Dublin</h2><p>Red-brick terraces, rot behind the gutter, and what to specify on a Victorian roofline</p><span class="read">Read more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/blog/gutter-repair-costs-in-dublin" class="blog-card"><span class="post-cat">Costs</span><h2>Gutter Repair Costs in Dublin</h2><p>What overflowing at the front actually costs to fix, and how to tell a €150 clean from a €1,500 realignment</p><span class="read">Read more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/blog/gutter-repair-costs-in-dublin" class="blog-card"><span class="post-cat">Costs</span><h2>Gutter Repair Costs in Dublin</h2><p>What overflowing at the front actually costs to fix, and how to tell a simple clean from a full realignment</p><span class="read">Read more <i class="fas fa-arrow-right"></i></span></a>
       </div>
     </div>
   </section>
@@ -233,7 +247,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="/" class="logo logo-light"><img src="/images/rg-logo-white-v2-500.webp" alt="Recommended Guttering" width="500" height="97" /></a>
+        <a href="/" class="logo logo-light"><img src="/images/logo-recommended-roofing.svg" alt="Recommended Roofing &amp; Guttering" height="80" /></a>
         <p>Dublin's trusted gutter repair and replacement experts. Directly employed crews, a price agreed before we start, and a 10-year written guarantee on the work.</p>
         <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
       </div>

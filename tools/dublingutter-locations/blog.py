@@ -93,9 +93,15 @@ BLOG_CSS = """  <style>
     .post-body h2 { font-size: 1.45rem; margin: 44px 0 14px; color: var(--grey-dark); }
     .post-body p { color: var(--text); line-height: 1.85; margin-bottom: 16px; }
     .post-lede { font-size: 1.12rem; color: var(--grey-dark); line-height: 1.8; padding-bottom: 26px; margin-bottom: 10px; border-bottom: 2px solid var(--blue-light); }
-    .post-list { display: flex; flex-direction: column; gap: 9px; margin: 0 0 18px; }
-    .post-list li { display: flex; align-items: flex-start; gap: 10px; color: var(--text); line-height: 1.7; }
-    .post-list li::before { content: '\\2713'; color: var(--yellow-dark); font-weight: 700; flex-shrink: 0; }
+    .post-list { display: flex; flex-direction: column; gap: 9px; margin: 0 0 18px; list-style: none; padding-left: 0; }
+    .post-list li { position: relative; padding-left: 26px; color: var(--text); line-height: 1.7; }
+    .post-list li::before { content: '\\2713'; position: absolute; left: 0; top: 0; color: var(--yellow-dark); font-weight: 700; }
+    .post-cta { background: #fff5f5; border: 2px solid #E11B22; border-radius: 14px; padding: 26px 28px; margin: 38px 0 10px; text-align: center; }
+    .post-cta h2 { margin: 0 0 8px !important; font-size: 1.35rem; color: var(--grey-dark); }
+    .post-cta p { margin: 0 0 16px; }
+    .post-cta .post-cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .post-cta .post-cta-note { font-size: .92rem; margin: 18px 0 0; }
+    .post-note a, .post-cta-note a { color: #E11B22; font-weight: 600; text-decoration: underline; }
     .post-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; color: rgba(255,255,255,0.8); font-size: 0.88rem; }
     .post-cat { background: var(--yellow); color: var(--grey-dark); padding: 4px 12px; border-radius: 50px; font-weight: 700; font-size: 0.78rem; font-family: 'Poppins', sans-serif; }
     .post-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
@@ -195,6 +201,15 @@ def post_page(p):
       <div class="post-body">
         <p class="post-lede">{esc(p['lede'])}</p>
 {secs}
+        <div class="post-cta">
+          <h2>Want a firm price for your house?</h2>
+          <p>Free survey, a written fixed price and no call-out fee, anywhere in Dublin.</p>
+          <div class="post-cta-actions">
+            <a href="tel:012658463" class="btn btn-primary"><i class="fas fa-phone"></i> (01) 265 8463</a>
+            <a href="/quote" class="btn btn-outline-blue">Get Free Quote</a>
+          </div>
+          <p class="post-cta-note">Outside Dublin? Munster Gutters covers Cork, Limerick, Kerry, Waterford, Clare and Tipperary: see their guide to <a href="https://munstergutters.ie/blog/average-cost-of-gutter-repairs/">gutter repair costs in Ireland</a>.</p>
+        </div>
         <div class="post-links">
         {chips}
         </div>

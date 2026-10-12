@@ -8,7 +8,7 @@
   <meta name="description" content="Red-brick terraces, rot behind the gutter, and what to specify on a Victorian roofline" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="/style.css" />
   <style>
@@ -48,11 +48,17 @@
     .post-body h2 { font-size: 1.45rem; margin: 44px 0 14px; color: var(--grey-dark); }
     .post-body p { color: var(--text); line-height: 1.85; margin-bottom: 16px; }
     .post-lede { font-size: 1.12rem; color: var(--grey-dark); line-height: 1.8; padding-bottom: 26px; margin-bottom: 10px; border-bottom: 2px solid var(--blue-light); }
-    .post-list { display: flex; flex-direction: column; gap: 9px; margin: 0 0 18px; }
-    .post-list li { display: flex; align-items: flex-start; gap: 10px; color: var(--text); line-height: 1.7; }
-    .post-list li::before { content: '\2713'; color: var(--yellow-dark); font-weight: 700; flex-shrink: 0; }
+    .post-list { display: flex; flex-direction: column; gap: 9px; margin: 0 0 18px; list-style: none; padding-left: 0; }
+    .post-list li { position: relative; padding-left: 26px; color: var(--text); line-height: 1.7; }
+    .post-list li::before { content: '\2713'; position: absolute; left: 0; top: 0; color: var(--yellow-dark); font-weight: 700; }
+    .post-cta { background: #fff5f5; border: 2px solid #E11B22; border-radius: 14px; padding: 26px 28px; margin: 38px 0 10px; text-align: center; }
+    .post-cta h2 { margin: 0 0 8px !important; font-size: 1.35rem; color: var(--grey-dark); }
+    .post-cta p { margin: 0 0 16px; }
+    .post-cta .post-cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .post-cta .post-cta-note { font-size: .92rem; margin: 18px 0 0; }
+    .post-note a, .post-cta-note a { color: #E11B22; font-weight: 600; text-decoration: underline; }
     .post-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; color: rgba(255,255,255,0.8); font-size: 0.88rem; }
-    .post-cat { background: var(--yellow); color: var(--grey-dark); padding: 4px 12px; border-radius: 50px; font-weight: 700; font-size: 0.78rem; font-family: 'Sora', sans-serif; }
+    .post-cat { background: var(--yellow); color: var(--grey-dark); padding: 4px 12px; border-radius: 50px; font-weight: 700; font-size: 0.78rem; font-family: 'Poppins', sans-serif; }
     .post-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
     .post-link-chip { display: inline-flex; align-items: center; gap: 7px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; padding: 9px 16px; font-size: 0.88rem; font-weight: 600; color: var(--grey-dark); text-decoration: none; transition: all var(--transition); }
     .post-link-chip:hover { border-color: var(--blue); color: var(--blue); }
@@ -62,7 +68,7 @@
     .blog-card .post-cat { align-self: flex-start; margin-bottom: 14px; }
     .blog-card h2 { font-size: 1.15rem; margin-bottom: 10px; color: var(--grey-dark); }
     .blog-card p { font-size: 0.9rem; color: var(--grey); line-height: 1.65; flex: 1; }
-    .blog-card .read { margin-top: 16px; font-size: 0.85rem; font-weight: 600; color: var(--yellow-dark); font-family: 'Sora', sans-serif; display: flex; align-items: center; gap: 6px; }
+    .blog-card .read { margin-top: 16px; font-size: 0.85rem; font-weight: 600; color: var(--yellow-dark); font-family: 'Poppins', sans-serif; display: flex; align-items: center; gap: 6px; }
   </style>
   <script type="application/ld+json">
   {
@@ -116,12 +122,11 @@
 
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="/" class="logo"><img src="/images/rg-logo-v2-500.webp" alt="Recommended Guttering" width="500" height="97" /></a>
+      <a href="/" class="logo"><img src="/images/logo-recommended-roofing.svg" alt="Recommended Roofing &amp; Guttering" height="80" /></a>
       <nav class="nav" id="nav">
         <a href="/" class="nav-link">Home</a>
         <a href="/services" class="nav-link">Services</a>
         <a href="/near-me" class="nav-link">Near Me</a>
-        <a href="/gallery" class="nav-link">Gallery</a>
         <a href="/blog" class="nav-link active">Blog</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/contact" class="nav-link">Contact</a>
@@ -148,7 +153,7 @@
     <div class="container">
       <div class="post-body">
         <p class="post-lede">Fascia and soffit replacement on a Dublin red-brick terrace runs from around €50 per metre for uPVC through to aluminium capping over sound timber, and is almost always done with the guttering because the gutter has to come off to reach the board. Rot behind the gutter is the usual trigger, and specification decides whether it comes back.</p>
-        <h2>The short version</h2>
+        <h2>Fascia and Soffit Replacement in Dublin at a Glance</h2>
         <ul class="post-list"><li>Fascia and soffit are priced with the guttering when done together, because the gutter has to be removed to reach the board — one visit is considerably cheaper than two.</li><li>On Phibsborough, Drumcondra and Portobello terraces the fascia sits behind a cast iron gutter, and the rot is almost always at the wall junction where the eaves close against the brick.</li><li>uPVC replacement board and soffit is the standard specification; aluminium capping over sound timber is a repair strategy, not a like-for-like replacement.</li><li>Soffit ventilation on a 1900s terrace is usually absent — a continuous 10mm vent strip or 25,000mm²/m equivalent should be specified when the soffit is renewed.</li><li>Every full replacement carries our 10-year written workmanship guarantee, and the roofline replacement also carries the Lifetime Leak Guarantee.</li><li>Indicative full uPVC gutter replacement on a typical Dublin semi runs €1,000–€1,400; fascia and soffit is quoted alongside after a free survey.</li></ul>
         <h2>Why rot appears behind the gutter on Dublin terraces</h2>
         <p>The Victorian and Edwardian red-brick terraces that line <strong>Phibsborough, Drumcondra, Portobello, Ranelagh and Rathmines</strong> were built between roughly 1880 and 1915, and the roofline detail has barely changed in the intervening 120 years. A softwood fascia board is nailed to the rafter feet. A softwood soffit closes the eaves back to the brickwork. And a cast iron gutter — ogee or half-round — is bolted through the fascia into the rafter end.</p>
@@ -178,6 +183,15 @@
         <p>Prices below are indicative and confirmed free after a site survey. Fascia and soffit is priced with the guttering because the two are done together — the gutter has to come off to reach the board, and separating the invoices does not separate the labour.</p>
         <div style="overflow-x:auto"><table><thead><tr><th>Element</th><th>Indicative cost</th></tr></thead><tbody><tr><td>uPVC gutter, typical Dublin semi (~20m front + rear)</td><td>€1,000 – €1,400</td></tr><tr><td>Aluminium gutter, same house</td><td>€1,300 – €1,800</td></tr><tr><td>Cast iron replacement (heritage / conservation)</td><td>€2,100 – €2,800</td></tr><tr><td>Fascia and soffit renewal</td><td>Quoted with the guttering after survey</td></tr></tbody></table></div>
         <p>Material is the single biggest lever on the guttering side. Fascia and soffit costs are driven by the length of run, the height, whether the rafter feet are sound, and whether scaffold or a tower is needed for access. There is no call-out fee, and a written breakdown is handed over before anything is signed.</p>
+        <div class="post-cta">
+          <h2>Want a firm price for your house?</h2>
+          <p>Free survey, a written fixed price and no call-out fee, anywhere in Dublin.</p>
+          <div class="post-cta-actions">
+            <a href="tel:012658463" class="btn btn-primary"><i class="fas fa-phone"></i> (01) 265 8463</a>
+            <a href="/quote" class="btn btn-outline-blue">Get Free Quote</a>
+          </div>
+          <p class="post-cta-note">Outside Dublin? Munster Gutters covers Cork, Limerick, Kerry, Waterford, Clare and Tipperary: see their guide to <a href="https://munstergutters.ie/blog/average-cost-of-gutter-repairs/">gutter repair costs in Ireland</a>.</p>
+        </div>
         <div class="post-links">
         <a href="/gutter-repairs" class="post-link-chip"><i class="fas fa-arrow-right"></i> Gutter repairs</a>
         <a href="/new-gutters" class="post-link-chip"><i class="fas fa-arrow-right"></i> New gutters</a>
@@ -217,7 +231,7 @@
       <div class="blog-grid">
         <a href="/blog/storm-damage-guttering-in-dublin" class="blog-card"><span class="post-cat">Costs</span><h2>Storm Damage Guttering in Dublin</h2><p>What to photograph, how to word the claim, and when a temporary repair is expected before the assessor calls</p><span class="read">Read more <i class="fas fa-arrow-right"></i></span></a>
         <a href="/blog/downpipes-and-drainage-in-dublin" class="blog-card"><span class="post-cat">Costs</span><h2>Downpipes and Drainage in Dublin</h2><p>Front-garden gullies, shared rear yards, and combined sewers — where the water actually ends up on a city terrace</p><span class="read">Read more <i class="fas fa-arrow-right"></i></span></a>
-        <a href="/blog/gutter-repair-costs-in-dublin" class="blog-card"><span class="post-cat">Costs</span><h2>Gutter Repair Costs in Dublin</h2><p>What overflowing at the front actually costs to fix, and how to tell a €150 clean from a €1,500 realignment</p><span class="read">Read more <i class="fas fa-arrow-right"></i></span></a>
+        <a href="/blog/gutter-repair-costs-in-dublin" class="blog-card"><span class="post-cat">Costs</span><h2>Gutter Repair Costs in Dublin</h2><p>What overflowing at the front actually costs to fix, and how to tell a simple clean from a full realignment</p><span class="read">Read more <i class="fas fa-arrow-right"></i></span></a>
       </div>
     </div>
   </section>
@@ -225,7 +239,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="/" class="logo logo-light"><img src="/images/rg-logo-white-v2-500.webp" alt="Recommended Guttering" width="500" height="97" /></a>
+        <a href="/" class="logo logo-light"><img src="/images/logo-recommended-roofing.svg" alt="Recommended Roofing &amp; Guttering" height="80" /></a>
         <p>Dublin's trusted gutter repair and replacement experts. Directly employed crews, a price agreed before we start, and a 10-year written guarantee on the work.</p>
         <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
       </div>
