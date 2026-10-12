@@ -164,7 +164,7 @@ def post_page(p):
       "dateModified": "{p['date']}",
       "author": {{ "@type": "Organization", "name": "Recommended Roofing & Guttering" }},
       "publisher": {{ "@type": "Organization", "name": "Recommended Roofing & Guttering",
-        "logo": {{ "@type": "ImageObject", "url": "https://dublingutter.ie/images/logo-recommended-roofing.svg" }} }},
+        "logo": {{ "@type": "ImageObject", "url": "https://dublingutter.ie/images/rg-logo-v2-500.webp" }} }},
       "mainEntityOfPage": "https://dublingutter.ie/blog/{p['slug']}"
     }},
     {{

@@ -158,7 +158,7 @@ def topbar_header(active):
 
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="/" class="logo"><img src="images/logo-recommended-roofing.svg" alt="Recommended Roofing &amp; Guttering" height="80" /></a>
+      <a href="/" class="logo"><img src="images/rg-logo-v2-500.webp" alt="Recommended Guttering" width="500" height="97" /></a>
       <nav class="nav" id="nav">{nav}
       </nav>
       <a href="tel:012658463" class="btn btn-outline-blue header-call" aria-label="Call (01) 265 8463"><i class="fas fa-phone"></i> <span>(01) 265 8463</span></a>
@@ -172,7 +172,7 @@ FOOTER = """
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="/" class="logo logo-light"><img src="images/logo-recommended-roofing.svg" alt="Recommended Roofing &amp; Guttering" height="80" /></a>
+        <a href="/" class="logo logo-light"><img src="images/rg-logo-white-v2-500.webp" alt="Recommended Guttering" width="500" height="97" /></a>
         <p>Dublin's trusted gutter repair and replacement experts. Directly employed crews, a price agreed before we start, and a %GUARANTEE% on the work.</p>
         <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
       </div>
@@ -300,7 +300,7 @@ def area_page(a, i):
     {{
       "@type": "LocalBusiness",
       "name": "Recommended Roofing & Guttering — {esc(A)}",
-      "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
+      "image": "https://dublingutter.ie/images/rg-logo-v2-500.webp",
       "url": "https://dublingutter.ie/gutter-services-{slug}",
       "telephone": "+35312658463",
       "email": "info@recommendedroofing.ie",
@@ -524,7 +524,7 @@ def hub_page(region):
     {{
       "@type": "LocalBusiness",
       "name": "Recommended Roofing & Guttering — {name}",
-      "image": "https://dublingutter.ie/images/logo-recommended-roofing.svg",
+      "image": "https://dublingutter.ie/images/rg-logo-v2-500.webp",
       "url": "https://dublingutter.ie/{slug}",
       "telephone": "+35312658463",
       "email": "info@recommendedroofing.ie",
