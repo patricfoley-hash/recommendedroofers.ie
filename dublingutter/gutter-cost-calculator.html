@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://dublingutter.ie/gutter-cost-calculator" />
+  <title>Gutter Cost Calculator Dublin | Instant Price Range</title>
+  <meta name="description" content="Free gutter cost calculator for Dublin homes. Enter your gutter length, material and downpipes for an instant price range with VAT included." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .service-nav { background: var(--white); border-bottom: 2px solid var(--border); position: sticky; top: 72px; z-index: 900; }
+    .service-nav-inner { display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+    .service-nav-inner::-webkit-scrollbar { display: none; }
+    .service-nav-link { display: flex; align-items: center; gap: 8px; padding: 14px 20px; font-family: 'Sora', sans-serif; font-size: 0.82rem; font-weight: 600; color: var(--grey); white-space: nowrap; border-bottom: 3px solid transparent; margin-bottom: -2px; text-decoration: none; transition: all var(--transition); }
+    .service-nav-link:hover { color: var(--blue); }
+    .service-nav-link.active { color: var(--yellow-dark); border-bottom-color: var(--yellow); }
+    .service-nav-link i { font-size: 0.85rem; }
+    .service-hero { padding: 60px 0; }
+    .service-hero-inner { display: grid; grid-template-columns: 1fr 380px; gap: 50px; align-items: center; }
+    .service-hero-content .breadcrumb { justify-content: flex-start; margin-bottom: 16px; }
+    .service-hero-content h1 { color: var(--white); font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom: 14px; }
+    .service-hero-content p { color: rgba(255,255,255,0.85); font-size: 1.05rem; margin-bottom: 24px; line-height: 1.7; }
+    .service-hero-bullets { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .service-hero-bullets li { display: flex; align-items: center; gap: 10px; color: var(--white); font-size: 0.95rem; }
+    .service-hero-bullets i { color: var(--yellow); }
+    .service-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .service-hero-form { background: var(--white); border-radius: var(--radius-lg); padding: 28px; }
+    .service-hero-form h3 { font-size: 1.15rem; color: var(--blue-dark); margin-bottom: 4px; }
+    .service-hero-form > p { font-size: 0.82rem; color: var(--grey); margin-bottom: 18px; }
+    .problems-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .problem-card { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 22px; display: flex; gap: 14px; align-items: flex-start; }
+    .problem-icon { width: 40px; height: 40px; background: var(--yellow-light); border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .problem-icon i { color: var(--yellow-dark); font-size: 1rem; }
+    .problem-card h4 { font-size: 0.9rem; color: var(--grey-dark); margin-bottom: 4px; }
+    .problem-card p { font-size: 0.82rem; color: var(--grey); line-height: 1.6; }
+    .content-split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .content-split-img { background: var(--blue-xlight); border-radius: var(--radius-lg); aspect-ratio: 16/9; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .content-split-img i { font-size: 6rem; color: var(--blue-light); }
+    .content-split-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .content-split-text h2 { font-size: 1.7rem; margin-bottom: 14px; }
+    .content-split-text p { color: var(--grey); margin-bottom: 14px; line-height: 1.75; }
+    .content-split-text ul { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
+    .content-split-text li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.92rem; color: var(--text); }
+    .content-split-text li i { color: var(--yellow-dark); margin-top: 3px; flex-shrink: 0; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-bottom: 16px; }
+    .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    @media (max-width: 1024px) {
+      .service-hero-inner { grid-template-columns: 1fr; }
+      .service-hero-form { display: none; }
+      .problems-grid { grid-template-columns: 1fr 1fr; }
+      .content-split { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .problems-grid { grid-template-columns: 1fr; }
+      .service-nav-link span { display: none; }
+    }
+  </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1577105684135325');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1577105684135325&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How accurate is the gutter cost calculator?","acceptedAnswer":{"@type":"Answer","text":"It gives an indicative range from your gutter length, material, downpipes and whether the fascia is being replaced. It is a guide, not a quote: the fixed price is confirmed only after we have seen the house."}},{"@type":"Question","name":"Is VAT included in the price range?","acceptedAnswer":{"@type":"Answer","text":"Yes. The range already includes VAT at 13.5%, so there is nothing added on top of what you see."}},{"@type":"Question","name":"What does the price range include?","acceptedAnswer":{"@type":"Answer","text":"Materials, labour, access and the downpipes and fascia you entered, all with VAT. It is an installed price, so fitting is included."}},{"@type":"Question","name":"What is not included?","acceptedAnswer":{"@type":"Answer","text":"Repairs to rotten fascia, soffit or timber found once the old gutters are off, skip hire or waste disposal beyond normal site clearance, and anything not listed in your answers."}},{"@type":"Question","name":"What if I do not know my gutter length?","acceptedAnswer":{"@type":"Answer","text":"Choose house perimeter and enter the distance around the outside of the house. Front and back runs together are usually close to that figure."}},{"@type":"Question","name":"Why do uPVC, aluminium and cast iron cost different amounts?","acceptedAnswer":{"@type":"Answer","text":"The material and the work involved differ. As a guide, installed prices run roughly €50 to €65 a metre for uPVC, €65 to €75 for aluminium and €75 to €90 for cast iron."}},{"@type":"Question","name":"Do I need to give my email to see the price?","acceptedAnswer":{"@type":"Answer","text":"No. The price shows straight away with no sign-up. You only leave details if you want us to ring you about a survey."}},{"@type":"Question","name":"Is the survey free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Quotes and surveys are free and the quote is written, so you know the price before anything starts."}},{"@type":"Question","name":"What guarantee do I get?","acceptedAnswer":{"@type":"Answer","text":"Installation work carries a 10-year written workmanship guarantee, and any gutter or roof replacement job also carries our Lifetime Leak Guarantee."}},{"@type":"Question","name":"Why can I not always book a survey from this page?","acceptedAnswer":{"@type":"Answer","text":"We use the page to book surveys for work you intend to do soon, in our Dublin focus area, with the owner able to be there, and we limit how many we book each week. If we cannot, the estimate still stays on the page, and you can call us if your job is urgent."}},{"@type":"Question","name":"How quickly will you ring me?","acceptedAnswer":{"@type":"Answer","text":"If you ask for a survey and we can take it, we phone the same day to arrange a time. Nothing is booked until we speak."}}]}</script>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span><i class="fas fa-phone"></i> <a href="tel:012658463">(01) 265 8463</a></span>
+        <span><i class="fas fa-envelope"></i> info@recommendedroofing.ie</span>
+      </div>
+      <div class="topbar-right">
+        <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0 Google Reviews</span>
+        <span><i class="fas fa-shield-halved"></i> Fully Insured</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><img src="images/rg-logo-v2-500.webp" alt="Recommended Guttering" width="500" height="97" /></a>
+      <nav class="nav" id="nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/services" class="nav-link active">Services</a>
+        <a href="/gutter-cost-calculator" class="nav-link active">Cost Calculator</a>
+        <a href="/near-me" class="nav-link">Near Me</a>
+        <a href="/gallery" class="nav-link">Gallery</a>
+        <a href="/blog" class="nav-link">Blog</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
+      <a href="tel:012658463" class="btn btn-outline-blue header-call" aria-label="Call (01) 265 8463"><i class="fas fa-phone"></i> <span>(01) 265 8463</span></a>
+      <a href="/quote" class="btn btn-primary header-cta">Get Free Quote</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+    <section class="service-hero"><div class="container"><div class="service-hero-content">
+    <div class="breadcrumb"><a href="/">Home</a><span>/</span><span>Gutter Cost Calculator</span></div>
+    <h1>Gutter Cost Calculator Dublin</h1>
+    <p>Enter the length, material and downpipes for an indicative price range in seconds. VAT is included and no email is needed.</p>
+  </div></div></section>
+<style>
+.calc-form fieldset{border:0;padding:0;margin:0 0 8px}
+.calc-form legend{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:14px;padding:0}
+.scope-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.scope-row label{flex:1 1 130px;border:1px solid var(--line);background:var(--paper);padding:14px 16px;cursor:pointer;font-size:.95rem;display:flex;gap:10px;align-items:center}
+.scope-row input{accent-color:var(--red)}
+.form-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.calc-err,.s-err{color:var(--red);font-size:.9rem;margin:10px 0 0;min-height:1.2em}
+.calc-result .r-range{font-size:2.3rem;line-height:1.2}
+.r-range .eu{color:#fff;font-family:Impact,'Arial Narrow',sans-serif;font-weight:400}
+.r-range .r-sep{color:#a8a29e;font-family:'Sora',sans-serif;font-size:1rem;font-weight:500;margin:0 1.1rem;letter-spacing:.06em;text-transform:uppercase}
+.r-build{width:100%;border-collapse:collapse;font-size:.92rem}
+.r-build td{padding:8px 0;border-bottom:1px solid #2a2520;color:#d6d3d1}
+.r-build td:last-child{text-align:right;white-space:nowrap}
+.r-build .r-strong td{color:#fff;font-weight:700;border-bottom:0}
+.calc-result .r-note b{color:#d6d3d1}
+.survey{display:none;margin-top:2px;background:#f5f3f0;padding:36px 40px}
+.survey h3{font-size:1.25rem;margin-bottom:8px}
+.survey .s-sub{color:var(--mut);font-size:.93rem;line-height:1.65;margin-bottom:20px}
+.survey-say{display:none;background:#fff;border-left:4px solid var(--red);padding:18px 20px;margin-top:16px;font-size:.96rem;line-height:1.65}
+.survey-say p+p{margin-top:8px}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.test-banner{background:#b91c1c;color:#fff;text-align:center;font-weight:700;padding:10px;letter-spacing:.04em}
+@media(max-width:620px){.form-two{grid-template-columns:1fr}.survey{padding:28px 22px}}
+
+.gcalc{--red:#E11B22;--ink:#0F172A;--paper:#F8FAFC;--line:#E2E8F0;--mut:#64748B;font-family:'Sora',system-ui,sans-serif;color:#334155;padding:48px 0}
+.gcalc *{box-sizing:border-box}
+.gcalc .gc-wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.gcalc .gc-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.gcalc .calc-form{background:#fff;border:1px solid var(--line);padding:36px}
+.gcalc .calc-form legend{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:14px;padding:0}
+.gcalc fieldset{border:0;padding:0;margin:0 0 8px}
+.gcalc .form-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gcalc .form-group{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.gcalc .form-label{font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.gcalc input,.gcalc select{border:1px solid var(--line);background:var(--paper);padding:13px 16px;font-family:inherit;font-size:.96rem;color:var(--ink);border-radius:0;width:100%}
+.gcalc input:focus,.gcalc select:focus{outline:none;border-color:var(--red);background:#fff}
+.gcalc .btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 26px;border:0;border-radius:0;font-family:inherit;font-weight:700;font-size:1rem;cursor:pointer;text-decoration:none;color:#fff;background:var(--red);transition:background .2s}
+.gcalc .btn:hover{background:#B8141A;color:#fff}
+.gcalc .calc-btn{width:100%}
+.gcalc .calc-err,.gcalc .s-err{color:var(--red);font-size:.9rem;margin:8px 0 12px;min-height:1.1em}
+.gcalc .calc-result{background:#0B0B0B;color:#fff;padding:36px;display:none;flex-direction:column;gap:22px}
+.gcalc .calc-result.show{display:flex}
+.gcalc .r-service{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#a8a29e}
+.gcalc .r-note{font-size:.88rem;color:#a8a29e;line-height:1.65;border-top:1px solid #2a2520;padding-top:18px}
+.gcalc .r-note b{color:#d6d3d1}
+.gcalc .r-range{font-family:'Anton',Impact,sans-serif;font-size:2.3rem;color:var(--red);line-height:1.2}
+.gcalc .r-to{color:#fff;font-size:1.05rem}
+.gcalc .calc-guide{background:#0B0B0B;color:#a8a29e;padding:36px;margin-top:2px}
+.gcalc .calc-guide h3{color:#fff;margin:0 0 18px;font-size:1.2rem}
+.gcalc .calc-guide table{width:100%;border-collapse:collapse;font-size:.92rem}
+.gcalc .calc-guide th{text-align:left;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#d6d3d1;padding:0 0 10px;border-bottom:1px solid #2a2520}
+.gcalc .calc-guide td{padding:11px 0;border-bottom:1px solid #2a2520;color:#d6d3d1;vertical-align:top}
+.gcalc .calc-guide td:last-child{text-align:right;white-space:nowrap;padding-left:14px}
+.gcalc .calc-guide .gc-guide-note{font-size:.8rem;margin:14px 0 0;line-height:1.6}
+.gcalc .gc-intro{color:var(--mut);font-size:.98rem;line-height:1.7;max-width:70ch;margin-bottom:28px}
+@media(max-width:900px){.gcalc .gc-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.gcalc .form-two{grid-template-columns:1fr}.gcalc .calc-form,.gcalc .calc-result{padding:26px 20px}}
+</style>
+<section class="gcalc" id="gutter-calculator"><div class="gc-wrap">
+  <p class="gc-intro">Tell us about your gutters and get an indicative price range straight away, no email needed. Every price is confirmed free after we have seen the house.</p>
+  <div class="gc-grid">
+    <div>
+      <div class="calc-form">
+        <input type="radio" name="c-scope" value="gutters" checked style="display:none" aria-hidden="true"/>
+        <fieldset><legend>Your gutters</legend>
+          <div class="form-two">
+            <div class="form-group"><label class="form-label" for="c-storeys">Storeys</label>
+              <select id="c-storeys"><option value="1">1 storey</option><option value="2" selected>2 storeys</option><option value="3+">3 or more</option></select></div>
+            <div class="form-group"><label class="form-label" for="c-access">Access</label>
+              <select id="c-access"><option value="easy" selected>Road access, easy</option><option value="restricted">Restricted (rear garden, shared drive)</option></select></div>
+          </div>
+          <div class="form-two">
+            <div class="form-group"><label class="form-label" for="c-lenmode">I know my</label>
+              <select id="c-lenmode"><option value="metres" selected>Gutter length</option><option value="perimeter">House perimeter only</option></select></div>
+            <div class="form-group"><label class="form-label" id="c-len-label" for="c-len">Gutter length (linear metres)</label>
+              <input id="c-len" type="number" inputmode="decimal" min="3" max="500" placeholder="e.g. 36"/></div>
+          </div>
+          <div class="form-two">
+            <div class="form-group"><label class="form-label" for="c-gmat">Material</label>
+              <select id="c-gmat"><option value="upvc" selected>uPVC</option><option value="aluminium">Aluminium</option><option value="cast_iron">Cast iron</option></select></div>
+            <div class="form-group"><label class="form-label" for="c-downpipes">Downpipes</label><input id="c-downpipes" type="number" min="0" max="30" value="2"/></div>
+          </div>
+          <div class="form-group"><label class="form-label" for="c-fascia">Replace the fascia too?</label>
+            <select id="c-fascia"><option value="no" selected>No</option><option value="yes">Yes</option></select></div>
+        </fieldset>
+        <p class="calc-err" id="calc-error" role="alert"></p>
+        <button id="calc-btn" class="btn calc-btn" type="button">Show my estimate</button>
+        <p id="calc-redo-wrap" style="display:none;margin-top:6px"><a href="#" id="calc-redo" style="color:var(--mut);border-bottom:1px solid var(--line);font-size:.9rem">Change my answers</a></p>
+      </div>
+      <a id="calc-cta2" class="btn calc-btn" href="#survey" style="display:none;margin-top:2px">Get an accurate quote here</a>
+    </div>
+    <div>
+      <div id="calc-result" class="calc-result"></div>
+      
+<div class="survey" id="survey">
+  <h3 id="survey-gates">Want us to survey it?</h3>
+  <p class="s-sub">The estimate above is yours to keep. A few quick questions tell us whether we can book a survey from this page. Nothing is saved until you ask us to call.</p>
+  <div id="survey-questions">
+    <div class="form-two">
+      <div class="form-group"><label class="form-label" for="s-key">First 3 characters of your Eircode</label><input id="s-key" type="text" maxlength="3" autocomplete="off" placeholder="e.g. D02" style="text-transform:uppercase"/></div>
+      <div class="form-group"><label class="form-label" for="s-timing">When do you need the work done?</label>
+        <select id="s-timing"><option value="">Choose…</option>
+          <option value="leak">I have an active leak</option>
+          <option value="gutters_failed">My gutters have failed</option>
+          <option value="within_3_months">Within 3 months</option>
+          <option value="insurer">An insurer needs a price</option>
+          <option value="comparing">Just comparing prices</option>
+          <option value="no_date">No date in mind</option>
+          <option value="this_year">Sometime this year</option></select></div>
+    </div>
+    <div class="form-group"><label class="form-label" for="s-owner">Will the owner be at the survey?</label>
+      <select id="s-owner"><option value="">Choose…</option>
+        <option value="owner_present">I am the owner</option>
+        <option value="can_get_owner">I can get the owner there</option>
+        <option value="tenant_cannot">I am a tenant and cannot get the owner there</option>
+        <option value="gathering_prices">I am gathering prices for someone else</option></select></div>
+    <div class="form-group"><label class="form-label" for="s-intent">If the fixed price lands near this range, do you want it surveyed?</label>
+      <select id="s-intent"><option value="">Choose…</option>
+        <option value="yes">Yes</option>
+        <option value="cheaper">Only if it is much cheaper</option>
+        <option value="not_ready">I am not ready for a visit</option></select></div>
+    <button id="s-check" class="btn btn-red" type="button">Check if we can survey</button>
+  </div>
+  <div class="survey-say" id="survey-say" role="status"></div>
+  <div id="survey-details" style="display:none;margin-top:22px">
+    <p class="s-sub" style="margin-bottom:14px"><b>Good news, we can take a survey request.</b> Leave your details and we will phone you today to arrange a time. This is a phone request, not a booked appointment.</p>
+    <div class="form-two">
+      <div class="form-group"><label class="form-label" for="s-name">Name</label><input id="s-name" type="text" autocomplete="name" maxlength="80"/></div>
+      <div class="form-group"><label class="form-label" for="s-mobile">Mobile</label><input id="s-mobile" type="tel" autocomplete="tel" placeholder="087 123 4567"/></div>
+    </div>
+    <div class="form-group"><label class="form-label" for="s-eircode">Full Eircode</label><input id="s-eircode" type="text" autocomplete="postal-code" placeholder="D02 FH60" style="text-transform:uppercase"/></div>
+    <div class="form-two">
+      <div class="form-group"><label class="form-label" for="s-window">Best time to phone</label>
+        <select id="s-window"><option value="">Choose…</option><option value="morning">Morning</option><option value="afternoon">Afternoon</option></select></div>
+      <div class="form-group"><label class="form-label" for="s-date">Day (next 14 days)</label><input id="s-date" type="date"/></div>
+    </div>
+    <div class="hp" aria-hidden="true"><label>Website<input id="s-website" type="text" tabindex="-1" autocomplete="off"/></label></div>
+    <p class="s-err" id="s-error" role="alert"></p>
+    <button id="s-submit" class="btn btn-red calc-btn" type="button">Ask us to phone me today</button>
+  </div>
+</div>
+      <div class="calc-guide"><h3>Full price guide</h3><table><thead><tr><th>Service</th><th>Price range</th></tr></thead><tbody><tr><td>Gutter Cleaning & Flush-Out (3-bed semi)</td><td>€120–€280</td></tr><tr><td>Gutter Repair (leak / joint re-seal / bracket)</td><td>€150–€450</td></tr><tr><td>uPVC Gutter Replacement (3-bed semi)</td><td>€950–€1,900</td></tr><tr><td>Seamless Aluminium Guttering (3-bed semi)</td><td>€1,900–€3,400</td></tr><tr><td>Cast Iron Gutter Restoration / Replacement</td><td>€2,500–€7,500</td></tr><tr><td>Full Roofline — Gutters, Fascia & Soffit (3-bed semi)</td><td>€2,800–€5,500</td></tr><tr><td>Gutter Guard / Leaf Filter Installation</td><td>€350–€900</td></tr><tr><td>Downpipe Repair / Replacement (per pipe)</td><td>€120–€380</td></tr></tbody></table><p class="gc-guide-note">Indicative 2026 guide prices for a typical 3-bed semi, with VAT at 13.5% on top. Confirmed free after a survey.</p></div>
+    </div>
+  </div>
+</div></section>
+<script>/* Calculator + survey filter — browser side. The generator (calculator-survey.mjs) replaces the two markers below with
+   the shared rules module (projects/sitebuilder/lib/calculator/survey-rules.mjs) and the survey config, so the visitor's
+   browser and Core's server run the SAME estimate and gate code. Nothing here decides a price or a gate on its own. */
+(function () {
+  /**
+ * Calculator survey rules — the ONE definition (Calculator Survey Build Brief, 2026-10-15).
+ *
+ * Read by three things and nothing else may re-implement it:
+ *   - the page on recommendedroofing.ie (this file's text is inlined into the page by the generator, so
+ *     the visitor's browser and the server run the SAME code),
+ *   - the Core route that accepts a survey request (it re-runs every figure and gate; the browser is
+ *     never trusted),
+ *   - the proof in scripts/test/calculator-survey.test.mjs.
+ *
+ * Self-contained on purpose: no imports, no `export default`, so it can be pasted into a page.
+ *
+ * ⚠️ NO CITY LITERAL DECIDES ANYTHING HERE. Who may request a survey is `config.focusRoutingKeys`, a data
+ * list. Changing focus later is an edit to that list, not a rebuild.
+ * ⚠️ NO INVENTED MONEY. Every rate comes from config.rates; a null rate makes `missingRates()` non-empty
+ * and the page refuses to publish. The only money rules written here are the ones the owner locked: the
+ * minimum job (config.minJobEur) and VAT (config.vatRate).
+ */
+
+const FAIL_COPY = {
+  focus: 'Surveys from this page are currently limited to our Dublin focus area. The estimate above still stands. Call us if your job is urgent.',
+  minimum: 'We do not book a survey from this page for work under €2,000. The estimate above is yours to keep.',
+  serious: 'We only book surveys for work you intend to do soon, with the owner able to be there. The estimate stays on this page.',
+  full: "This week's survey slots are full. The estimate above still stands. If you have an active leak, call us.",
+};
+
+const TIMING_PASS = ['leak', 'gutters_failed', 'within_3_months', 'insurer'];
+const TIMING_URGENT = ['leak', 'gutters_failed'];
+const OWNER_PASS = ['owner_present', 'can_get_owner'];
+
+const EIRCODE_CHARS = 'ACDEFHKNPRTVWXY';
+const ROUTING_RE = new RegExp('^(D6W|[' + EIRCODE_CHARS + '][0-9]{2})$');
+const EIRCODE_RE = new RegExp('^(D6W|[' + EIRCODE_CHARS + '][0-9]{2})([0-9' + EIRCODE_CHARS + ']{4})$');
+
+/** "d02 fh60" -> "D02FH60". */
+function squash(s) {
+  return String(s == null ? '' : s).toUpperCase().replace(/[^A-Z0-9]/g, '');
+}
+
+/** A routing key typed on its own ("D6W", "d02"), or null if it is not shaped like one. */
+function parseRoutingKey(s) {
+  const k = squash(s);
+  return ROUTING_RE.test(k) ? k : null;
+}
+
+/** A full Eircode ("D02 FH60") -> { routingKey, unique } or null. D6W is matched as a whole key, never as a "D6" prefix. */
+function parseEircode(s) {
+  const k = squash(s);
+  const m = EIRCODE_RE.exec(k);
+  return m ? { routingKey: m[1], unique: m[2], normal: m[1] + ' ' + m[2] } : null;
+}
+
+/** Exact membership in the configured list — never a prefix test. */
+function inFocus(routingKey, config) {
+  const k = parseRoutingKey(routingKey);
+  if (!k) return false;
+  return (config.focusRoutingKeys || []).map(squash).indexOf(k) !== -1;
+}
+
+/**
+ * Irish mobile -> national form "087 123 4567" digits "0871234567", or null.
+ * ⚠️ The owner has not yet confirmed the rule they want: this is the standard 083/085/086/087/088/089 +
+ * seven digits, accepted with a leading 0, +353 or 00353.
+ */
+function parseIrishMobile(s) {
+  let d = String(s == null ? '' : s).replace(/[\s\-().]/g, '');
+  if (d.indexOf('+353') === 0) d = '0' + d.slice(4);
+  else if (d.indexOf('00353') === 0) d = '0' + d.slice(5);
+  else if (d.indexOf('353') === 0 && d.length === 12) d = '0' + d.slice(3);
+  return /^08[3-9][0-9]{7}$/.test(d) ? d : null;
+}
+
+/** Every rate the estimate needs that is still null — the list the owner has to fill in. Empty = ready to publish. */
+function missingRates(config) {
+  const out = [];
+  const r = config.rates || {};
+  const tier = (path, v) => {
+    ['low', 'typical', 'high'].forEach((t) => {
+      if (!v || typeof v[t] !== 'number' || !isFinite(v[t])) out.push(path + '.' + t);
+    });
+  };
+  if (!r.crew || typeof r.crew.people !== 'number' || typeof r.crew.dayRatePerPerson !== 'number') out.push('crew');
+  Object.keys(r.materialPerM2 || {}).forEach((k) => { if (k !== 'flat') tier('outputM2PerDay.' + k, r.outputM2PerDay && r.outputM2PerDay[k]); });
+  Object.keys((r.materialPerM2) || { concrete_tile: 1, natural_slate: 1, fibre_cement_slate: 1, flat: 1 }).forEach((k) => tier('materialPerM2.' + k, (r.materialPerM2 || {})[k]));
+  ['low', 'standard', 'steep'].forEach((k) => { if (!r.pitchFactor || typeof r.pitchFactor[k] !== 'number') out.push('pitchFactor.' + k); });
+  ['1', '2', '3+'].forEach((s) => ['easy', 'restricted'].forEach((a) => tier('scaffoldEur.' + s + '.' + a, r.scaffoldEur && r.scaffoldEur[s] && r.scaffoldEur[s][a])));
+  tier('chimneyEach', r.chimneyEach);
+  tier('valleyEach', r.valleyEach);
+  ['upvc', 'aluminium', 'cast_iron'].forEach((k) => tier('gutterPerM.' + k, r.gutterPerM && r.gutterPerM[k]));
+  tier('downpipeEach', r.downpipeEach);
+  tier('fasciaPerM', r.fasciaPerM);
+  return out;
+}
+
+const num = (v) => { const n = Number(v); return isFinite(n) && n >= 0 ? n : 0; };
+const GUTTER_MATERIALS = ['upvc', 'aluminium', 'cast_iron'];
+
+/**
+ * input: { scope: 'roof'|'gutters'|'both', storeys: '1'|'2'|'3+', access: 'easy'|'restricted',
+ *   roof: { areaMode:'area'|'footprint', area, pitch:'low'|'standard'|'steep', material, chimneys, valleys },
+ *   gutters: { lengthMode:'metres'|'perimeter', length, material, downpipes, fascia:boolean } }
+ * Returns { ok:false, error } or { ok:true, tiers:{low,typical,high}, widened:[...], included:[...], excluded:[...] }
+ * where each tier is { materials, labour, access, extras, subtotal, vat, total } in whole euro.
+ */
+function estimate(input, config) {
+  const gaps = missingRates(config);
+  if (gaps.length) return { ok: false, error: 'rates_incomplete', gaps };
+  const r = config.rates;
+  const scope = input && input.scope;
+  if (['roof', 'gutters', 'both'].indexOf(scope) === -1) return { ok: false, error: 'scope' };
+  const storeys = ['1', '2', '3+'].indexOf(String(input.storeys)) !== -1 ? String(input.storeys) : null;
+  const access = input.access === 'restricted' ? 'restricted' : input.access === 'easy' ? 'easy' : null;
+  if (!storeys || !access) return { ok: false, error: 'storeys_or_access' };
+
+  const wantsRoof = scope !== 'gutters';
+  const wantsGutters = scope !== 'roof';
+  const roof = input.roof || {};
+  const gut = input.gutters || {};
+  let roofArea = 0;
+  let roofRate = null;
+  let gutLen = 0;
+
+  if (wantsRoof) {
+    if (!r.materialPerM2 || !Object.prototype.hasOwnProperty.call(r.materialPerM2, roof.material)) return { ok: false, error: 'roof_material' };
+    const pitch = ['low', 'standard', 'steep'].indexOf(roof.pitch) !== -1 ? roof.pitch : 'standard';
+    const raw = num(roof.area);
+    if (raw < 5 || raw > 1500) return { ok: false, error: 'roof_area' };
+    // Footprint is the plan area; the roof surface is bigger by the pitch factor. A direct m² is used as is.
+    roofArea = roof.areaMode === 'footprint' ? raw * r.pitchFactor[pitch] : raw;
+    roofRate = r.materialPerM2[roof.material];
+  }
+  if (wantsGutters) {
+    if (GUTTER_MATERIALS.indexOf(gut.material) === -1) return { ok: false, error: 'gutter_material' };
+    gutLen = num(gut.length);
+    if (gutLen < 3 || gutLen > 500) return { ok: false, error: 'gutter_length' };
+  }
+
+  const chimneys = Math.min(20, Math.floor(num(roof.chimneys)));
+  const valleys = Math.min(30, Math.floor(num(roof.valleys)));
+  const downpipes = Math.min(30, Math.floor(num(gut.downpipes)));
+
+  const tiers = {};
+  ['low', 'typical', 'high'].forEach((t) => {
+    let materials = 0;
+    let labour = 0;
+    let extras = 0;
+    if (wantsRoof) {
+      // The per-m2 rate is the INSTALLED rate. Labour is carved out of it from the crew's own numbers:
+      // people x day rate / m2 done in a day. Low tier = a fast day (less labour), high = a slow one.
+      // Flat roofing has no output figure, so it stays one combined installed rate (labour 0, flagged below).
+      const base = roofArea * roofRate[t];
+      const out = r.outputM2PerDay && r.outputM2PerDay[roof.material];
+      const labourPerM2 = out ? (r.crew.people * r.crew.dayRatePerPerson) / out[t] : 0;
+      const lab = Math.min(base, roofArea * labourPerM2);
+      labour += lab; materials += base - lab;
+      extras += chimneys * r.chimneyEach[t] + valleys * r.valleyEach[t];
+    }
+    if (wantsGutters) {
+      // Gutter rates are installed per metre; no labour split is recorded for them, so they sit in materials.
+      materials += gutLen * r.gutterPerM[gut.material][t];
+      extras += downpipes * r.downpipeEach[t];
+      if (gut.fascia) extras += gutLen * r.fasciaPerM[t];
+    }
+    // Scaffolding is a fixed cost per JOB in euro (Patrick, 2026-10-15), not a percentage of the job.
+    const accessCost = r.scaffoldEur[storeys][access][t];
+    const subtotal = materials + labour + accessCost + extras;
+    const vat = subtotal * config.vatRate;
+    tiers[t] = {
+      materials: Math.round(materials), labour: Math.round(labour), access: Math.round(accessCost),
+      extras: Math.round(extras), subtotal: Math.round(subtotal), vat: Math.round(vat), total: Math.round(subtotal + vat),
+    };
+  });
+
+  const widened = [];
+  if (wantsRoof && roof.pitch === 'steep') widened.push('steep pitch');
+  if (access === 'restricted') widened.push('restricted access');
+  if (chimneys > 0) widened.push('chimneys');
+  if (valleys > 0) widened.push('valleys');
+  if (wantsRoof && roof.material === 'flat') widened.push('flat roof');
+
+  const notes = [];
+  if (wantsGutters || (wantsRoof && roof.material === 'flat')) notes.push('Gutter and flat-roof prices are installed rates, so their labour is inside the materials line.');
+  return {
+    ok: true,
+    scope,
+    notes,
+    tiers,
+    widened,
+    included: ['Materials', 'Labour', 'Scaffolding / access', 'Chimneys, valleys, downpipes and fascia you entered', 'VAT at ' + (config.vatRate * 100).toFixed(1).replace('.0', '') + '%'],
+    excluded: [wantsRoof ? 'Structural timber repairs found once the roof is opened' : 'Repairs to rotten fascia, soffit or timber found once the old gutters are off', 'Skip hire or waste disposal beyond normal site clearance', 'Anything not listed in your answers'],
+  };
+}
+
+/** Free-slot counting. Counted: owed a call, booked, no-show. A freed slot is not counted. */
+const COUNTED_STATUSES = ['owed_call', 'booked', 'no_show'];
+
+/**
+ * Gate F. booked 0..openToAllUpTo -> open to everyone who passed A-E; up to cap.total-1 -> only urgent
+ * (active leak / failed gutters); cap.total or more -> closed to everyone.
+ */
+function capState(booked, config) {
+  const c = config.cap;
+  if (booked >= c.total) return 'closed';
+  if (booked > c.openToAllUpTo) return 'urgent_only';
+  return 'open';
+}
+
+/**
+ * Gates A-F in order. answers: { routingKey, timing, owner, intent }; ctx: { low, booked }.
+ * Returns { pass:true } or { pass:false, gate:'A'..'F', copy, showPhone }.
+ */
+function runGates(answers, ctx, config) {
+  const a = answers || {};
+  if (!inFocus(a.routingKey, config)) return { pass: false, gate: 'A', reason: 'focus', copy: FAIL_COPY.focus, showPhone: true };
+  if (!(ctx.low >= config.minJobEur)) return { pass: false, gate: 'B', reason: 'minimum', copy: FAIL_COPY.minimum, showPhone: false };
+  if (TIMING_PASS.indexOf(a.timing) === -1) return { pass: false, gate: 'C', reason: 'serious', copy: FAIL_COPY.serious, showPhone: false };
+  if (OWNER_PASS.indexOf(a.owner) === -1) return { pass: false, gate: 'D', reason: 'serious', copy: FAIL_COPY.serious, showPhone: false };
+  if (a.intent !== 'yes') return { pass: false, gate: 'E', reason: 'serious', copy: FAIL_COPY.serious, showPhone: false };
+  const urgent = TIMING_URGENT.indexOf(a.timing) !== -1;
+  const state = capState(ctx.booked, config);
+  if (state === 'closed') return { pass: false, gate: 'F', reason: 'full', copy: FAIL_COPY.full, showPhone: urgent, closed: true };
+  if (state === 'urgent_only' && !urgent) return { pass: false, gate: 'F', reason: 'full', copy: FAIL_COPY.full, showPhone: false };
+  return { pass: true, urgent, capState: state };
+}
+
+/** Monday of the week containing `at`, in Europe/Dublin, as 'YYYY-MM-DD'. The counter resets Monday 00:00 Dublin. */
+function weekStartDublin(at, tz) {
+  const zone = tz || 'Europe/Dublin';
+  const parts = new Intl.DateTimeFormat('en-GB', { timeZone: zone, year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short' }).formatToParts(at || new Date());
+  const get = (t) => (parts.find((p) => p.type === t) || {}).value;
+  const wd = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].indexOf(get('weekday'));
+  const d = new Date(Date.UTC(Number(get('year')), Number(get('month')) - 1, Number(get('day'))));
+  d.setUTCDate(d.getUTCDate() - (wd < 0 ? 0 : wd));
+  return d.toISOString().slice(0, 10);
+}
+
+/** "2026-10-15 14:03:22 Europe/Dublin" style stamp. */
+function dublinStamp(at, tz) {
+  const zone = tz || 'Europe/Dublin';
+  const f = new Intl.DateTimeFormat('en-GB', { timeZone: zone, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }).formatToParts(at || new Date());
+  const g = (t) => (f.find((p) => p.type === t) || {}).value;
+  return g('year') + '-' + g('month') + '-' + g('day') + ' ' + g('hour') + ':' + g('minute') + ':' + g('second') + ' ' + zone;
+}
+
+  var CONFIG = {"business":"recommended_roofing","source":"calculator-survey","timezone":"Europe/Dublin","minJobEur":2000,"vatRate":0.135,"cap":{"total":8,"openToAllUpTo":5,"reservedForUrgent":2},"callbackWindowDays":14,"focusRoutingKeys":["D01","D02","D03","D04","D05","D06","D6W","D07","D08","D09","D10","D11","D12","D13","D14","D15","D16","D17","D18","D20","D22","D24","A41","A42","A45","A94","A96","K32","K34","K36","K45","K56","K67","K78"],"phone":{"display":"(01) 265 8463","tel":"+35312658463"},"rates":{"_status":"complete","materialPerM2":{"concrete_tile":{"low":89,"typical":163,"high":257},"natural_slate":{"low":133,"typical":250,"high":400},"fibre_cement_slate":{"low":105,"typical":140,"high":175},"flat":{"low":90,"typical":115,"high":140}},"pitchFactor":{"low":1.1,"standard":1.22,"steep":1.41},"chimneyEach":{"low":800,"typical":2150,"high":3500},"valleyEach":{"low":1200,"typical":2850,"high":4500},"gutterPerM":{"upvc":{"low":50,"typical":57.5,"high":65},"aluminium":{"low":65,"typical":70,"high":75},"cast_iron":{"low":75,"typical":82.5,"high":90}},"downpipeEach":{"low":50,"typical":70,"high":90},"fasciaPerM":{"low":30,"typical":40,"high":50},"_sources":"Filled 2026-10-15 from projects/recommended-roofing/knowledge-base/03-pricing.md (prices confirmed 2026-08-30) and projects/dublin-gutter/knowledge-base/03-pricing.md. 'typical' here is the MIDPOINT of the published range, not an invoiced median. Tile and slate per-m2 are the published whole-roof range divided by a 70-90 m2 three-bed roof (low = low/90, high = high/70, typical = midpoint/80). Pitch factors are plain geometry (roof surface = footprint / cos(pitch)) for 25/35/45 degrees. Scaffolding is NOT automatic per the KB (only very high buildings or busy streets, always a separate line), so 1-2 storey easy access is 0; the other cells need the owner. Metal roofing excluded for now (Patrick, 2026-10-15): not offered on the page. Scaffolding is a fixed euro cost per job (Patrick, 2026-10-15: small jobs about 500, larger 3,000-5,000, bigger jobs more). Mapping to storeys/access is Claude's reading and needs confirming. Labour: 200 per person per day. WEB-AVERAGE FIGURES (Patrick, 2026-10-15: 'use average online industry prices'), UK sterling guides converted at 1 GBP = 1.16 EUR because no Irish 2026 price was found online: fibre-cement slate 90-150 GBP/m2 ex scaffold and VAT (bestbuilders.co.uk, trade2base) -> 105/140/175; downpipe 20-35 GBP per metre supplied and fitted (trade2base 2026) x an assumed 5 m run -> 115/155/200; fascia 18-35 GBP per metre installed uPVC (bookabuilderuk, mybuilder) -> 21/30/40. Another guide quoted 80-150 GBP per metre for fascia replacement, so fascia may be low. These three are the weakest figures in the table: replace with Patrick's own medians when he has them. DOWNPIPE REBUILT (Patrick, 2026-10-15: 'use materials plus labour'): materials = two 2.5 m lengths at about 9 EUR each (Screwfix Ireland six-pack 53.95 EUR) plus brackets, shoe and bends, assumed 30/40/60 EUR; labour = one person at 200 EUR/day for a quarter / half / three-quarter day (50/100/150 EUR) - the time is Claude's assumption. Totals 80/140/210 each. FINAL INPUTS 2026-10-15 (Patrick's pasted estimating notes): downpipe supplied and fitted 50/70/90 each; uPVC fascia supplied and fitted 30/40/50 per m; two-person crew at 200 per person per day; output per day concrete tile 25 (20 cautious, 30 fast), natural slate 12-20 (16 typical). Fibre-cement slate output is NOT in the notes: it uses the slate figures (conservative) - confirm. Flat roofing has no output figure so stays one installed rate. These supersede the earlier web-average downpipe and fascia figures.","scaffoldEur":{"1":{"easy":{"low":0,"typical":0,"high":0},"restricted":{"low":0,"typical":500,"high":500}},"2":{"easy":{"low":0,"typical":0,"high":500},"restricted":{"low":500,"typical":500,"high":500}},"3+":{"easy":{"low":3000,"typical":4000,"high":5000},"restricted":{"low":3000,"typical":4000,"high":5000}}},"crew":{"people":2,"dayRatePerPerson":200},"outputM2PerDay":{"concrete_tile":{"low":30,"typical":25,"high":20},"natural_slate":{"low":20,"typical":16,"high":12},"fibre_cement_slate":{"low":20,"typical":16,"high":12}}}};
+  var API = 'https://core.recommendedgroup.ie/api/calculator/survey';
+  var $ = function (id) { return document.getElementById(id); };
+  var on = function (id, ev, fn) { var e = $(id); if (e) e.addEventListener(ev, fn); };
+  var SITE = location.hostname.replace(/^www\./, '');
+  var euro = function (n) { return '€' + Math.round(n).toLocaleString('en-IE'); };
+  var euroBig = function (n) { return '<span class="eu">€</span>' + Math.round(n).toLocaleString('en-IE'); };
+  // Once there is a price, the page is about getting an accurate quote: the price guide and the explainer step aside.
+  function focusMode(on) {
+    $('calc-cta2').style.display = on ? 'flex' : 'none';
+    Array.prototype.forEach.call(document.querySelectorAll('.calc-side-note, .calc-guide'), function (e) { e.style.display = on ? 'none' : ''; });
+  }
+  var last = null; // the estimate on screen
+
+  function val(id) { var e = $(id); return e ? e.value : ''; }
+  function scope() { var r = document.querySelector('input[name="c-scope"]:checked'); return r ? r.value : 'roof'; }
+
+  function syncScope() {
+    var s = scope();
+    if ($('roof-fields')) $('roof-fields').style.display = s === 'gutters' ? 'none' : 'block';
+    if ($('gutter-fields')) $('gutter-fields').style.display = s === 'roof' ? 'none' : 'block';
+  }
+  function syncModes() {
+    if ($('c-area-label')) $('c-area-label').textContent = val('c-areamode') === 'footprint' ? 'House footprint (m², ground floor outline)' : 'Roof area (m²)';
+    $('c-len-label').textContent = val('c-lenmode') === 'perimeter' ? 'House perimeter (metres)' : 'Gutter length (linear metres)';
+  }
+
+  function readInput() {
+    return {
+      scope: scope(), storeys: val('c-storeys'), access: val('c-access'),
+      roof: { areaMode: val('c-areamode'), area: val('c-area'), pitch: val('c-pitch'), material: val('c-material'), chimneys: val('c-chimneys'), valleys: val('c-valleys') },
+      gutters: { lengthMode: val('c-lenmode'), length: val('c-len'), material: val('c-gmat'), downpipes: val('c-downpipes'), fascia: val('c-fascia') === 'yes' }
+    };
+  }
+
+  var ERR = {
+    roof_area: 'Please enter the roof area in square metres.', roof_material: 'Please choose the roof material.',
+    gutter_length: 'Please enter the gutter length in metres.', gutter_material: 'Please choose the gutter material.',
+    storeys_or_access: 'Please choose the storeys and access.'
+  };
+
+  function row(label, v, strong) {
+    return '<tr' + (strong ? ' class="r-strong"' : '') + '><td>' + label + '</td><td>' + v + '</td></tr>';
+  }
+
+  function showEstimate() {
+    var input = readInput();
+    var est = estimate(input, CONFIG);
+    var box = $('calc-result');
+    $('calc-error').textContent = '';
+    if (!est.ok) {
+      $('calc-error').textContent = ERR[est.error] || 'Please check your answers.';
+      return;
+    }
+    last = { input: input, est: est };
+    var T = est.tiers;
+    var html = '';
+    html += '<p class="r-service">Indicative estimate</p>';
+    html += '<div><p class="r-range">' + euroBig(T.low.total) + '<span class="r-sep">to</span>' + euroBig(T.high.total) + '</p>' +
+            '<p class="r-to" style="font-size:1.05rem;margin-top:10px">Everything included: materials, labour, access and VAT at ' + (CONFIG.vatRate * 100).toFixed(1).replace('.0', '') + '%.</p></div>';
+    html += '<p class="r-note"><b>Not included:</b> ' + est.excluded.join('; ') + '.</p>';
+    var conf = 'Indicative only. The fixed price is confirmed after we have seen the ' + (est.scope === 'gutters' ? 'gutters' : 'roof') + '.';
+    if (est.widened.length) conf += ' You selected ' + est.widened.join(', ') + ', which widened the range, because those are the things only a survey can pin down.';
+    html += '<p class="r-note" style="border-top:none;padding-top:0">' + conf + '</p>';
+    html += '<a class="btn" href="#survey" style="justify-content:center">Get an accurate quote here</a>';
+    box.innerHTML = html;
+    $('calc-btn').style.display = 'none';
+    focusMode(true);
+    $('calc-redo-wrap').style.display = 'block';
+    box.className = 'calc-result show';
+    openSurvey();
+    box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  /* ── the survey filter ─────────────────────────────────────────────── */
+  var slot = { state: 'unknown' };
+
+  function refreshSlots(cb) {
+    var x = new XMLHttpRequest();
+    x.open('GET', API);
+    x.timeout = 8000;
+    x.onload = function () {
+      try { var j = JSON.parse(x.responseText); slot = { state: j.ok ? j.state : 'unknown' }; } catch (e) { slot = { state: 'unknown' }; }
+      cb();
+    };
+    x.onerror = x.ontimeout = function () { slot = { state: 'unknown' }; cb(); };
+    x.send();
+  }
+
+  function bookedFromState(state) {
+    if (state === 'closed') return CONFIG.cap.total;
+    if (state === 'urgent_only') return CONFIG.cap.openToAllUpTo + 1;
+    return 0;
+  }
+
+  function phoneLine() {
+    return ' <a href="tel:' + CONFIG.phone.tel + '" style="color:var(--red);font-weight:700">' + CONFIG.phone.display + '</a>';
+  }
+  function say(msg, withPhone) {
+    var s = $('survey-say');
+    s.innerHTML = '';
+    var p = document.createElement('p');
+    p.textContent = msg;
+    s.appendChild(p);
+    if (withPhone) { var a = document.createElement('p'); a.innerHTML = 'Call us on' + phoneLine() + '.'; s.appendChild(a); }
+    s.style.display = 'block';
+    $('survey-details').style.display = 'none';
+  }
+
+  function openSurvey() {
+    $('survey').style.display = 'block';
+    $('survey-say').style.display = 'none';
+    $('survey-details').style.display = 'none';
+    // Gate B is knowable straight away; say it without asking anything else.
+    if (last.est.tiers.low.total < CONFIG.minJobEur) {
+      $('survey-questions').style.display = 'none';
+      say(FAIL_COPY.minimum, false);
+    } else {
+      $('survey-questions').style.display = 'block';
+    }
+  }
+
+  function answers() {
+    return { routingKey: val('s-key'), timing: val('s-timing'), owner: val('s-owner'), intent: val('s-intent') };
+  }
+
+  function checkGates() {
+    var a = answers();
+    if (!parseRoutingKey(a.routingKey)) { say('Please enter the first three characters of your Eircode, for example D02.', false); return; }
+    if (!a.timing || !a.owner || !a.intent) { say('Please answer all the questions.', false); return; }
+    refreshSlots(function () {
+      var g;
+      if (slot.state === 'unknown') {
+        // We cannot see the week's slots, so we do not open a form we might not be able to honour.
+        say('We cannot check this week’s survey slots just now. The estimate above still stands.', true);
+        return;
+      }
+      g = runGates(a, { low: last.est.tiers.low.total, booked: bookedFromState(slot.state) }, CONFIG);
+      if (!g.pass) { say(g.copy, g.showPhone); return; }
+      $('survey-say').style.display = 'none';
+      $('survey-details').style.display = 'block';
+      $('s-name').focus();
+    });
+  }
+
+  function fieldErr(list) {
+    var names = { name: 'your name', mobile: 'an Irish mobile number', eircode: 'a full Eircode in our focus area, for example D02 FH60', callbackWindow: 'morning or afternoon', callbackDate: 'a day in the next 14 days' };
+    $('s-error').textContent = 'Please check ' + list.map(function (f) { return names[f] || f; }).join(', ') + '.';
+  }
+
+  function submit() {
+    $('s-error').textContent = '';
+    var e = [];
+    if (val('s-name').trim().length < 2) e.push('name');
+    if (!parseIrishMobile(val('s-mobile'))) e.push('mobile');
+    var eir = parseEircode(val('s-eircode'));
+    if (!eir || !inFocus(eir.routingKey, CONFIG) || eir.routingKey !== parseRoutingKey(val('s-key'))) e.push('eircode');
+    if (!val('s-window')) e.push('callbackWindow');
+    if (!val('s-date')) e.push('callbackDate');
+    if (e.length) { fieldErr(e); return; }
+    var btn = $('s-submit');
+    btn.disabled = true;
+    var body = {
+      input: last.input, routingKey: val('s-key'), timing: val('s-timing'), owner: val('s-owner'), intent: val('s-intent'),
+      name: val('s-name'), mobile: val('s-mobile'), eircode: val('s-eircode'), callbackWindow: val('s-window'), callbackDate: val('s-date'),
+      pageUrl: location.href, site: SITE, website: val('s-website')
+    };
+    var x = new XMLHttpRequest();
+    x.open('POST', API);
+    x.setRequestHeader('Content-Type', 'application/json');
+    x.timeout = 20000;
+    x.onload = function () {
+      btn.disabled = false;
+      var j = {};
+      try { j = JSON.parse(x.responseText); } catch (err) {}
+      if (j.ok && j.passed) {
+        $('survey-details').style.display = 'none';
+        $('survey-questions').style.display = 'none';
+        say(j.message, false);
+      } else if (j.ok && j.passed === false) {
+        $('survey-questions').style.display = 'none';
+        say(j.copy, j.showPhone);
+      } else if (j.error === 'fields') {
+        fieldErr(j.fields || []);
+      } else {
+        $('s-error').innerHTML = 'Sorry, we could not take that just now. Please call us on' + phoneLine() + '.';
+      }
+    };
+    x.onerror = x.ontimeout = function () { btn.disabled = false; $('s-error').innerHTML = 'Sorry, we could not take that just now. Please call us on' + phoneLine() + '.'; };
+    x.send(JSON.stringify(body));
+  }
+
+  $('calc-btn').addEventListener('click', showEstimate);
+  $('calc-redo').addEventListener('click', function (e) { e.preventDefault(); $('calc-btn').style.display = ''; focusMode(false); $('calc-redo-wrap').style.display = 'none'; $('calc-btn').scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+  // Every "survey" link: the survey questions only exist once there is a price to attach them to. Before that, a link to
+  // them would go nowhere, so it takes the visitor to the estimate form and says what to do.
+  Array.prototype.forEach.call(document.querySelectorAll('a[href="#survey"]'), function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (!last) {
+        $('calc-error').textContent = 'Fill in the details above and press Show my estimate first. Then we can check whether we can survey your roof.';
+        $('calc-btn').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        $('survey').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+  $('s-check').addEventListener('click', checkGates);
+  $('s-submit').addEventListener('click', submit);
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="c-scope"]'), function (r) { r.addEventListener('change', syncScope); });
+  on('c-areamode', 'change', syncModes);
+  $('c-lenmode').addEventListener('change', syncModes);
+
+  // callback day: today .. +14 days
+  (function () {
+    var d = new Date(), z = function (n) { return (n < 10 ? '0' : '') + n; };
+    var f = function (x) { return x.getFullYear() + '-' + z(x.getMonth() + 1) + '-' + z(x.getDate()); };
+    var max = new Date(d.getTime() + CONFIG.callbackWindowDays * 86400000);
+    $('s-date').min = f(d); $('s-date').max = f(max); $('s-date').value = f(d);
+  })();
+  syncScope(); syncModes();
+})();
+</script>
+
+  <section class="section section-light"><div class="container">
+    <div class="section-header"><span class="section-tag">FAQ</span><h2>Calculator questions, answered</h2></div>
+    <div class="faq-grid">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How accurate is the gutter cost calculator? <i class="fas fa-plus"></i></button><div class="faq-a"><p>It gives an indicative range from your gutter length, material, downpipes and whether the fascia is being replaced. It is a guide, not a quote: the fixed price is confirmed only after we have seen the house.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is VAT included in the price range? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes. The range already includes VAT at 13.5%, so there is nothing added on top of what you see.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What does the price range include? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Materials, labour, access and the downpipes and fascia you entered, all with VAT. It is an installed price, so fitting is included.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is not included? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Repairs to rotten fascia, soffit or timber found once the old gutters are off, skip hire or waste disposal beyond normal site clearance, and anything not listed in your answers.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What if I do not know my gutter length? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Choose house perimeter and enter the distance around the outside of the house. Front and back runs together are usually close to that figure.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Why do uPVC, aluminium and cast iron cost different amounts? <i class="fas fa-plus"></i></button><div class="faq-a"><p>The material and the work involved differ. As a guide, installed prices run roughly €50 to €65 a metre for uPVC, €65 to €75 for aluminium and €75 to €90 for cast iron.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do I need to give my email to see the price? <i class="fas fa-plus"></i></button><div class="faq-a"><p>No. The price shows straight away with no sign-up. You only leave details if you want us to ring you about a survey.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is the survey free? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Yes. Quotes and surveys are free and the quote is written, so you know the price before anything starts.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What guarantee do I get? <i class="fas fa-plus"></i></button><div class="faq-a"><p>Installation work carries a 10-year written workmanship guarantee, and any gutter or roof replacement job also carries our Lifetime Leak Guarantee.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Why can I not always book a survey from this page? <i class="fas fa-plus"></i></button><div class="faq-a"><p>We use the page to book surveys for work you intend to do soon, in our Dublin focus area, with the owner able to be there, and we limit how many we book each week. If we cannot, the estimate still stays on the page, and you can call us if your job is urgent.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How quickly will you ring me? <i class="fas fa-plus"></i></button><div class="faq-a"><p>If you ask for a survey and we can take it, we phone the same day to arrange a time. Nothing is booked until we speak.</p></div></div>
+    </div></div></section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo logo-light"><img src="images/rg-logo-white-v2-500.webp" alt="Recommended Guttering" width="500" height="97" /></a>
+        <p>Dublin's trusted gutter repair and replacement experts. Directly employed crews, a price agreed before we start, and a 10-year written guarantee on the work.</p>
+        <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-google"></i></a></div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="/gutter-repairs">Gutter Repairs</a></li><li><a href="/gutter-cleaning">Gutter Cleaning</a></li><li><a href="/new-gutters">New Gutters</a></li><li><a href="/fascia-soffit">Fascia &amp; Soffit</a></li><li><a href="/downpipes">Downpipes Repair</a></li><li><a href="/commercial-guttering">Commercial Guttering</a></li></ul></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about">About Us</a></li><li><a href="/gutter-cost-calculator">Gutter Cost Calculator</a></li><li><a href="/near-me">Areas We Cover</a></li><li><a href="/quote">Get a Free Quote</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fas fa-phone"></i><a href="tel:012658463">(01) 265 8463</a></li><li><i class="fas fa-envelope"></i><a href="mailto:info@recommendedroofing.ie">info@recommendedroofing.ie</a></li><li><i class="fas fa-map-marker-alt"></i> 24A Baggot Street Upper, Dublin 4, D04 N528</li><li><i class="fas fa-clock"></i> Mon–Sat: 8am–6pm</li></ul></div>
+    </div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2026 Recommended Roofing & Guttering — All rights reserved.</p><p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p></div></div>
+  </footer>
+
+  <div class="float-ctas">
+    <a href="tel:012658463" class="float-btn float-phone"><i class="fas fa-phone"></i></a>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', () => { document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50); });
+    document.getElementById('hamburger').addEventListener('click', () => { document.getElementById('nav').classList.toggle('open'); document.getElementById('hamburger').classList.toggle('active'); });
+    function toggleFaq(btn) { const item = btn.parentElement; const isOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open')); if (!isOpen) item.classList.add('open'); }
+  </script>
+</body>
+</html>
