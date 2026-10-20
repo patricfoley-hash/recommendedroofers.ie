@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Blog index + first posts. Each post answers a question a Dublin homeowner
 actually types, and links back into the service and area pages."""
+import glance as G
 import sys, os, html, re
 sys.path.insert(0,'.')
 from gen import (OUT, FACTS, HEAD_CSS, topbar_header, FOOTER, QUOTE_FORM, PHONE, PHONE_HREF,
@@ -175,13 +176,14 @@ def post_page(p):
   {{
     "@context": "https://schema.org",
     "@graph": [
+    {G.PATRICK_LD},
     {{
       "@type": "BlogPosting",
       "headline": {jsonstr(p['title'])},
       "description": {jsonstr(p['desc'])},
       "datePublished": "{p['date']}",
       "dateModified": "{p['date']}",
-      "author": {{ "@type": "Organization", "name": "Recommended Roofing & Guttering" }},
+      "author": {{ "@id": "https://dublingutter.ie/#patrick-foley" }},
       "publisher": {{ "@type": "Organization", "name": "Recommended Roofing & Guttering",
         "logo": {{ "@type": "ImageObject", "url": "https://dublingutter.ie/images/rg-logo-v2-500.webp" }} }},
       "mainEntityOfPage": "https://dublingutter.ie/blog/{p['slug']}"
@@ -211,6 +213,7 @@ def post_page(p):
         <span class="post-cat">{esc(p['cat'])}</span>
         <span><i class="fas fa-clock"></i> {p['read']} min read</span>
         <span><i class="fas fa-calendar"></i> {p['date']}</span>
+        <span><i class="fas fa-user"></i> By {G.OWNER['name']}, {G.OWNER['jobTitle']}</span>
       </div>
     </div>
   </section>

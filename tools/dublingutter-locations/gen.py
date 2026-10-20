@@ -4,6 +4,7 @@ sys.path.insert(0,'.')
 from areas_north import NORTH
 from areas_south import SOUTH
 import variants as V
+import glance as G
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "dublingutter")
 PHONE, PHONE_HREF = "(01) 265 8463", "012658463"
@@ -311,6 +312,7 @@ def area_page(a, i):
       ],
       "aggregateRating": {{ "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }}
     }},
+    {{ "@type": "Person", "@id": "https://dublingutter.ie/#gerard-ogorman", "name": "Gerard O'Gorman", "jobTitle": "General Manager", "worksFor": {{ "@type": "Organization", "name": "Recommended Roofing" }} }},
     {{
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -360,7 +362,7 @@ def area_page(a, i):
       <div class="trust-item"><i class="fab fa-google"></i><div><strong>{FACTS["reviews"]} Google Reviews</strong><span>Rated {FACTS["rating"]} / 5 stars</span></div></div>
     </div>
   </section>
-
+{G.area_box(A)}
   <section class="section">
     <div class="container content-split">
       <div class="content-split-text">
@@ -535,6 +537,7 @@ def hub_page(region):
       ],
       "aggregateRating": {{ "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "20" }}
     }},
+    {{ "@type": "Person", "@id": "https://dublingutter.ie/#gerard-ogorman", "name": "Gerard O'Gorman", "jobTitle": "General Manager", "worksFor": {{ "@type": "Organization", "name": "Recommended Roofing" }} }},
     {{
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -580,7 +583,7 @@ def hub_page(region):
       <div class="trust-item"><i class="fab fa-google"></i><div><strong>{FACTS["reviews"]} Google Reviews</strong><span>Rated {FACTS["rating"]} / 5 stars</span></div></div>
     </div>
   </section>
-
+{G.area_box(name)}
   <section class="section">
     <div class="container">
       <div class="section-header">
