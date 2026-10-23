@@ -538,7 +538,7 @@ h1, h2, .hero-headline { text-transform: uppercase; }
 @media (max-width: 1180px) { .header-call span { display: none; } .header-call { padding: 10px 13px; } }
 
 /* BOI HERO (Patrick, 2026-10-15): the restored cast-iron gutter with the Bank of Ireland badge on every header, as on recommendedguttering.ie. */
-.hero::after, .service-hero::after, .page-hero::after { content: ''; position: absolute; z-index: 2; right: max(20px, calc((100vw - 1180px) / 2)); bottom: 16px; width: clamp(86px, 16vw, 130px); height: clamp(40px, 8vw, 62px); box-sizing: border-box; padding: 6px 12px; background: #fff url('images/bank-of-ireland.webp') center / contain no-repeat; background-origin: content-box; border-radius: 8px; }
+.hero::after, .service-hero::after, .page-hero::after { content: ''; position: absolute; z-index: 2; right: max(20px, calc((100vw - 1180px) / 2 - 12vw)); bottom: 16px; width: clamp(86px, 16vw, 130px); height: clamp(40px, 8vw, 62px); box-sizing: border-box; padding: 6px 12px; background: #fff url('images/bank-of-ireland.webp') center / contain no-repeat; background-origin: content-box; border-radius: 8px; }
 /* Same look as recommendedguttering.ie: dark on the left under the words, fading to a clear photo on the right. */
 .hero-overlay { background: linear-gradient(to right, rgba(12,10,9,1) 0%, rgba(12,10,9,.97) 30%, rgba(12,10,9,.75) 52%, rgba(12,10,9,.2) 72%, rgba(12,10,9,0) 85%); }
 .service-hero { background-image: linear-gradient(to right, rgba(12,10,9,1) 0%, rgba(12,10,9,.97) 30%, rgba(12,10,9,.75) 52%, rgba(12,10,9,.2) 72%, rgba(12,10,9,0) 85%), url('images/cast-iron-gutter-heritage-slate-roof.webp'); background-position: center, 50% 66%; min-height: min(52vh, 560px); display: flex; align-items: center; }
