@@ -223,7 +223,7 @@ def area_page(a, i):
     hub_slug, hub_name = HUBS[a["region"]]
     label = a.get("label","")
     title_loc = f"{A} ({label})" if label and label.startswith("Dublin") else A
-    h1 = f"Gutter Services in {A}" + (f", {label}" if label else "")
+    h1 = f"Gutter Services Near Me in {A}" + (f", {label}" if label else "")
     photo = PHOTOS[i % len(PHOTOS)]
     sibs = siblings(a)
     nb_disp = a["nb"][:12]
@@ -556,7 +556,7 @@ def hub_page(region):
     <div class="container service-hero-inner">
       <div class="service-hero-content">
         <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/near-me">Areas</a><span>/</span><span>{name}</span></div>
-        <h1>Gutter Services in {name}</h1>
+        <h1>Gutter Services Near Me in {name}</h1>
         <p>{esc(copy['intro'])}</p>
         <ul class="service-hero-bullets">
           <li><i class="fas fa-check-circle"></i> {len(areas)} areas covered across {name}</li>
