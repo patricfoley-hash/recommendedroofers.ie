@@ -103,6 +103,9 @@ BLOG_CSS = """  <style>
     .aside-toc a { font-size: .9rem; color: var(--text); text-decoration: none; line-height: 1.4; display: block; }
     .aside-toc a:hover { color: #E11B22; }
     .post-hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important; padding: 56px 0 48px; }
+    .post-hero-grid { display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: center; }
+    .post-hero-photo { width: 300px; height: 400px; object-fit: cover; object-position: center; border-radius: 14px; box-shadow: 0 12px 36px rgba(0,0,0,.45); border: 3px solid rgba(255,255,255,.15); }
+    @media (max-width: 860px) { .post-hero-grid { grid-template-columns: minmax(0,1fr); gap: 28px; } .post-hero-grid > div { min-width: 0; } .post-hero-photo { width: 100%; height: 260px; object-position: center 55%; } }
     .post-hero h1 { max-width: 30ch !important; font-size: clamp(2rem, 4vw, 3rem) !important; line-height: 1.12; }
     @media (max-width: 960px) { .post-layout { grid-template-columns: 1fr; gap: 32px; } .post-aside { position: static; } .aside-toc { display: none; } }
     .post-body h2 { font-size: 1.45rem; margin: 44px 0 14px; color: var(--grey-dark); }
@@ -148,11 +151,15 @@ HERO_IMAGES = {
 
 
 def _hero_style(slug):
+    return ""
+
+
+def _hero_photo(slug):
     img = HERO_IMAGES.get(slug)
     if not img:
         return ""
-    return (' style="background:linear-gradient(135deg,rgba(15,23,42,.88),rgba(30,41,59,.72)),'
-            f'url({img}) center/cover no-repeat !important;"')
+    return (f'<img class="post-hero-photo" src="{img}" alt="Gutter and fascia work on a Bank of Ireland branch, '
+            'scaffold up" width="768" height="1145" loading="eager" />')
 
 
 def post_page(p):
@@ -221,7 +228,8 @@ def post_page(p):
 <body>
 {topbar_header("Blog").replace('src="images/', 'src="/images/')}
   <section class="service-hero post-hero"{_hero_style(p['slug'])}>
-    <div class="container">
+    <div class="container{' post-hero-grid' if p['slug'] in HERO_IMAGES else ''}">
+      <div>
       <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Gutter Advice</a><span>/</span><span>{esc(p['title'][:40])}&hellip;</span></div>
       <h1 style="color:var(--white);margin:14px 0 18px;">{esc(p['title'])}</h1>
       <div class="post-meta">
@@ -230,6 +238,8 @@ def post_page(p):
         <span><i class="fas fa-calendar"></i> {p['date']}</span>
         <span><i class="fas fa-user"></i> By {G.OWNER['name']}, {G.OWNER['jobTitle']}</span>
       </div>
+      </div>
+      {_hero_photo(p['slug'])}
     </div>
   </section>
 
