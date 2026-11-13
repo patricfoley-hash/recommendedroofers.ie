@@ -140,6 +140,21 @@ def _sid(h):
     return re.sub(r'[^a-z0-9]+', '-', h.lower()).strip('-')[:60]
 
 
+# Hero photos, by slug. Kept HERE (not in posts_generated.py) because the Core
+# publisher rewrites that file wholesale and would drop the field.
+HERO_IMAGES = {
+    "gutter-installation-and-repair-in-dublin": "/images/bank-of-ireland-cast-iron.webp",
+}
+
+
+def _hero_style(slug):
+    img = HERO_IMAGES.get(slug)
+    if not img:
+        return ""
+    return (' style="background:linear-gradient(135deg,rgba(15,23,42,.88),rgba(30,41,59,.72)),'
+            f'url({img}) center/cover no-repeat !important;"')
+
+
 def post_page(p):
     secs = "\n".join(f'        <h2 id="{_sid(h)}">{esc(h)}</h2>\n        {b}' for h, b in p["body"])
     toc = "".join(f'<li><a href="#{_sid(h)}">{esc(h)}</a></li>' for h, b in p["body"])
@@ -205,7 +220,7 @@ def post_page(p):
 </head>
 <body>
 {topbar_header("Blog").replace('src="images/', 'src="/images/')}
-  <section class="service-hero post-hero">
+  <section class="service-hero post-hero"{_hero_style(p['slug'])}>
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog">Gutter Advice</a><span>/</span><span>{esc(p['title'][:40])}&hellip;</span></div>
       <h1 style="color:var(--white);margin:14px 0 18px;">{esc(p['title'])}</h1>
